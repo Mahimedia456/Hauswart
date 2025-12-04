@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import Splash from "../modules/auth/pages/Splash";
 import Onboarding from "../modules/auth/pages/Onboarding";
 
@@ -13,25 +14,22 @@ import AuthLayout from "../modules/auth/components/AuthLayout";
 export default function AuthRouter() {
   return (
     <Routes>
-
-      {/* Splash Screen */}
-      <Route path="/splash" element={<Splash />} />
+      {/* Splash */}
+      <Route path="splash" element={<Splash />} />
 
       {/* Onboarding */}
-      <Route path="/onboarding" element={<Onboarding />} />
+      <Route path="onboarding" element={<Onboarding />} />
 
-      {/* Auth routes wrapped in layout */}
-      <Route element={<AuthLayout />}>
-
-        <Route path="/auth/login" element={<Login />} />
-        <Route path="/auth/register" element={<Register />} />
-        <Route path="/auth/forgot-password" element={<ForgotPassword />} />
-        <Route path="/auth/verify-otp" element={<VerifyOTP />} />
-        <Route path="/auth/reset-password" element={<ResetPassword />} />
-
+      {/* AUTH ROUTES (FIXED) */}
+      <Route path="auth" element={<AuthLayout />}>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="verify-otp" element={<VerifyOTP />} />
+        <Route path="reset-password" element={<ResetPassword />} />
       </Route>
 
-      {/* Default redirect */}
+      {/* Redirect anything invalid */}
       <Route path="*" element={<Navigate to="/splash" replace />} />
     </Routes>
   );

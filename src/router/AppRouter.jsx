@@ -14,10 +14,10 @@ import ForgotPassword from "../modules/auth/pages/ForgotPassword";
 import VerifyOTP from "../modules/auth/pages/VerifyOTP";
 import ResetPassword from "../modules/auth/pages/ResetPassword";
 
-// Dashboards
+// Dashboard
 import SaDashboard from "../modules/superAdmin/pages/Dashboard";
 
-// Protected route
+// Protected
 import ProtectedRoute from "./ProtectedRoute";
 
 export default function AppRouter() {
@@ -25,17 +25,17 @@ export default function AppRouter() {
     <Routes>
       <Route element={<RootLayout />}>
 
-        {/* Splash */}
+        {/* Public screens */}
         <Route path="/" element={<Splash />} />
+        <Route path="/auth/onboarding" element={<Onboarding />} />
 
-        {/* AUTH */}
-        <Route element={<AuthLayout />}>
-          <Route path="auth/onboarding" element={<Onboarding />} />
-          <Route path="auth/login" element={<Login />} />
-          <Route path="auth/register" element={<Register />} />
-          <Route path="auth/forgot-password" element={<ForgotPassword />} />
-          <Route path="auth/verify-otp" element={<VerifyOTP />} />
-          <Route path="auth/reset-password" element={<ResetPassword />} />
+        {/* AUTH FLOW */}
+        <Route path="auth" element={<AuthLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="verify-otp" element={<VerifyOTP />} />
+          <Route path="reset-password" element={<ResetPassword />} />
         </Route>
 
         {/* SUPER ADMIN */}
