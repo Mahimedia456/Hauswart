@@ -7,19 +7,17 @@ export default function SuperAdminLayout() {
   return (
     <div className="flex h-screen bg-background-light">
 
-      {/* FIXED SIDEBAR */}
+      {/* SIDEBAR */}
       <SaSidebar />
 
-      {/* MAIN AREA */}
+      {/* MAIN */}
       <div className="flex flex-col flex-1 ml-[260px]">
-
-        {/* TOP BAR */}
         <SaTopbar />
 
-        {/* PAGE CONTENT */}
         <main className="flex-1 p-6 overflow-y-auto">
           <Outlet />
         </main>
+
       </div>
     </div>
   );

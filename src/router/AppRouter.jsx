@@ -1,11 +1,10 @@
+// src/router/AppRouter.jsx
 import { Routes, Route } from "react-router-dom";
 
-// Layouts
 import RootLayout from "../layouts/RootLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import SuperAdminLayout from "../layouts/SuperAdminLayout";
 
-// Auth pages
 import Splash from "../modules/auth/pages/Splash";
 import Onboarding from "../modules/auth/pages/Onboarding";
 import Login from "../modules/auth/pages/Login";
@@ -14,10 +13,7 @@ import ForgotPassword from "../modules/auth/pages/ForgotPassword";
 import VerifyOTP from "../modules/auth/pages/VerifyOTP";
 import ResetPassword from "../modules/auth/pages/ResetPassword";
 
-// Dashboard
 import SaDashboard from "../modules/superAdmin/pages/Dashboard";
-
-// Protected
 import ProtectedRoute from "./ProtectedRoute";
 
 export default function AppRouter() {
@@ -25,11 +21,11 @@ export default function AppRouter() {
     <Routes>
       <Route element={<RootLayout />}>
 
-        {/* Public screens */}
+        {/* Public */}
         <Route path="/" element={<Splash />} />
         <Route path="/auth/onboarding" element={<Onboarding />} />
 
-        {/* AUTH FLOW */}
+        {/* Auth */}
         <Route path="auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -38,7 +34,7 @@ export default function AppRouter() {
           <Route path="reset-password" element={<ResetPassword />} />
         </Route>
 
-        {/* SUPER ADMIN */}
+        {/* Dashboard */}
         <Route
           path="super-admin/*"
           element={

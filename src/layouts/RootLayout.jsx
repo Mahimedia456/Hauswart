@@ -1,3 +1,4 @@
+// src/layouts/RootLayout.jsx
 import { Outlet, useLocation, Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
@@ -5,18 +6,21 @@ export default function RootLayout() {
   const { token } = useAuth();
   const location = useLocation();
 
-  const isAuthPage = location.pathname.startsWith("/auth");
+  const isAuthRoute = location.pathname.startsWith("/auth");
+  const isPublic =
+    location.pathname === "/" ||
+    location.pathname === "/auth/onboarding";
 
-  // Allow ALL auth pages without redirect
-  if (isAuthPage) {
+  // Allow splash + onboarding + all auth pages
+  if (isAuthRoute || isPublic) {
     return <Outlet />;
   }
 
-  // If user is NOT logged in → redirect to login
+  // Block dashboard pages for non-logged-in users
   if (!token) {
     return <Navigate to="/auth/login" replace />;
   }
 
-  // If user IS logged in → allow normal layouts
+  // For logged-in users → continue normally
   return <Outlet />;
 }
