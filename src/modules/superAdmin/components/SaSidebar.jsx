@@ -7,7 +7,7 @@ import { t } from "../../../i18n/translations";
 export default function SaSidebar() {
   const { logout } = useAuth();
   const { lang } = useLanguage();
-  const dict = t[lang]; // FULL TRANSLATION OBJECT
+  const dict = t[lang];
 
   return (
     <aside
@@ -36,6 +36,20 @@ export default function SaSidebar() {
         {/* Dashboard */}
         <SidebarSection label={dict.dashboard}>
           <SidebarItem to="/super-admin" icon="dashboard" label={dict.dashboard} />
+        </SidebarSection>
+
+        {/* Organizations (NEW SECTION) */}
+        <SidebarSection label={dict.organizations || "Organizations"}>
+          <SidebarItem
+            to="/super-admin/organizations"
+            icon="business_center"
+            label={dict.organizations || "Organizations"}
+          />
+          <SidebarItem
+            to="/super-admin/organizations/create"
+            icon="add_business"
+            label={dict.createOrganization || "Create Organization"}
+          />
         </SidebarSection>
 
         {/* Jobs */}
