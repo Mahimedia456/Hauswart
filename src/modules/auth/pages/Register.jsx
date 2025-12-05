@@ -1,165 +1,222 @@
 // src/modules/auth/pages/Register.jsx
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../../context/LanguageContext";
 import { t } from "../../../i18n/translations";
-import { useState } from "react";
 
 export default function Register() {
+  const navigate = useNavigate();
   const { lang } = useLanguage();
   const dict = t[lang];
-  const navigate = useNavigate();
 
-  const [showPwd, setShowPwd] = useState(false);
-  const [showCPwd, setShowCPwd] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [role, setRole] = useState("Caretaker");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [terms, setTerms] = useState(false);
+  const [error, setError] = useState("");
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    if (!terms) return setError("You must agree to the Terms & Privacy Policy.");
+    if (password !== confirmPassword)
+      return setError("Passwords do not match.");
+
+    // Continue to OTP screen
+    navigate("/auth/verify-otp");
+  };
 
   return (
-    <div className="
-      min-h-screen flex items-center justify-center px-4
+    <div
+      className="
+      min-h-screen w-full flex items-center justify-center px-4
       bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100
-    ">
-      <div className="
+    "
+    >
+      <div
+        className="
         w-full max-w-md p-10 rounded-2xl
-        bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl
-      ">
-
+        bg-white/60 backdrop-blur-xl
+        border border-white/40 shadow-[0_8px_25px_rgba(0,0,0,0.08)]
+      "
+      >
         {/* LOGO */}
         <div className="flex justify-center mb-6">
-          <div className="h-12 w-12 bg-[#F38B14] rounded-xl flex items-center justify-center shadow-orange-300/30 shadow-lg">
-            <span className="material-symbols-outlined text-white text-3xl">person_add</span>
+          <div className="h-12 w-12 bg-[#F38B14] rounded-xl flex items-center justify-center shadow-lg shadow-orange-300/30">
+            <span className="material-symbols-outlined text-white text-3xl">
+              person_add
+            </span>
           </div>
         </div>
 
-        <h1 className="text-2xl font-bold text-center">{dict.register_title}</h1>
-        <p className="text-sm text-slate-600 text-center mt-2">{dict.register_subtitle}</p>
+        <h2 className="text-2xl font-bold text-center text-slate-900">
+          Create Your Hauswart Account
+        </h2>
+        <p className="text-center text-slate-600 mt-1">
+          Join the leading facility management platform.
+        </p>
 
-        <form className="mt-6 space-y-4">
+        <form onSubmit={submit} className="mt-6 space-y-4">
 
-          {/* FULL NAME */}
-          <label className="text-sm font-medium block">
-            {dict.auth_fullName}
-            <input
-              placeholder={dict.auth_fullName_placeholder}
-              className="
-                w-full h-11 px-4 rounded-xl mt-1
-                bg-white/80 border border-slate-300 
-                outline-none focus:ring-2 focus:ring-[#F38B14]
-              "
-            />
-          </label>
-
-          {/* EMAIL */}
-          <label className="text-sm font-medium block">
-            {dict.auth_email}
-            <input
-              placeholder={dict.auth_email_placeholder}
-              className="
-                w-full h-11 px-4 rounded-xl mt-1
-                bg-white/80 border border-slate-300 
-                outline-none focus:ring-2 focus:ring-[#F38B14]
-              "
-            />
-          </label>
-
-          {/* PHONE */}
-          <label className="text-sm font-medium block">
-            {dict.auth_phone}
-            <input
-              placeholder={dict.auth_phone_placeholder}
-              className="
-                w-full h-11 px-4 rounded-xl mt-1
-                bg-white/80 border border-slate-300 
-                outline-none focus:ring-2 focus:ring-[#F38B14]
-              "
-            />
-          </label>
-
-          {/* ROLE */}
-          <label className="text-sm font-medium block">
-            {dict.register_role_label}
-            <select
-              className="
-                w-full h-11 mt-1 px-4 rounded-xl
-                bg-white/80 border border-slate-300 outline-none
-                focus:ring-2 focus:ring-[#F38B14]
-              "
-            >
-              <option>{dict.role_facilityManager}</option>
-              <option>{dict.role_caretaker}</option>
-              <option>{dict.role_serviceProvider}</option>
-              <option>{dict.role_tenant}</option>
-            </select>
-          </label>
-
-          {/* PASSWORD */}
-          <label className="text-sm font-medium block">
-            {dict.auth_password}
-            <div className="relative">
+          {/* Full Name */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Full Name</label>
+            <div className="flex items-center rounded-xl bg-white/80 border border-slate-300">
+              <span className="material-symbols-outlined px-3 text-slate-500">
+                person
+              </span>
               <input
-                type={showPwd ? "text" : "password"}
-                placeholder={dict.auth_password_placeholder}
-                className="
-                  w-full h-11 pl-4 pr-12 rounded-xl mt-1
-                  bg-white/80 border border-slate-300 outline-none
-                  focus:ring-2 focus:ring-[#F38B14]
-                "
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="flex-1 h-11 px-2 bg-transparent outline-none"
+                placeholder="John Doe"
+                required
               />
-              <span
-                className="material-symbols-outlined absolute right-3 top-3 cursor-pointer text-slate-500"
-                onClick={() => setShowPwd(!showPwd)}
+            </div>
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Email</label>
+            <div className="flex items-center rounded-xl bg-white/80 border border-slate-300">
+              <span className="material-symbols-outlined px-3 text-slate-500">
+                mail
+              </span>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 h-11 px-2 bg-transparent outline-none"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Phone Number</label>
+            <div className="flex items-center rounded-xl bg-white/80 border border-slate-300">
+              <span className="material-symbols-outlined px-3 text-slate-500">
+                phone
+              </span>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="flex-1 h-11 px-2 bg-transparent outline-none"
+                placeholder="+1 (555) 000-0000"
+                required
+              />
+            </div>
+          </div>
+
+          {/* Role */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Select Role</label>
+
+            <div className="relative">
+              <span className="material-symbols-outlined absolute left-3 top-3 text-slate-500">
+                badge
+              </span>
+
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                className="
+                  w-full h-11 pl-12 pr-10 rounded-xl bg-white/80 border border-slate-300 
+                  outline-none focus:ring-2 focus:ring-[#F38B14]
+                "
               >
-                {showPwd ? "visibility" : "visibility_off"}
+                <option>Caretaker</option>
+                <option>Facility Manager</option>
+                <option>Service Provider</option>
+                <option>Tenant</option>
+              </select>
+
+              <span className="material-symbols-outlined absolute right-3 top-3 text-slate-500">
+                expand_more
               </span>
             </div>
-          </label>
+          </div>
 
-          {/* CONFIRM PASSWORD */}
-          <label className="text-sm font-medium block">
-            {dict.auth_confirmPassword}
-            <div className="relative">
-              <input
-                type={showCPwd ? "text" : "password"}
-                placeholder={dict.auth_confirmPassword_placeholder}
-                className="
-                  w-full h-11 pl-4 pr-12 rounded-xl mt-1
-                  bg-white/80 border border-slate-300 outline-none
-                  focus:ring-2 focus:ring-[#F38B14]
-                "
-              />
-              <span
-                className="material-symbols-outlined absolute right-3 top-3 cursor-pointer text-slate-500"
-                onClick={() => setShowCPwd(!showCPwd)}
-              >
-                {showCPwd ? "visibility" : "visibility_off"}
+          {/* Password */}
+          <div>
+            <label className="block text-sm font-medium mb-2">Password</label>
+            <div className="flex items-center rounded-xl bg-white/80 border border-slate-300">
+              <span className="material-symbols-outlined px-3 text-slate-500">
+                lock
               </span>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="flex-1 h-11 px-2 bg-transparent outline-none"
+                placeholder="••••••••"
+                required
+              />
             </div>
-          </label>
+          </div>
 
-          {/* TERMS */}
-          <label className="flex items-center gap-2 text-sm text-slate-700">
-            <input type="checkbox" className="h-4 w-4" />
-            {dict.register_terms_prefix}{" "}
-            <span className="text-[#F38B14]">{dict.register_terms_link}</span>
-          </label>
+          {/* Confirm Password */}
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Confirm Password
+            </label>
+            <div className="flex items-center rounded-xl bg-white/80 border border-slate-300">
+              <span className="material-symbols-outlined px-3 text-slate-500">
+                lock
+              </span>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="flex-1 h-11 px-2 bg-transparent outline-none"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+          </div>
 
-          {/* BUTTON */}
+          {/* Terms */}
+          <div className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              checked={terms}
+              onChange={(e) => setTerms(e.target.checked)}
+              className="h-4 w-4 rounded text-[#F38B14]"
+            />
+            <p className="text-sm">
+              I agree to the{" "}
+              <span className="text-[#F38B14] underline cursor-pointer">
+                Terms & Privacy Policy
+              </span>
+            </p>
+          </div>
+
+          {/* Error */}
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+
+          {/* CTA */}
           <button
-            type="button"
-            onClick={() => navigate("/auth/login")}
+            type="submit"
             className="
-              w-full h-11 mt-2 rounded-xl bg-[#F38B14] 
-              text-white font-medium hover:bg-black transition
-              shadow-md shadow-orange-300/30
+              w-full h-11 rounded-xl bg-[#F38B14] text-white font-semibold
+              hover:bg-black transition shadow-md shadow-orange-300/30
             "
           >
-            {dict.auth_register}
+            Create Account
           </button>
         </form>
 
         <p
-          className="text-center mt-4 underline text-[#F38B14] cursor-pointer"
+          className="text-center mt-4 text-[#F38B14] cursor-pointer underline"
           onClick={() => navigate("/auth/login")}
         >
-          {dict.register_haveAccount}
+          Already have an account? Login
         </p>
       </div>
     </div>

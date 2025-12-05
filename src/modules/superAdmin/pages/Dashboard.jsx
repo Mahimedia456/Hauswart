@@ -95,21 +95,29 @@ export default function Dashboard() {
 
       {/* ALERTS + ACTIVITY */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-6">
+        
+        {/* ALERTS */}
         <Card title={dict.dash_systemAlerts}>
           <Alert type="warning" text={dict.dash_alert_subRenew_desc} />
           <Alert type="error" text={dict.dash_alert_failedPay_desc} />
           <Alert type="info" text={dict.dash_alert_apiSpike_desc} />
         </Card>
 
+        {/* ACTIVITY */}
         <Card title={dict.section_recent_activity}>
-          <Activity icon="edit" text={dict.activity_ticket_updated} time={dict.activity_just_now} />
-          <Activity icon="person_add" text={dict.activity_org_created} time={dict.activity_15min} />
-          <Activity icon="sync" text={dict.activity_sync_done} time={dict.activity_1h} />
+          <div className="space-y-3">
+            <Activity icon="edit" text={dict.activity_ticket_updated} time={dict.activity_just_now} />
+            <Activity icon="person_add" text={dict.activity_org_created} time={dict.activity_15min} />
+            <Activity icon="sync" text={dict.activity_sync_done} time={dict.activity_1h} />
+          </div>
         </Card>
+
       </div>
 
       {/* MINI TABLES */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        {/* Recent tickets */}
         <MiniTable
           title="Recent Tickets"
           headers={["Ticket", "User", "Property", "Date"]}
@@ -120,6 +128,7 @@ export default function Dashboard() {
           ]}
         />
 
+        {/* Recent orgs */}
         <MiniTable
           title="Recent Organizations"
           headers={["Name", "Contact", "Email", "Created"]}
@@ -129,6 +138,7 @@ export default function Dashboard() {
             ["Global Corp", "Mark Davis", "m.davis@global.co", "2025-10-22"],
           ]}
         />
+
       </div>
 
     </div>
@@ -188,22 +198,28 @@ function Alert({ type, text }) {
 
 function Activity({ icon, text, time }) {
   return (
-    <div className="flex items-center gap-3 py-2">
-      <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
-        <span className="material-symbols-outlined text-slate-700">{icon}</span>
+    <div className="flex items-center gap-4 p-3 rounded-xl bg-slate-50 hover:bg-slate-100 transition">
+      <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+        <span className="material-symbols-outlined text-[#F38B14]">{icon}</span>
       </div>
       <div>
-        <p className="text-sm text-slate-900">{text}</p>
+        <p className="text-sm font-medium text-slate-900">{text}</p>
         <p className="text-xs text-slate-500">{time}</p>
       </div>
     </div>
   );
 }
 
-/* ---------- FIXED MINI TABLE ---------- */
+/* ---------- MINI TABLE ---------- */
 function MiniTable({ title, headers = [], rows = [] }) {
   const safeHeaders = Array.isArray(headers) ? headers : [];
-  const safeRows = Array.isArray(rows) ? rows : [];
+  const safeRows = (Array.isArray(rows) ? rows : []).map((row) => {
+    if (!Array.isArray(row)) return [];
+    if (row.length < safeHeaders.length) {
+      return [...row, ...Array(safeHeaders.length - row.length).fill("")];
+    }
+    return row;
+  });
 
   return (
     <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-md rounded-2xl p-5">
@@ -224,10 +240,7 @@ function MiniTable({ title, headers = [], rows = [] }) {
           <tbody>
             {safeRows.length === 0 && (
               <tr>
-                <td
-                  colSpan={safeHeaders.length || 1}
-                  className="px-4 py-3 text-center text-slate-400"
-                >
+                <td colSpan={safeHeaders.length || 1} className="px-4 py-3 text-center text-slate-400">
                   No data available
                 </td>
               </tr>
@@ -243,7 +256,6 @@ function MiniTable({ title, headers = [], rows = [] }) {
               </tr>
             ))}
           </tbody>
-
         </table>
       </div>
     </div>
