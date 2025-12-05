@@ -134,6 +134,25 @@ org_name: "Organization",
 org_email: "Email",
 org_plan: "Plan",
 org_created: "Created At",
+dash_ticketTrend: "Ticket Trend",
+dash_maintenanceRate: "Maintenance Completion Rate",
+
+// Alerts (Dashboard)
+dash_alert_subRenew_desc: "Your subscription will renew soon.",
+dash_alert_failedPay_desc: "A recent payment attempt has failed.",
+dash_alert_apiSpike_desc: "Unusual API activity detected.",
+
+// Section titles
+section_recent_activity: "Recent Activity",
+
+// Activity texts
+activity_ticket_updated: "A ticket was updated.",
+activity_just_now: "Just now",
+activity_org_created: "A new organization was created.",
+activity_15min: "15 minutes ago",
+activity_sync_done: "System data sync completed.",
+activity_1h: "1 hour ago",
+
 
   },
 
@@ -270,6 +289,25 @@ org_name: "Organisation",
 org_email: "E-Mail",
 org_plan: "Plan",
 org_created: "Erstellt am",
+dash_ticketTrend: "Ticketverlauf",
+dash_maintenanceRate: "Wartungsabschlussrate",
+
+// Alerts (Dashboard)
+dash_alert_subRenew_desc: "Ihr Abonnement wird in Kürze verlängert.",
+dash_alert_failedPay_desc: "Ein kürzlicher Zahlungsversuch ist fehlgeschlagen.",
+dash_alert_apiSpike_desc: "Ungewöhnliche API-Aktivität wurde erkannt.",
+
+// Section titles
+section_recent_activity: "Letzte Aktivitäten",
+
+// Activity texts
+activity_ticket_updated: "Ein Ticket wurde aktualisiert.",
+activity_just_now: "Gerade eben",
+activity_org_created: "Eine neue Organisation wurde erstellt.",
+activity_15min: "Vor 15 Minuten",
+activity_sync_done: "Systemdaten-Synchronisierung abgeschlossen.",
+activity_1h: "Vor 1 Stunde",
+
 
   },
 };
