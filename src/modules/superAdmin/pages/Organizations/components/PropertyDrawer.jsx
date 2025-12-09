@@ -89,7 +89,7 @@ export default function PropertyDrawer({ property, onClose }) {
           </h3>
 
           <div className="space-y-3">
-            <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary text-white px-4 py-2 text-sm font-semibold hover:bg-black">
+            <button className="flex w-full items-center justify-center gap-2 rounded-lg bg-F38b14 text-white px-4 py-2 text-sm font-semibold hover:bg-black">
               <span className="material-symbols-outlined text-base">open_in_new</span>
               Open Property Details
             </button>

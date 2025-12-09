@@ -15,39 +15,76 @@ import ResetPassword from "../modules/auth/pages/ResetPassword";
 
 import ProtectedRoute from "./ProtectedRoute";
 
-// SUPER ADMIN PAGES
+// SUPER ADMIN DASHBOARD
 import SaDashboard from "../modules/superAdmin/pages/Dashboard";
+
 
 // ORGANIZATION MODULE
 import OrganizationsList from "../modules/superAdmin/pages/Organizations/OrganizationsList";
 import OrganizationCreate from "../modules/superAdmin/pages/Organizations/OrganizationCreate";
 import OrganizationDetails from "../modules/superAdmin/pages/Organizations/OrganizationDetails";
 
-// TAB PAGES
-import Overview from "../modules/superAdmin/pages/Organizations/tabs/Overview";
-import Details from "../modules/superAdmin/pages/Organizations/tabs/Details";
-import Billing from "../modules/superAdmin/pages/Organizations/tabs/Billing";
-import Users from "../modules/superAdmin/pages/Organizations/tabs/Users";
-import Properties from "../modules/superAdmin/pages/Organizations/tabs/Properties";
-import Tickets from "../modules/superAdmin/pages/Organizations/tabs/Tickets";
-import Maintenance from "../modules/superAdmin/pages/Organizations/tabs/Maintenance";
-import Documents from "../modules/superAdmin/pages/Organizations/tabs/Documents";
-import ActivityLogs from "../modules/superAdmin/pages/Organizations/tabs/ActivityLogs";
+import OrgOverview from "../modules/superAdmin/pages/Organizations/tabs/Overview";
+import OrgDetails from "../modules/superAdmin/pages/Organizations/tabs/Details";
+import OrgBilling from "../modules/superAdmin/pages/Organizations/tabs/Billing";
+import OrgUsers from "../modules/superAdmin/pages/Organizations/tabs/Users";
+import OrgProperties from "../modules/superAdmin/pages/Organizations/tabs/Properties";
+import OrgTickets from "../modules/superAdmin/pages/Organizations/tabs/Tickets";
+import OrgMaintenance from "../modules/superAdmin/pages/Organizations/tabs/Maintenance";
+import OrgActivityLogs from "../modules/superAdmin/pages/Organizations/tabs/ActivityLogs";
 
-// ⬇️ NEW IMPORTS (this was missing!)
 import OrganizationEdit from "../modules/superAdmin/pages/Organizations/OrganizationEdit";
 import OrganizationDelete from "../modules/superAdmin/pages/Organizations/OrganizationDelete";
+
+
+// PROPERTY MODULE
+import PropertiesList from "../modules/superAdmin/pages/Properties/PropertiesList";
+import PropertyCreate from "../modules/superAdmin/pages/Properties/PropertyCreate";
+import PropertyDetails from "../modules/superAdmin/pages/Properties/PropertyDetails";
+import PropertyEdit from "../modules/superAdmin/pages/Properties/PropertyEdit";
+import PropertyDelete from "../modules/superAdmin/pages/Properties/PropertyDelete";
+
+// PROPERTY TABS
+import PropertyOverview from "../modules/superAdmin/pages/Properties/tabs/Overview";
+import PropertyDetailsTab from "../modules/superAdmin/pages/Properties/tabs/Details";
+import PropertyStructure from "../modules/superAdmin/pages/Properties/tabs/Structure";
+import PropertyAssets from "../modules/superAdmin/pages/Properties/tabs/Assets";
+import PropertyMaintenance from "../modules/superAdmin/pages/Properties/tabs/Maintenance.jsx";
+import PropertyTickets from "../modules/superAdmin/pages/Properties/tabs/Tickets";
+import PropertyStaff from "../modules/superAdmin/pages/Properties/tabs/Staff";
+import PropertyGPSLogs from "../modules/superAdmin/pages/Properties/tabs/GPS";
+import PropertyActivity from "../modules/superAdmin/pages/Properties/tabs/Activity";
+
+// ASSET DETAILS
+import AssetDetails from "../modules/superAdmin/pages/Properties/assetDetails/AssetDetails.jsx";
+
+
+// -----------------------------------------
+// TICKETS MODULE — FULL SYSTEM
+// -----------------------------------------
+import TicketsList from "../modules/superAdmin/pages/Tickets/TicketsList";
+import TicketCreate from "../modules/superAdmin/pages/Tickets/TicketCreate";
+import TicketDetail from "../modules/superAdmin/pages/Tickets/TicketDetail";
+
+// Ticket Tabs
+import TicketOverview from "../modules/superAdmin/pages/Tickets/tabs/Overview";
+import TicketDetailTab from "../modules/superAdmin/pages/Tickets/tabs/Detail";
+import TicketAttachments from "../modules/superAdmin/pages/Tickets/tabs/Attachments";
+import TicketChatHub from "../modules/superAdmin/pages/Tickets/tabs/ChatHub";
+import TicketHistoryLog from "../modules/superAdmin/pages/Tickets/tabs/HistoryLog";
+import TicketAssessment from "../modules/superAdmin/pages/Tickets/tabs/Assessment";
+import TicketTimelineAudit from "../modules/superAdmin/pages/Tickets/tabs/TimelineAudit";
 
 export default function AppRouter() {
   return (
     <Routes>
       <Route element={<RootLayout />}>
 
-        {/* PUBLIC */}
+        {/* PUBLIC ROUTES */}
         <Route path="/" element={<Splash />} />
-        <Route path="/auth/onboarding" element={<Onboarding />} />
+        <Route path="auth/onboarding" element={<Onboarding />} />
 
-        {/* AUTH SCREENS */}
+        {/* AUTH ROUTES */}
         <Route path="auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -56,7 +93,8 @@ export default function AppRouter() {
           <Route path="reset-password" element={<ResetPassword />} />
         </Route>
 
-        {/* SUPER ADMIN */}
+
+        {/* SUPER ADMIN AREA */}
         <Route
           path="super-admin/*"
           element={
@@ -66,29 +104,68 @@ export default function AppRouter() {
           }
         >
 
-          {/* DEFAULT DASHBOARD */}
+          {/* DASHBOARD */}
           <Route index element={<SaDashboard />} />
 
-          {/* ORGANIZATIONS LIST + CREATE */}
+
+          {/* ORGANIZATIONS */}
           <Route path="organizations" element={<OrganizationsList />} />
           <Route path="organizations/create" element={<OrganizationCreate />} />
 
-          {/* ORGANIZATION DETAILS + TABS */}
           <Route path="organizations/:id" element={<OrganizationDetails />}>
-            <Route index element={<Overview />} />
-            <Route path="overview" element={<Overview />} />
-            <Route path="details" element={<Details />} />
-            <Route path="billing" element={<Billing />} />
-            <Route path="users" element={<Users />} />
-            <Route path="properties" element={<Properties />} />
-            <Route path="tickets" element={<Tickets />} />
-            <Route path="maintenance" element={<Maintenance />} />
-            <Route path="documents" element={<Documents />} />
-            <Route path="activity" element={<ActivityLogs />} />
-
-            {/* NEW ROUTES */}
+            <Route index element={<OrgOverview />} />
+            <Route path="overview" element={<OrgOverview />} />
+            <Route path="details" element={<OrgDetails />} />
+            <Route path="billing" element={<OrgBilling />} />
+            <Route path="users" element={<OrgUsers />} />
+            <Route path="properties" element={<OrgProperties />} />
+            <Route path="tickets" element={<OrgTickets />} />
+            <Route path="maintenance" element={<OrgMaintenance />} />
+            <Route path="activity" element={<OrgActivityLogs />} />
             <Route path="edit" element={<OrganizationEdit />} />
             <Route path="delete" element={<OrganizationDelete />} />
+          </Route>
+
+
+          {/* PROPERTIES */}
+          <Route path="properties" element={<PropertiesList />} />
+          <Route path="properties/create" element={<PropertyCreate />} />
+
+          <Route path="properties/:id" element={<PropertyDetails />}>
+            <Route index element={<PropertyOverview />} />
+            <Route path="overview" element={<PropertyOverview />} />
+            <Route path="details" element={<PropertyDetailsTab />} />
+            <Route path="structure" element={<PropertyStructure />} />
+            <Route path="assets" element={<PropertyAssets />} />
+            <Route path="maintenance" element={<PropertyMaintenance />} />
+            <Route path="tickets" element={<PropertyTickets />} />
+            <Route path="staff" element={<PropertyStaff />} />
+            <Route path="gps" element={<PropertyGPSLogs />} />
+            <Route path="activity" element={<PropertyActivity />} />
+          </Route>
+
+          <Route path="properties/:id/edit" element={<PropertyEdit />} />
+          <Route path="properties/:id/delete" element={<PropertyDelete />} />
+
+          {/* ASSET DETAILS */}
+          <Route path="properties/assets/:assetId" element={<AssetDetails />} />
+
+
+          {/* ============================= */}
+          {/*        TICKET SYSTEM          */}
+          {/* ============================= */}
+          <Route path="tickets" element={<TicketsList />} />
+          <Route path="tickets/create" element={<TicketCreate />} />
+
+          <Route path="tickets/:id" element={<TicketDetail />}>
+            <Route index element={<TicketOverview />} />
+            <Route path="overview" element={<TicketOverview />} />
+            <Route path="detail" element={<TicketDetailTab />} />
+            <Route path="attachments" element={<TicketAttachments />} />
+            <Route path="chat" element={<TicketChatHub />} />
+            <Route path="history" element={<TicketHistoryLog />} />
+            <Route path="assessment" element={<TicketAssessment />} />
+            <Route path="timeline" element={<TicketTimelineAudit />} />
           </Route>
 
         </Route>

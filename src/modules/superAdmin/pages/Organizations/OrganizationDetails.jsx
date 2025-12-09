@@ -27,7 +27,6 @@ export default function OrganizationDetails() {
     { id: "properties", label: "Properties", icon: "domain" },
     { id: "tickets", label: "Tickets", icon: "confirmation_number" },
     { id: "maintenance", label: "Maintenance", icon: "build" },
-    { id: "documents", label: "Documents", icon: "description" },
     { id: "activity", label: "Activity Logs", icon: "history" },
   ];
 

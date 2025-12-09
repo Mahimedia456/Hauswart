@@ -38,19 +38,54 @@ export default function SaSidebar() {
           <SidebarItem to="/super-admin" icon="dashboard" label={dict.dashboard} />
         </SidebarSection>
 
-        {/* Organizations (NEW SECTION) */}
-        <SidebarSection label={dict.organizations || "Organizations"}>
+        {/* Organizations */}
+        <SidebarSection label={dict.organizations}>
           <SidebarItem
             to="/super-admin/organizations"
             icon="business_center"
-            label={dict.organizations || "Organizations"}
+            label={dict.organizations}
           />
           <SidebarItem
             to="/super-admin/organizations/create"
             icon="add_business"
-            label={dict.createOrganization || "Create Organization"}
+            label={dict.createOrganization}
           />
         </SidebarSection>
+
+        {/* ✅ NEW — Properties */}
+        <SidebarSection label={dict.properties}>
+          <SidebarItem
+            to="/super-admin/properties"
+            icon="apartment"
+            label={dict.properties}
+          />
+          <SidebarItem
+            to="/super-admin/properties/create"
+            icon="add_home_work"
+            label={dict.createProperty}
+          />
+        </SidebarSection>
+
+        {/* Tickets */}
+<SidebarSection label={dict.tickets}>
+  <SidebarItem 
+    to="/super-admin/tickets" 
+    icon="confirmation_number" 
+    label={dict.ticketsDashboard} 
+  />
+
+  <SidebarItem 
+    to="/super-admin/tickets/all" 
+    icon="lists" 
+    label={dict.ticketsAll} 
+  />
+
+  <SidebarItem 
+    to="/super-admin/tickets/create" 
+    icon="add" 
+    label={dict.ticketCreate} 
+  />
+</SidebarSection>
 
         {/* Jobs */}
         <SidebarSection label={dict.jobs}>
@@ -80,7 +115,7 @@ export default function SaSidebar() {
           <SidebarItem to="/super-admin/chat" icon="chat" label={dict.chat} />
         </SidebarSection>
 
-        {/* System Settings */}
+        {/* Settings */}
         <SidebarSection label={dict.settings}>
           <SidebarItem to="/super-admin/profile" icon="person" label={dict.profile} />
           <SidebarItem to="/super-admin/system-settings" icon="settings" label={dict.settings} />

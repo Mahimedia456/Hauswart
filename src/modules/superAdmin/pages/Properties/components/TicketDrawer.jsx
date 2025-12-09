@@ -54,7 +54,7 @@ export default function TicketDrawer({ ticket, onClose }) {
             View Timeline
           </button>
 
-          <button className="w-full rounded-lg bg-[#F38B14] text-white rounded-lg h-10 font-semibold hover:bg-black">
+          <button className="h-10 px-4 rounded-lg bg-primary text-white hover:bg-black">
             Open Full Ticket Details
           </button>
         </div>

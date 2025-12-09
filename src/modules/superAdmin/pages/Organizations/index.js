@@ -10,5 +10,4 @@ export { default as OrgUsers } from "./tabs/Users";
 export { default as OrgProperties } from "./tabs/Properties";
 export { default as OrgTickets } from "./tabs/Tickets";
 export { default as OrgMaintenance } from "./tabs/Maintenance";
-export { default as OrgDocuments } from "./tabs/Documents";
 export { default as OrgActivityLogs } from "./tabs/ActivityLogs";
