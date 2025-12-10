@@ -3,6 +3,13 @@
 import { useLanguage } from "../../../../context/LanguageContext";
 import { t } from "../../../../i18n/translations";
 
+// ✅ Correct chart imports based on your folder:
+import TicketVolumeLine from "./charts/TicketVolumeLine.jsx";
+import TicketsByCategoryPie from "./charts/TicketsByCategoryPie.jsx";
+import SLAColumnChart from "./charts/SLAColumnChart.jsx";
+import OverdueBar from "./charts/OverdueBar.jsx";
+import TicketHeatmap from "./charts/TicketHeatmap.jsx";
+
 export default function TicketsDashboard() {
   const { lang } = useLanguage();
   const dict = t[lang];
@@ -10,8 +17,8 @@ export default function TicketsDashboard() {
   return (
     <div className="space-y-8">
 
-      {/* PAGE HEADER */}
-      <div className="flex flex-wrap justify-between items-center gap-4">
+      {/* HEADER */}
+      <div className="flex flex-wrap justify-between items-center">
         <div>
           <p className="text-3xl font-bold">{dict.tkt_dash_title}</p>
           <p className="text-gray-500">{dict.tkt_dash_subtitle}</p>
@@ -29,28 +36,27 @@ export default function TicketsDashboard() {
         </div>
       </div>
 
+
       {/* KPI CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
         <KPICard
           title={dict.tkt_kpi_total}
           value="12,432"
           footer="+2.5% • All orgs"
-          statusTone="green"
         />
 
         <KPICard
           title={dict.tkt_kpi_open}
           value="8,129"
           badge="Open"
-          badgeTone="blue"
-          spark
+          badgeColor="blue"
         />
 
         <KPICard
           title={dict.tkt_kpi_overdue}
           value="345"
           footer={`${dict.tkt_kpi_overdue_breached}: 212`}
-          statusTone="red"
+          valueColor="red"
         />
 
         <KPICard
@@ -60,40 +66,42 @@ export default function TicketsDashboard() {
         />
       </div>
 
-      {/* CHARTS ROW */}
+
+      {/* ROW — TICKET VOLUME + CATEGORY */}
       <div className="grid md:grid-cols-2 gap-6">
         <Card title={dict.tkt_vol_trend} subtitle={dict.tkt_vol_trend_sub}>
-          <img
-            className="w-full h-48 object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0N96CrSRRmopyonFbW..."
-          />
+          <div className="h-64">
+            <TicketVolumeLine />
+          </div>
         </Card>
 
         <Card title={dict.tkt_by_category} subtitle={dict.tkt_by_category_sub}>
-          <img
-            className="w-full h-48 object-contain"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV8JwXeXqubxCUxUB..."
-          />
+          <div className="h-64">
+            <TicketsByCategoryPie />
+          </div>
         </Card>
       </div>
 
-      {/* SLA + OVERDUE BREAKDOWN */}
+
+      {/* ROW — SLA PERFORMANCE + OVERDUE BREAKDOWN */}
       <div className="grid md:grid-cols-2 gap-6">
         <Card title={dict.tkt_sla_perf} subtitle={dict.tkt_sla_perf_sub}>
-          <p className="text-4xl font-bold text-green-600 mt-4">82%</p>
-          <p className="text-sm text-gray-500 mb-4">{dict.tkt_sla_rate}</p>
-          <img className="h-32" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABsvQSYBXDRTpg0..." />
+          <div className="h-64">
+            <SLAColumnChart />
+          </div>
         </Card>
 
         <Card title={dict.tkt_overdue_breakdown} subtitle={dict.tkt_overdue_breakdown_sub}>
-          <img className="h-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLScouPIDtKy6f..." />
+          <div className="h-64">
+            <OverdueBar />
+          </div>
         </Card>
       </div>
 
-      {/* ORG + PROPERTY DISTRIBUTION */}
-      <div className="grid md:grid-cols-2 gap-6">
 
-        {/* ORGS */}
+      {/* PROPERTY + ORG BLOCKS */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {/* ORG TABLE */}
         <Card title={dict.tkt_top_orgs}>
           <OrgTable />
         </Card>
@@ -108,22 +116,21 @@ export default function TicketsDashboard() {
         </Card>
       </div>
 
+
       {/* HEATMAP */}
-      <div>
-        <Card title={dict.tkt_heatmap}>
-          <img
-            className="w-full"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCfid1HSpHIfqvPT..."
-          />
-        </Card>
-      </div>
+      <Card title={dict.tkt_heatmap}>
+        <div className="h-[380px]">
+          <TicketHeatmap />
+        </div>
+      </Card>
+
     </div>
   );
 }
 
-/* -------------------------------------- */
-/* COMPONENTS */
-/* -------------------------------------- */
+/* ------------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------- */
 
 function FilterButton({ label, icon = "keyboard_arrow_down" }) {
   return (
@@ -134,30 +141,22 @@ function FilterButton({ label, icon = "keyboard_arrow_down" }) {
   );
 }
 
-function KPICard({ title, value, footer, badge, badgeTone, spark, statusTone }) {
+function KPICard({ title, value, footer, badge, badgeColor = "blue", valueColor }) {
   return (
-    <div className="rounded border p-6 shadow-sm bg-white flex flex-col gap-2">
+    <div className="rounded border p-6 shadow-sm bg-white">
       <p className="text-gray-500 text-sm">{title}</p>
-      <p className={`text-3xl font-bold ${statusTone === "red" && "text-red-500"}`}>
+
+      <p className={`text-3xl font-bold ${valueColor === "red" ? "text-red-500" : ""}`}>
         {value}
       </p>
 
       {badge && (
-        <span
-          className={`px-2 py-0.5 rounded-full text-xs font-medium bg-${badgeTone}-100 text-${badgeTone}-700`}
-        >
+        <span className={`px-2 py-0.5 rounded-full text-xs font-medium bg-${badgeColor}-100 text-${badgeColor}-700`}>
           {badge}
         </span>
       )}
 
-      {spark && (
-        <img
-          className="h-6 opacity-50 ml-auto"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0N96CrSRRmopyonFbW..."
-        />
-      )}
-
-      {footer && <p className="text-xs text-gray-500">{footer}</p>}
+      {footer && <p className="text-xs text-gray-500 mt-2">{footer}</p>}
     </div>
   );
 }
@@ -182,6 +181,7 @@ function OrgTable() {
 
   return (
     <div className="flex flex-col gap-3">
+      {/* Header */}
       <div className="grid grid-cols-4 text-xs uppercase text-gray-400 font-semibold">
         <div>Organization</div>
         <div className="text-center">Open</div>
@@ -189,6 +189,7 @@ function OrgTable() {
         <div className="text-center">Overdue</div>
       </div>
 
+      {/* Rows */}
       {rows.map((r, i) => (
         <div key={i} className="grid grid-cols-4 p-2 rounded hover:bg-gray-50">
           <div>{r.org}</div>
@@ -205,12 +206,13 @@ function OrgTable() {
   );
 }
 
+/* PROPERTY LIST */
 function PropertyList() {
   const items = [
-    { name: "Grand Central Tower", issues: "12 Open Issues - Assigned: J. Doe" },
-    { name: "Riverfront Mall", issues: "9 Open Issues - Assigned: A. Smith" },
-    { name: "Skyline Business Park", issues: "7 Open Issues - Assigned: M. Jones" },
-    { name: "Oceanview Residences", issues: "5 Open Issues - Unassigned" },
+    { name: "Grand Central Tower", issues: "12 Open Issues • Assigned: J. Doe" },
+    { name: "Riverfront Mall", issues: "9 Open Issues • Assigned: A. Smith" },
+    { name: "Skyline Business Park", issues: "7 Open Issues • Assigned: M. Jones" },
+    { name: "Oceanview Residences", issues: "5 Open Issues • Unassigned" },
   ];
 
   return (
@@ -228,7 +230,7 @@ function PropertyList() {
 function Toggle() {
   return (
     <label className="relative inline-block w-10 cursor-pointer">
-      <input type="checkbox" className="toggle-checkbox absolute w-6 h-6 rounded-full bg-white border-4 cursor-pointer"/>
+      <input type="checkbox" className="toggle-checkbox absolute w-6 h-6 rounded-full bg-white border-4 cursor-pointer" />
       <span className="toggle-label block h-6 rounded-full bg-gray-300"></span>
     </label>
   );

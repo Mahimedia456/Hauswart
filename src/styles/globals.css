@@ -43,3 +43,16 @@ html, body {
 .animate-slide-up-soft {
   animation: slide-up-soft 0.4s ease-out;
 }
+.form-field {
+  background-color: #F5F5F5;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+.form-field:focus {
+  outline: none;
+  border-color: #F38B14;
+  box-shadow: 0 0 0 1px #F38B14;
+}

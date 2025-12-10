@@ -1,3 +1,4 @@
+// TicketCreate.jsx — Final UI-Correct Version
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../../../context/LanguageContext";
@@ -10,11 +11,11 @@ export default function TicketCreate() {
 
   const [form, setForm] = useState({
     title: "",
-    type: "",
+    type: "Corrective",
     category: "",
-    requestedBy: "",
-    priority: "",
-    source: "",
+    requestedBy: "Tenant",
+    priority: "Low",
+    source: "Mobile App",
     organization: "",
     floor: "",
     property: "",
@@ -30,23 +31,21 @@ export default function TicketCreate() {
 
   const update = (key, value) => setForm({ ...form, [key]: value });
 
-  const handleSubmit = () => {
-    console.log("CREATE TICKET FORM DATA:", form);
-    alert("Ticket logged in console!");
-  };
-
   return (
     <div className="p-8">
+
       {/* HEADER */}
-      <div className="flex justify-between mb-6">
+      <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-4xl font-black">{dict.createTicket}</h1>
-          <p className="text-gray-500">{dict.ticketCreateDesc}</p>
+          <h1 className="text-[#1c150d] text-4xl font-black">
+            {dict.ticketCreate}
+          </h1>
+          <p className="text-[#9c7649] mt-1">{dict.ticketCreateDesc}</p>
         </div>
 
         <button
-          className="flex items-center gap-2 text-gray-500 hover:underline"
           onClick={() => navigate("/super-admin/tickets")}
+          className="flex items-center gap-2 text-gray-500 hover:underline"
         >
           <span className="material-symbols-outlined">arrow_back</span>
           {dict.backToTickets}
@@ -54,121 +53,245 @@ export default function TicketCreate() {
       </div>
 
       {/* FORM CARD */}
-      <div className="bg-white p-8 rounded shadow">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="bg-white p-8 rounded-lg shadow-subtle">
+        <div className="flex flex-col gap-10">
 
-          {/* Ticket Information */}
+          {/* ============================ */}
+          {/* SECTION: Ticket Information */}
+          {/* ============================ */}
           <SectionTitle title={dict.ticketInfo} />
 
-          <Input label={dict.ticketTitle} value={form.title} onChange={(e) => update("title", e.target.value)} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <Select label={dict.ticketType} options={["Corrective","Preventive","Inspection","Tenant Request","Emergency"]}
-            value={form.type} onChange={(e) => update("type", e.target.value)} />
+            <Input
+              label={dict.ticketTitle}
+              placeholder="Short summary of the issue"
+              value={form.title}
+              onChange={(e) => update("title", e.target.value)}
+            />
 
-          <Select label={dict.category} options={["Electrical","HVAC","Plumbing","Cleaning","Safety"]}
-            value={form.category} onChange={(e) => update("category", e.target.value)} />
+            <Select
+              label={dict.ticketType}
+              value={form.type}
+              onChange={(e) => update("type", e.target.value)}
+              options={["Corrective", "Preventive", "Inspection", "Tenant Request", "Emergency"]}
+            />
 
-          <Select label={dict.requestedBy} options={["Tenant","Facility Manager","Caretaker","Admin"]}
-            value={form.requestedBy} onChange={(e) => update("requestedBy", e.target.value)} />
+            <Select
+              label={dict.category}
+              value={form.category}
+              onChange={(e) => update("category", e.target.value)}
+              options={["Electrical", "HVAC", "Plumbing", "Cleaning", "Safety"]}
+            />
 
-          <Select label={dict.priority} options={["Low","Medium","High","Critical"]}
-            value={form.priority} onChange={(e) => update("priority", e.target.value)} />
+            <Select
+              label={dict.requestedBy}
+              value={form.requestedBy}
+              onChange={(e) => update("requestedBy", e.target.value)}
+              options={["Tenant", "Facility Manager", "Caretaker", "Admin"]}
+            />
 
-          <Select label={dict.sourceOfRequest} options={["Mobile App","Web Panel","Email","Auto-Generated"]}
-            value={form.source} onChange={(e) => update("source", e.target.value)} />
+            <Select
+              label={dict.priority}
+              value={form.priority}
+              onChange={(e) => update("priority", e.target.value)}
+              options={["Low", "Medium", "High", "Critical"]}
+            />
 
-          {/* Location */}
+            <Select
+              label={dict.sourceOfRequest}
+              value={form.source}
+              onChange={(e) => update("source", e.target.value)}
+              options={["Mobile App", "Web Panel", "Email", "Auto-generated", "Admin Created"]}
+            />
+          </div>
+
+          {/* ============================ */}
+          {/* SECTION: Location Details */}
+          {/* ============================ */}
           <SectionTitle title={dict.locationDetails} />
 
-          <Select label={dict.organization} options={["Sunrise Towers LLC","Metro Properties"]}
-            value={form.organization} onChange={(e) => update("organization", e.target.value)} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <Select label={dict.floor} options={["Ground","1","2","3"]} value={form.floor} onChange={(e) => update("floor", e.target.value)} />
+            <Select
+              label={dict.organization}
+              value={form.organization}
+              onChange={(e) => update("organization", e.target.value)}
+              options={["Sunrise Towers LLC", "Metro Properties"]}
+            />
 
-          <Select label={dict.property} options={["Building A","Building B","Downtown Plaza"]} value={form.property} onChange={(e) => update("property", e.target.value)} />
+            <Select
+              label={dict.floor}
+              value={form.floor}
+              onChange={(e) => update("floor", e.target.value)}
+              options={["Ground", "1", "2", "3"]}
+            />
 
-          <Select label={dict.unitRoom} options={["Unit 403","Unit 201","Unit 101"]} value={form.unit} onChange={(e) => update("unit", e.target.value)} />
+            <Select
+              label={dict.property}
+              placeholder="Select an organization first"
+              value={form.property}
+              onChange={(e) => update("property", e.target.value)}
+              options={["Building A", "Building B", "Downtown Plaza"]}
+            />
 
-          <Select label={dict.asset} options={["HVAC AC","Water Pump","Fire Alarm"]} value={form.asset} onChange={(e) => update("asset", e.target.value)} />
+            <Select
+              label={dict.unitRoom}
+              value={form.unit}
+              onChange={(e) => update("unit", e.target.value)}
+              options={["Unit 403", "Unit 201", "Unit 101"]}
+            />
 
-          {/* Assignment */}
+            <Select
+              label={dict.asset}
+              value={form.asset}
+              onChange={(e) => update("asset", e.target.value)}
+              options={["HVAC AC", "Water Pump", "Fire Alarm"]}
+            />
+
+            {/* ADDRESS */}
+            <div className="col-span-1 md:col-span-2">
+              <label className="flex flex-col gap-2">
+                <span className="text-sm font-medium">{dict.address}</span>
+                <input
+                  readOnly
+                  className="form-field text-gray-500"
+                  value="Auto-populated"
+                />
+              </label>
+            </div>
+          </div>
+
+          {/* ============================ */}
+          {/* SECTION: Assignment */}
+          {/* ============================ */}
           <SectionTitle title={dict.assignment} />
 
-          <Select label={dict.assignTo} options={["Facility Manager","Caretaker","Technician","Service Provider"]}
-            value={form.assignTo} onChange={(e) => update("assignTo", e.target.value)} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <Input label={dict.userPicker} placeholder={dict.searchUser}
-            value={form.userPicker} onChange={(e) => update("userPicker", e.target.value)} />
+            <Select
+              label={dict.assignTo}
+              value={form.assignTo}
+              onChange={(e) => update("assignTo", e.target.value)}
+              options={["Facility Manager", "Caretaker", "Technician", "Service Provider"]}
+            />
 
-          {/* Dates */}
-          <Input label={dict.expectedCompletion} type="date"
-            value={form.expectedDate} onChange={(e) => update("expectedDate", e.target.value)} />
+            <Input
+              label={dict.userPicker}
+              placeholder={dict.searchUser}
+              value={form.userPicker}
+              onChange={(e) => update("userPicker", e.target.value)}
+            />
 
-          <label className="flex items-center gap-2 mt-6">
-            <input type="checkbox" checked={form.notify} onChange={(e) => update("notify", e.target.checked)} />
-            <span className="text-sm">{dict.notifyUser}</span>
-          </label>
+            <Input
+              label={dict.expectedCompletion}
+              type="date"
+              value={form.expectedDate}
+              onChange={(e) => update("expectedDate", e.target.value)}
+            />
 
-          {/* Description */}
+            <label className="flex items-center gap-2 pt-6">
+              <input
+                type="checkbox"
+                checked={form.notify}
+                onChange={(e) => update("notify", e.target.checked)}
+                className="form-checkbox text-brand-orange"
+              />
+              <span className="text-sm">{dict.notifyUser}</span>
+            </label>
+          </div>
+
+          {/* ============================ */}
+          {/* SECTION: Description */}
+          {/* ============================ */}
           <SectionTitle title={dict.descriptionNotes} />
 
-          <TextArea label={dict.description} value={form.description} onChange={(e) => update("description", e.target.value)} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <TextArea
+              label={dict.description}
+              value={form.description}
+              placeholder="Describe the issue in detail..."
+              onChange={(e) => update("description", e.target.value)}
+            />
 
-          <TextArea label={dict.internalNotes} value={form.notes} onChange={(e) => update("notes", e.target.value)} />
+            <TextArea
+              label={dict.internalNotes}
+              value={form.notes}
+              onChange={(e) => update("notes", e.target.value)}
+            />
+          </div>
         </div>
       </div>
 
-      {/* FOOTER ACTIONS */}
-      <div className="flex justify-between mt-6">
-        <button onClick={() => navigate("/super-admin/tickets")} className="px-4 py-2 bg-gray-200 rounded">
+      {/* STICKY FOOTER */}
+      <div className="sticky bottom-0 bg-white/80 backdrop-blur-sm mt-6 p-4 -mx-8 border-t flex justify-between items-center">
+        <button
+          onClick={() => navigate("/super-admin/tickets")}
+          className="px-4 h-10 rounded-lg text-sm font-bold bg-gray-100"
+        >
           {dict.cancel}
         </button>
-        <button onClick={handleSubmit} className="px-6 py-2 bg-primary text-white rounded">
-          {dict.createTicket}
+
+        <button
+          onClick={() => console.log(form)}
+          className="px-6 h-10 rounded-lg text-sm font-bold bg-[#F38B14] bg-brand-orange text-white"
+        >
+          {dict.createTicketsButton}
         </button>
       </div>
     </div>
   );
 }
 
+/* ============ COMPONENTS =============== */
+
 function SectionTitle({ title }) {
-  return (
-    <h3 className="col-span-2 text-lg font-bold mt-4 mb-2">{title}</h3>
-  );
+  return <h3 className="text-lg font-bold text-[#1c150d]">{title}</h3>;
 }
 
-function Input({ label, value, onChange, type = "text", placeholder }) {
+function Input({ label, value, onChange, placeholder, type = "text" }) {
   return (
-    <label className="flex flex-col gap-1">
-      <span className="text-sm font-medium">{label}</span>
-      <input type={type} value={value} placeholder={placeholder}
+    <label className="flex flex-col gap-2">
+      <span className="text-sm font-medium text-[#1c150d]">{label}</span>
+      <input
+        type={type}
+        value={value}
         onChange={onChange}
-        className="p-2 bg-gray-100 rounded border"
+        placeholder={placeholder}
+        className="form-field"
       />
     </label>
   );
 }
 
-function Select({ label, options, value, onChange }) {
+function Select({ label, value, onChange, options, placeholder }) {
   return (
-    <label className="flex flex-col gap-1">
-      <span className="text-sm font-medium">{label}</span>
-      <select value={value} onChange={onChange} className="p-2 bg-gray-100 rounded border">
-        <option value="">Select...</option>
-        {options.map((o) => (
-          <option key={o}>{o}</option>
+    <label className="flex flex-col gap-2">
+      <span className="text-sm font-medium text-[#1c150d]">{label}</span>
+      <select
+        value={value}
+        onChange={onChange}
+        className="form-field"
+      >
+        {placeholder && <option value="">{placeholder}</option>}
+        {options.map((opt) => (
+          <option key={opt}>{opt}</option>
         ))}
       </select>
     </label>
   );
 }
 
-function TextArea({ label, value, onChange }) {
+function TextArea({ label, value, onChange, placeholder }) {
   return (
-    <label className="flex flex-col gap-1 col-span-2">
-      <span className="text-sm font-medium">{label}</span>
-      <textarea rows="4" value={value} onChange={onChange}
-        className="p-2 bg-gray-100 rounded border"
+    <label className="flex flex-col gap-2 col-span-1 md:col-span-2">
+      <span className="text-sm font-medium text-[#1c150d]">{label}</span>
+      <textarea
+        value={value}
+        rows={5}
+        placeholder={placeholder}
+        onChange={onChange}
+        className="form-field"
       />
     </label>
   );

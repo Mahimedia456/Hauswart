@@ -162,7 +162,7 @@ export default function AssignTicketModal({ open, onClose }) {
 
           <button
             onClick={handleAssign}
-            className="px-5 py-2 bg-primary text-white rounded-lg"
+            className="px-5 py-2 bg-[#F38B14] text-white rounded-lg"
           >
             {dict.assign_btn}
           </button>

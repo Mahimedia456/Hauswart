@@ -1078,6 +1078,325 @@ ticket_notes_viewFull: "View full note",
 
 
 
+tkt_dash_title: "Tickets Dashboard",
+  tkt_dash_subtitle: "System-wide overview of ticket activity, SLAs, and workload.",
+
+  tkt_filter_org: "Organizations: All",
+  tkt_filter_property: "Properties: All",
+  tkt_filter_range: "Date Range: This Month",
+
+  tkt_kpi_total: "Total Tickets",
+  tkt_kpi_total_footer: "+2.5% • All organizations",
+  tkt_kpi_open: "Open Tickets",
+  tkt_badge_open: "Open",
+  tkt_kpi_overdue: "Overdue Tickets",
+  tkt_kpi_overdue_footer: "SLA Breached: 212",
+  tkt_kpi_resolved_today: "Resolved Today",
+  tkt_kpi_last24: "Last 24 hours",
+
+  tkt_vol_trend: "Ticket Volume Trend",
+  tkt_vol_trend_sub: "Overall ticket flow across all organizations",
+
+  tkt_by_category: "Tickets by Category",
+  tkt_by_category_sub: "Breakdown of tickets by service category",
+
+  tkt_sla_perf: "SLA Performance",
+  tkt_sla_perf_sub: "SLA compliance in current reporting period",
+
+  tkt_overdue_breakdown: "Overdue Breakdown",
+  tkt_overdue_breakdown_sub: "Age of tickets that breached SLA",
+
+  tkt_top_orgs: "Top 5 Tickets by Organization",
+  tkt_by_property: "Tickets by Property",
+  tkt_high_priority_only: "High Priority Only",
+
+  tkt_heatmap: "Tickets Heatmap (Time vs Day)",
+  tkt_heatmap_sub: "Ticket density visualized by day and time",
+
+  tkt_org: "Organization",
+  tkt_open: "Open",
+  tkt_in_progress: "In Progress",
+  tkt_overdue: "Overdue",
+  tkt_view_all: "View All",
+
+ticketCreate: "Create New Ticket",
+ticketCreateDesc: "Log a new issue and assign it to the correct team.",
+backToTickets: "Back to All Tickets",
+
+// Sections
+ticketInfo: "Ticket Information",
+locationDetails: "Location Details",
+assignment: "Assignment",
+descriptionNotes: "Description & Notes",
+
+// Fields
+ticketTitle: "Ticket Title*",
+ticketType: "Ticket Type",
+category: "Category*",
+requestedBy: "Requested By",
+priority: "Priority*",
+sourceOfRequest: "Source of Request",
+
+organization: "Organization*",
+property: "Property*",
+floor: "Floor",
+unitRoom: "Unit / Room",
+address: "Address",
+asset: "Asset",
+
+assignTo: "Assign To*",
+userPicker: "User Picker",
+searchUser: "Search for a user...",
+expectedCompletion: "Expected Completion Date",
+notifyUser: "Notify User",
+
+description: "Description*",
+internalNotes: "Internal Notes",
+
+cancel: "Cancel",
+createTicketsButton: "Create Tickets",
+createTicketButton: "Create Ticket",
+cancelChanges: "Cancel Changes",
+saveChanges: "Save Changes",
+closeTicket: "Close Ticket",
+backToTicket: "Back to Ticket",
+ticketEdit: "Edit Ticket",
+ticketEditDesc: "Update ticket information and assignment.",
+
+
+ticket_overview: "Overview",
+ticket_details: "Details",
+ticket_attachments: "Attachments",
+ticket_history: "History Log",
+ticket_chat: "Chat Hub",
+ticket_assessment: "Assessment",
+ticket_timeline: "Timeline Audit",
+
+
+title: "Title",
+priority: "Priority",
+category: "Category",
+ticketType: "Ticket Type",
+sourceOfRequest: "Source",
+requestedBy: "Requested By",
+slaDue: "SLA Due",
+lastUpdated: "Last Updated",
+description: "Description",
+internalNotes: "Internal Notes",
+timeline: "Timeline",
+attachments: "Attachments",
+
+
+
+
+requestedBy: "Requested By",
+assignedTo: "Assigned To",
+createdAt: "Created Date",
+highlights: "Highlights",
+latestEvent: "Latest event",
+messages: "Messages",
+historyLog: "History Log",
+assessment: "Assessment",
+recentTimeline: "Recent Timeline",
+addInternalNote: "Add Internal Note",
+
+
+attachmentsForTicket: "Attachments for Ticket",
+attachmentsSubtitle: "View, upload, tag, and manage all media files linked to this ticket.",
+backToTicket: "Back to Ticket",
+uploadFiles: "Upload Files",
+searchPlaceholder: "Search by file name or tag",
+sortNewest: "Sort: Newest First",
+clearFilters: "Clear Filters",
+fileType: "File Type",
+taggedAs: "Tagged As",
+uploadedBy: "Uploaded By",
+dateRange: "Date Range",
+fileDetails: "File Details",
+fileName: "File Name",
+fileType: "File Type",
+fileSize: "File Size",
+dimensions: "Dimensions",
+uploadDate: "Upload Date",
+tags: "Tags",
+addTag: "Add Tag",
+timeline: "Timeline",
+addToTimeline: "Add this attachment to ticket timeline",
+updateAttachment: "Update Attachment",
+download: "Download",
+deleteFile: "Delete File",
+ticketHistoryLog: "Ticket History Log",
+historySubtitle: "A full audit trail of every action performed on this ticket.",
+backToTicket: "Back to Ticket Detail",
+exportLog: "Export Log",
+filterEvents: "Filter Events",
+performedBy: "Performed By",
+allUsers: "All Users",
+tenant: "Tenant",
+technician: "Technician",
+admin: "Admin",
+dateRange: "Date Range",
+impactLevel: "Impact Level",
+allLevels: "All Levels",
+low: "Low",
+medium: "Medium",
+high: "High",
+searchHistory: "Search history events...",
+eventType: "Event Type",
+created: "Created",
+assignmentChange: "Assignment Change",
+statusChange: "Status Change",
+noteAdded: "Note Added",
+slaEvent: "SLA Event",
+clearFilters: "Clear Filters",
+
+slaBreach: "SLA Breach",
+firstResponseTime: "First Response Time",
+slaFirstResponse: "First response time",
+statusChanged: "Status Changed",
+attachmentUploaded: "Attachment Uploaded",
+ticketCreated: "Ticket Created",
+
+subject: "Subject",
+download: "Download",
+
+auditInspector: "Audit Metadata Inspector",
+selectEvent: "Select an event from the timeline to view its detailed metadata.",
+participants: "Participants",
+tenant: "Tenant",
+facilityManager: "Facility Manager",
+technician: "Technician",
+superAdmin: "Super Admin",
+
+filters: "Filters",
+allMessages: "All Messages",
+attachmentsOnly: "Attachments Only",
+adminMessages: "Admin Messages",
+voiceNotes: "Voice Notes",
+searchMessages: "Search messages...",
+
+ticketTitle: "Ticket",
+locationSample: "Floor 2 → Unit 201 → Server Room",
+inProgress: "In Progress",
+
+writeMessage: "Write a message...",
+messageDetails: "Message Details",
+noMessageSelected: "Select a message to view details",
+
+you: "You",
+assessment_title: "Ticket Assessment",
+assessment_subtitle: "Review diagnostic details, risk rating, and recommended actions.",
+assessment_overview: "Assessment Overview",
+priority: "Priority",
+category: "Category",
+property: "Property",
+unit: "Unit",
+sla_remaining: "SLA Remaining",
+assessment_info: "Assessment affects SLA, risk levels, and required technician skill set.",
+
+root_cause: "Root Cause Analysis",
+cause_1: "Clogged condenser coil reducing airflow.",
+cause_2: "Refrigerant pressure imbalance detected during inspection.",
+cause_3: "Unit maintenance overdue by 3 months.",
+
+risk_assessment: "Risk Assessment",
+risk_score: "Risk Score",
+impact: "Impact",
+impact_text: "Issue may affect cooling and server room stability.",
+urgency: "Urgency",
+urgency_text: "Requires immediate attention to avoid downtime.",
+
+rec_actions: "Recommended Actions",
+action_1_title: "Clean condenser coil",
+action_1_desc: "Perform full cleaning to restore airflow efficiency.",
+action_2_title: "Check refrigerant levels",
+action_2_desc: "Balance pressure and ensure no leakage.",
+action_3_title: "Replace worn components",
+action_3_desc: "Proactively replace filters and weak parts.",
+
+suggested_personnel: "Suggested Technician (AI)",
+technician: "Technician",
+skill_match: "Best skill match",
+fast_response: "Fast response",
+low_workload: "Low workload",
+assign_now: "Assign Now",
+ticket_notes_title: "Internal Notes",
+ticket_notes_sub: "Notes visible only to Super Admin, Facility Managers, and Admins.",
+ticket_notes_addNew: "Add a New Internal Note",
+ticket_notes_ph: "Write an internal note...",
+ticket_notes_attach: "Attach files (optional)",
+ticket_notes_tag: "Tag this note (optional)",
+
+ticket_notes_tag_general: "General",
+ticket_notes_tag_escalation: "Escalation",
+ticket_notes_tag_sla: "SLA Exception",
+ticket_notes_tag_safety: "Safety Concern",
+
+ticket_notes_high: "Record as high-importance note",
+ticket_notes_highLabel: "High Importance",
+
+ticket_notes_info: "These notes are not visible to tenants or service providers.",
+ticket_notes_history: "Notes History",
+
+ticket_notes_dummy1: "Tenant reported a significant leak. Maintenance assigned. Monitor closely.",
+ticket_notes_dummy2: "Security cameras installed. Please see attached vendor report.",
+
+ticket_notes_viewFull: "View full note",
+ticket_notes_submit: "Add Note",
+
+action_edit: "Edit",
+action_delete: "Delete",
+action_close: "Close",
+ticket_notes_title: "Internal Notes",
+ticket_notes_sub: "Notes visible only to Super Admin, Facility Managers, and Admins.",
+ticket_notes_addNew: "Add a New Internal Note",
+ticket_notes_ph: "Write an internal note...",
+ticket_notes_attach: "Attach files (optional)",
+ticket_notes_tag: "Tag this note (optional)",
+
+ticket_notes_tag_general: "General",
+ticket_notes_tag_escalation: "Escalation",
+ticket_notes_tag_sla: "SLA Exception",
+ticket_notes_tag_safety: "Safety Concern",
+
+ticket_notes_high: "Record as high-importance note",
+ticket_notes_highLabel: "High Importance",
+
+ticket_notes_info: "These notes are not visible to tenants or service providers.",
+ticket_notes_history: "Notes History",
+
+ticket_notes_dummy1: "Tenant reported a significant leak. Maintenance assigned. Monitor closely.",
+ticket_notes_dummy2: "Security cameras installed. Please see attached vendor report.",
+
+ticket_notes_viewFull: "View full note",
+ticket_notes_submit: "Add Note",
+
+action_edit: "Edit",
+action_delete: "Delete",
+action_close: "Close",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2194,6 +2513,312 @@ upload: "Hochladen",
 
 
 ticket_notes_viewFull: "Vollständige Notiz anzeigen",
+
+  tkt_dash_title: "Ticket-Dashboard",
+  tkt_dash_subtitle: "Systemweite Übersicht über Ticketaktivität, SLAs und Workload.",
+
+  tkt_filter_org: "Organisationen: Alle",
+  tkt_filter_property: "Liegenschaften: Alle",
+  tkt_filter_range: "Zeitraum: Dieser Monat",
+
+  tkt_kpi_total: "Gesamtzahl Tickets",
+  tkt_kpi_total_footer: "+2.5% • Alle Organisationen",
+  tkt_kpi_open: "Offene Tickets",
+  tkt_badge_open: "Offen",
+  tkt_kpi_overdue: "Überfällige Tickets",
+  tkt_kpi_overdue_footer: "SLA verletzt: 212",
+  tkt_kpi_resolved_today: "Heute gelöst",
+  tkt_kpi_last24: "Letzte 24 Stunden",
+
+  tkt_vol_trend: "Ticket-Volumentrend",
+  tkt_vol_trend_sub: "Gesamter Ticketfluss über alle Organisationen",
+
+  tkt_by_category: "Tickets nach Kategorie",
+  tkt_by_category_sub: "Aufteilung der Tickets nach Dienstleistungskategorie",
+
+  tkt_sla_perf: "SLA-Leistung",
+  tkt_sla_perf_sub: "SLA-Einhaltung im aktuellen Zeitraum",
+
+  tkt_overdue_breakdown: "Überfällig nach Zeit",
+  tkt_overdue_breakdown_sub: "Alter der Tickets, die eine SLA verletzt haben",
+
+  tkt_top_orgs: "Top 5 Tickets nach Organisation",
+  tkt_by_property: "Tickets nach Liegenschaft",
+  tkt_high_priority_only: "Nur hohe Priorität",
+
+  tkt_heatmap: "Ticket-Heatmap (Zeit vs Tag)",
+  tkt_heatmap_sub: "Ticket-Dichte nach Tagen und Uhrzeiten",
+
+  tkt_org: "Organisation",
+  tkt_open: "Offen",
+  tkt_in_progress: "In Bearbeitung",
+  tkt_overdue: "Überfällig",
+  tkt_view_all: "Alle anzeigen",
+
+
+  ticketCreate: "Neues Ticket erstellen",
+ticketCreateDesc: "Erfassen Sie ein neues Problem und weisen Sie es dem richtigen Team zu.",
+backToTickets: "Zurück zu allen Tickets",
+
+// Sections
+ticketInfo: "Ticketinformationen",
+locationDetails: "Standortdetails",
+assignment: "Zuweisung",
+descriptionNotes: "Beschreibung & Notizen",
+
+// Fields
+ticketTitle: "Tickettitel*",
+ticketType: "Tickettyp",
+category: "Kategorie*",
+requestedBy: "Angefordert von",
+priority: "Priorität*",
+sourceOfRequest: "Anfragequelle",
+
+organization: "Organisation*",
+property: "Immobilie*",
+floor: "Stockwerk",
+unitRoom: "Einheit / Raum",
+address: "Adresse",
+asset: "Anlage",
+
+assignTo: "Zuweisen an*",
+userPicker: "Benutzerauswahl",
+searchUser: "Benutzer suchen...",
+expectedCompletion: "Voraussichtliches Abschlussdatum",
+notifyUser: "Benutzer benachrichtigen",
+
+description: "Beschreibung*",
+internalNotes: "Interne Notizen",
+
+cancel: "Abbrechen",
+createTicketsButton: "Tickets erstellen",
+createTicketButton: "Ticket erstellen",
+cancelChanges: "Änderungen verwerfen",
+saveChanges: "Änderungen speichern",
+closeTicket: "Ticket schließen",
+backToTicket: "Zurück zum Ticket",
+ticketEdit: "Ticket bearbeiten",
+ticketEditDesc: "Ticketinformationen und Zuweisung aktualisieren.",
+
+ticket_overview: "Übersicht",
+ticket_details: "Details",
+ticket_attachments: "Anhänge",
+ticket_history: "Verlauf",
+ticket_chat: "Chat",
+ticket_assessment: "Bewertung",
+ticket_timeline: "Zeitachse",
+
+title: "Titel",
+priority: "Priorität",
+category: "Kategorie",
+ticketType: "Tickettyp",
+sourceOfRequest: "Quelle der Anfrage",
+requestedBy: "Angefordert von",
+slaDue: "SLA Fällig",
+lastUpdated: "Zuletzt aktualisiert",
+description: "Beschreibung",
+internalNotes: "Interne Notizen",
+timeline: "Zeitverlauf",
+attachments: "Anhänge",
+
+requestedBy: "Angefordert von",
+assignedTo: "Zugewiesen an",
+createdAt: "Erstellt am",
+highlights: "Highlights",
+latestEvent: "Letztes Ereignis",
+messages: "Nachrichten",
+historyLog: "Verlauf",
+assessment: "Bewertung",
+recentTimeline: "Letzte Zeitleiste",
+addInternalNote: "Interne Notiz hinzufügen",
+attachmentsForTicket: "Anhänge für Ticket",
+attachmentsSubtitle: "Anzeigen, hochladen, markieren und verwalten Sie alle Medien, die mit diesem Ticket verknüpft sind.",
+backToTicket: "Zurück zum Ticket",
+uploadFiles: "Dateien hochladen",
+searchPlaceholder: "Nach Dateiname oder Tag suchen",
+sortNewest: "Sortieren: Neueste zuerst",
+clearFilters: "Filter löschen",
+fileType: "Dateityp",
+taggedAs: "Markiert als",
+uploadedBy: "Hochgeladen von",
+dateRange: "Datumsbereich",
+fileDetails: "Dateidetails",
+fileName: "Dateiname",
+fileSize: "Dateigröße",
+dimensions: "Abmessungen",
+uploadDate: "Upload-Datum",
+tags: "Tags",
+addTag: "Tag hinzufügen",
+timeline: "Zeitleiste",
+addToTimeline: "Diesen Anhang zur Ticket-Zeitleiste hinzufügen",
+updateAttachment: "Anhang aktualisieren",
+download: "Herunterladen",
+deleteFile: "Datei löschen",
+
+
+ticketHistoryLog: "Ticket-Verlauf",
+historySubtitle: "Eine vollständige Audit-Historie aller Aktionen dieses Tickets.",
+backToTicket: "Zurück zum Ticket",
+exportLog: "Protokoll exportieren",
+filterEvents: "Ereignisse filtern",
+performedBy: "Ausgeführt von",
+allUsers: "Alle Benutzer",
+tenant: "Mieter",
+technician: "Techniker",
+admin: "Administrator",
+dateRange: "Datumsbereich",
+impactLevel: "Auswirkungsgrad",
+allLevels: "Alle Stufen",
+low: "Niedrig",
+medium: "Mittel",
+high: "Hoch",
+searchHistory: "Verlauf durchsuchen...",
+eventType: "Ereignistyp",
+created: "Erstellt",
+assignmentChange: "Zuweisungsänderung",
+statusChange: "Statusänderung",
+noteAdded: "Notiz hinzugefügt",
+slaEvent: "SLA-Ereignis",
+clearFilters: "Filter löschen",
+
+slaBreach: "SLA-Verstoß",
+firstResponseTime: "Reaktionszeit",
+slaFirstResponse: "Reaktionszeit",
+statusChanged: "Status geändert",
+attachmentUploaded: "Anhang hochgeladen",
+ticketCreated: "Ticket erstellt",
+
+subject: "Betreff",
+download: "Download",
+
+auditInspector: "Audit-Metadaten-Inspektor",
+selectEvent: "Wählen Sie ein Ereignis aus, um die Details anzuzeigen.",
+participants: "Teilnehmer",
+tenant: "Mieter",
+facilityManager: "Facility Manager",
+technician: "Techniker",
+superAdmin: "Super Admin",
+
+filters: "Filter",
+allMessages: "Alle Nachrichten",
+attachmentsOnly: "Nur Anhänge",
+adminMessages: "Admin-Nachrichten",
+voiceNotes: "Sprachnotizen",
+searchMessages: "Nachrichten durchsuchen...",
+
+ticketTitle: "Ticket",
+locationSample: "Etage 2 → Einheit 201 → Serverraum",
+inProgress: "In Bearbeitung",
+
+writeMessage: "Nachricht schreiben...",
+messageDetails: "Nachrichtendetails",
+noMessageSelected: "Wählen Sie eine Nachricht aus, um Details anzuzeigen.",
+
+you: "Sie",
+
+assessment_title: "Ticketbewertung",
+assessment_subtitle: "Überprüfen Sie Diagnose, Risikoeinstufung und empfohlene Maßnahmen.",
+assessment_overview: "Bewertungsübersicht",
+priority: "Priorität",
+category: "Kategorie",
+property: "Immobilie",
+unit: "Einheit",
+sla_remaining: "SLA verbleibend",
+assessment_info: "Die Bewertung beeinflusst SLA, Risiko und erforderliche Fähigkeiten.",
+
+root_cause: "Ursachenanalyse",
+cause_1: "Verstopfte Kondensatorspule reduziert den Luftstrom.",
+cause_2: "Ungleichgewicht des Kältemitteldrucks festgestellt.",
+cause_3: "Wartung seit 3 Monaten überfällig.",
+
+risk_assessment: "Risikobewertung",
+risk_score: "Risikowert",
+impact: "Auswirkung",
+impact_text: "Problem kann Kühlung und Serverraumstabilität beeinträchtigen.",
+urgency: "Dringlichkeit",
+urgency_text: "Erfordert sofortige Maßnahmen, um Ausfallzeit zu vermeiden.",
+
+rec_actions: "Empfohlene Maßnahmen",
+action_1_title: "Kondensatorspule reinigen",
+action_1_desc: "Reinigung durchführen, um Luftstrom zu verbessern.",
+action_2_title: "Kältemittel prüfen",
+action_2_desc: "Druck ausgleichen und Undichtigkeiten prüfen.",
+action_3_title: "Verschlissene Teile ersetzen",
+action_3_desc: "Filter und verschlissene Komponenten austauschen.",
+
+suggested_personnel: "Vorgeschlagener Techniker (KI)",
+technician: "Techniker",
+skill_match: "Beste Übereinstimmung",
+fast_response: "Schnelle Reaktion",
+low_workload: "Geringe Auslastung",
+assign_now: "Jetzt zuweisen",
+ticket_notes_title: "Interne Notizen",
+ticket_notes_sub: "Notizen sind nur für Super Admin, Facility Manager und Administratoren sichtbar.",
+
+ticket_notes_addNew: "Neue interne Notiz hinzufügen",
+ticket_notes_ph: "Interne Notiz schreiben...",
+ticket_notes_attach: "Dateien anhängen (optional)",
+
+ticket_notes_tag: "Notiz markieren (optional)",
+ticket_notes_tag_general: "Allgemein",
+ticket_notes_tag_escalation: "Eskalation",
+ticket_notes_tag_sla: "SLA-Ausnahme",
+ticket_notes_tag_safety: "Sicherheitsrelevantes Thema",
+
+ticket_notes_high: "Als wichtige Notiz markieren",
+ticket_notes_highLabel: "Hohe Wichtigkeit",
+
+ticket_notes_info: "Diese Notizen sind für Mieter oder Dienstleister nicht sichtbar.",
+
+ticket_notes_history: "Notizverlauf",
+
+ticket_notes_dummy1:
+  "Mieter meldete einen erheblichen Wasserschaden. Wartungsteam wurde zugewiesen. Bitte engmaschig überwachen.",
+ticket_notes_dummy2:
+  "Neue Sicherheitskameras wurden installiert. Siehe beigefügten Bericht des Anbieters.",
+
+ticket_notes_viewFull: "Vollständige Notiz anzeigen",
+ticket_notes_submit: "Notiz hinzufügen",
+
+action_edit: "Bearbeiten",
+action_delete: "Löschen",
+action_close: "Schließen",
+
+ticket_notes_title: "Interne Notizen",
+ticket_notes_sub: "Notizen sind nur für Super Admin, Facility Manager und Administratoren sichtbar.",
+
+ticket_notes_addNew: "Neue interne Notiz hinzufügen",
+ticket_notes_ph: "Interne Notiz schreiben...",
+ticket_notes_attach: "Dateien anhängen (optional)",
+
+ticket_notes_tag: "Notiz markieren (optional)",
+ticket_notes_tag_general: "Allgemein",
+ticket_notes_tag_escalation: "Eskalation",
+ticket_notes_tag_sla: "SLA-Ausnahme",
+ticket_notes_tag_safety: "Sicherheitsrelevantes Thema",
+
+ticket_notes_high: "Als wichtige Notiz markieren",
+ticket_notes_highLabel: "Hohe Wichtigkeit",
+
+ticket_notes_info: "Diese Notizen sind für Mieter oder Dienstleister nicht sichtbar.",
+
+ticket_notes_history: "Notizverlauf",
+
+ticket_notes_dummy1:
+  "Mieter meldete einen erheblichen Wasserschaden. Wartungsteam wurde zugewiesen. Bitte engmaschig überwachen.",
+ticket_notes_dummy2:
+  "Neue Sicherheitskameras wurden installiert. Siehe beigefügten Bericht des Anbieters.",
+
+ticket_notes_viewFull: "Vollständige Notiz anzeigen",
+ticket_notes_submit: "Notiz hinzufügen",
+
+action_edit: "Bearbeiten",
+action_delete: "Löschen",
+action_close: "Schließen",
+
+
+
+
 
 
 

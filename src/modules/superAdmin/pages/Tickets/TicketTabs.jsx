@@ -1,55 +1,36 @@
-import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../../../context/LanguageContext";
 import { t } from "../../../../i18n/translations";
 
 export default function TicketTabs({ activeTab, setActiveTab, ticketId }) {
-  const navigate = useNavigate();
   const { lang } = useLanguage();
   const dict = t[lang];
 
   const tabs = [
-    { id: "overview", label: dict.ticket_tab_overview },
-    { id: "detail", label: dict.ticket_tab_detail },
-    { id: "attachments", label: dict.ticket_tab_attachments },
-    {
-      id: "conversation",
-      label: dict.ticket_tab_conversation,
-      external: `/super-admin/tickets/${ticketId}/conversation`,
-    },
-    { id: "history", label: dict.ticket_tab_history },
-    { id: "chat", label: dict.ticket_tab_chathub },
-    { id: "assessment", label: dict.ticket_tab_assessment },
-    { id: "timeline", label: dict.ticket_tab_timeline },
+    { id: "overview", label: dict.ticket_overview || "Overview" },
+    { id: "detail", label: dict.ticket_details || "Details" },
+    { id: "attachments", label: dict.ticket_attachments || "Attachments" },
+    { id: "history", label: dict.ticket_history || "History" },
+    { id: "chat", label: dict.ticket_chat || "Chat" },
+    { id: "assessment", label: dict.ticket_assessment || "Assessment" },
   ];
 
   return (
-    <div className="bg-white/80 rounded-2xl border border-slate-200 shadow p-3 flex gap-2 overflow-x-auto">
-      {tabs.map((tab) =>
-        tab.external ? (
-          <button
-            key={tab.id}
-            onClick={() => navigate(tab.external)}
-            className="px-4 py-2 rounded-xl text-sm font-medium bg-slate-100 hover:bg-slate-200"
-          >
-            {tab.label}
-          </button>
-        ) : (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`
-              px-4 py-2 rounded-xl text-sm font-medium transition
-              ${
-                activeTab === tab.id
-                  ? "bg-primary text-white shadow"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-              }
-            `}
-          >
-            {tab.label}
-          </button>
-        )
-      )}
+    <div className="bg-white rounded-xl border border-gray-200 px-4 py-2 flex gap-2 overflow-x-auto shadow-sm">
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`
+            px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap
+            ${activeTab === tab.id 
+              ? "bg-[#F38B14] text-white shadow-sm" 
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }
+          `}
+        >
+          {tab.label}
+        </button>
+      ))}
     </div>
   );
 }

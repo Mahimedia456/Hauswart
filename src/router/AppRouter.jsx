@@ -18,7 +18,6 @@ import ProtectedRoute from "./ProtectedRoute";
 // SUPER ADMIN DASHBOARD
 import SaDashboard from "../modules/superAdmin/pages/Dashboard";
 
-
 // ORGANIZATION MODULE
 import OrganizationsList from "../modules/superAdmin/pages/Organizations/OrganizationsList";
 import OrganizationCreate from "../modules/superAdmin/pages/Organizations/OrganizationCreate";
@@ -36,7 +35,6 @@ import OrgActivityLogs from "../modules/superAdmin/pages/Organizations/tabs/Acti
 import OrganizationEdit from "../modules/superAdmin/pages/Organizations/OrganizationEdit";
 import OrganizationDelete from "../modules/superAdmin/pages/Organizations/OrganizationDelete";
 
-
 // PROPERTY MODULE
 import PropertiesList from "../modules/superAdmin/pages/Properties/PropertiesList";
 import PropertyCreate from "../modules/superAdmin/pages/Properties/PropertyCreate";
@@ -49,7 +47,7 @@ import PropertyOverview from "../modules/superAdmin/pages/Properties/tabs/Overvi
 import PropertyDetailsTab from "../modules/superAdmin/pages/Properties/tabs/Details";
 import PropertyStructure from "../modules/superAdmin/pages/Properties/tabs/Structure";
 import PropertyAssets from "../modules/superAdmin/pages/Properties/tabs/Assets";
-import PropertyMaintenance from "../modules/superAdmin/pages/Properties/tabs/Maintenance.jsx";
+import PropertyMaintenance from "../modules/superAdmin/pages/Properties/tabs/Maintenance";
 import PropertyTickets from "../modules/superAdmin/pages/Properties/tabs/Tickets";
 import PropertyStaff from "../modules/superAdmin/pages/Properties/tabs/Staff";
 import PropertyGPSLogs from "../modules/superAdmin/pages/Properties/tabs/GPS";
@@ -58,13 +56,14 @@ import PropertyActivity from "../modules/superAdmin/pages/Properties/tabs/Activi
 // ASSET DETAILS
 import AssetDetails from "../modules/superAdmin/pages/Properties/assetDetails/AssetDetails.jsx";
 
-
 // -----------------------------------------
 // TICKETS MODULE — FULL SYSTEM
 // -----------------------------------------
+import TicketsDashboard from "../modules/superAdmin/pages/Tickets/TicketsDashboard";
 import TicketsList from "../modules/superAdmin/pages/Tickets/TicketsList";
 import TicketCreate from "../modules/superAdmin/pages/Tickets/TicketCreate";
 import TicketDetail from "../modules/superAdmin/pages/Tickets/TicketDetail";
+import EditTicket from "../modules/superAdmin/pages/Tickets/EditTicket";
 
 // Ticket Tabs
 import TicketOverview from "../modules/superAdmin/pages/Tickets/tabs/Overview";
@@ -73,18 +72,20 @@ import TicketAttachments from "../modules/superAdmin/pages/Tickets/tabs/Attachme
 import TicketChatHub from "../modules/superAdmin/pages/Tickets/tabs/ChatHub";
 import TicketHistoryLog from "../modules/superAdmin/pages/Tickets/tabs/HistoryLog";
 import TicketAssessment from "../modules/superAdmin/pages/Tickets/tabs/Assessment";
-import TicketTimelineAudit from "../modules/superAdmin/pages/Tickets/tabs/TimelineAudit";
+
+// NEW — Dedicated full conversation page
+import TicketConversation from "../modules/superAdmin/pages/Tickets/TicketConversation";
 
 export default function AppRouter() {
   return (
     <Routes>
       <Route element={<RootLayout />}>
 
-        {/* PUBLIC ROUTES */}
+        {/* PUBLIC */}
         <Route path="/" element={<Splash />} />
         <Route path="auth/onboarding" element={<Onboarding />} />
 
-        {/* AUTH ROUTES */}
+        {/* AUTH */}
         <Route path="auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -93,8 +94,7 @@ export default function AppRouter() {
           <Route path="reset-password" element={<ResetPassword />} />
         </Route>
 
-
-        {/* SUPER ADMIN AREA */}
+        {/* SUPER ADMIN */}
         <Route
           path="super-admin/*"
           element={
@@ -106,7 +106,6 @@ export default function AppRouter() {
 
           {/* DASHBOARD */}
           <Route index element={<SaDashboard />} />
-
 
           {/* ORGANIZATIONS */}
           <Route path="organizations" element={<OrganizationsList />} />
@@ -122,10 +121,10 @@ export default function AppRouter() {
             <Route path="tickets" element={<OrgTickets />} />
             <Route path="maintenance" element={<OrgMaintenance />} />
             <Route path="activity" element={<OrgActivityLogs />} />
-            <Route path="edit" element={<OrganizationEdit />} />
-            <Route path="delete" element={<OrganizationDelete />} />
           </Route>
 
+          <Route path="organizations/:id/edit" element={<OrganizationEdit />} />
+          <Route path="organizations/:id/delete" element={<OrganizationDelete />} />
 
           {/* PROPERTIES */}
           <Route path="properties" element={<PropertiesList />} />
@@ -150,13 +149,23 @@ export default function AppRouter() {
           {/* ASSET DETAILS */}
           <Route path="properties/assets/:assetId" element={<AssetDetails />} />
 
+          {/* ============================= */}
+          {/*       TICKET SYSTEM          */}
+          {/* ============================= */}
 
-          {/* ============================= */}
-          {/*        TICKET SYSTEM          */}
-          {/* ============================= */}
-          <Route path="tickets" element={<TicketsList />} />
+          {/* DASHBOARD */}
+          <Route path="tickets" element={<TicketsDashboard />} />
+
+          {/* ALL LIST */}
+          <Route path="tickets/all" element={<TicketsList />} />
+
+          {/* CREATE */}
           <Route path="tickets/create" element={<TicketCreate />} />
 
+          {/* EDIT */}
+          <Route path="tickets/:id/edit" element={<EditTicket />} />
+
+          {/* DETAIL + NESTED TABS */}
           <Route path="tickets/:id" element={<TicketDetail />}>
             <Route index element={<TicketOverview />} />
             <Route path="overview" element={<TicketOverview />} />
@@ -165,8 +174,13 @@ export default function AppRouter() {
             <Route path="chat" element={<TicketChatHub />} />
             <Route path="history" element={<TicketHistoryLog />} />
             <Route path="assessment" element={<TicketAssessment />} />
-            <Route path="timeline" element={<TicketTimelineAudit />} />
           </Route>
+
+          {/* NEW — FULL CONVERSATION PAGE (Correct route) */}
+          <Route
+            path="tickets/:id/conversation"
+            element={<TicketConversation />}
+          />
 
         </Route>
       </Route>

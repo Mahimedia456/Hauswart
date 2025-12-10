@@ -3,17 +3,51 @@ import { useState } from "react";
 import TicketHeader from "./TicketHeader";
 import TicketTabs from "./TicketTabs";
 
+import AssignTicketModal from "./AssignTicketModal"; // ✅ NEW
+
+import Overview from "./tabs/Overview";
+import Detail from "./tabs/Detail";
+import Attachments from "./tabs/Attachments";
+import HistoryLog from "./tabs/HistoryLog";
+import ChatHub from "./tabs/ChatHub";
+import Assessment from "./tabs/Assessment";
+
 export default function TicketDetail() {
   const { id } = useParams();
   const [activeTab, setActiveTab] = useState("overview");
 
+  // Ticket sample (replace later)
+  const ticket = {
+    id,
+    title: "Air conditioning not cooling",
+    category: "HVAC",
+    status: "In Progress",
+  };
+
+  // NEW — Assign Modal
+  const [openAssignModal, setOpenAssignModal] = useState(false);
+
   return (
     <div className="p-6 space-y-6">
+
+      {/* ASSIGN MODAL */}
+      <AssignTicketModal 
+        open={openAssignModal}
+        onClose={() => setOpenAssignModal(false)}
+      />
+
       {/* HEADER */}
-      <TicketHeader ticketId={id} />
+      <TicketHeader 
+        ticket={ticket}
+        onOpenAssign={() => setOpenAssignModal(true)} // ✅ OPEN MODAL
+      />
 
       {/* TABS */}
-      <TicketTabs activeTab={activeTab} setActiveTab={setActiveTab} ticketId={id} />
+      <TicketTabs 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        ticketId={id} 
+      />
 
       {/* TAB CONTENT */}
       <div>
@@ -23,17 +57,7 @@ export default function TicketDetail() {
         {activeTab === "history" && <HistoryLog />}
         {activeTab === "chat" && <ChatHub />}
         {activeTab === "assessment" && <Assessment />}
-        {activeTab === "timeline" && <TimelineAudit />}
       </div>
     </div>
   );
 }
-
-/* Lazy imports to avoid circular errors */
-import Overview from "./tabs/Overview";
-import Detail from "./tabs/Detail";
-import Attachments from "./tabs/Attachments";
-import HistoryLog from "./tabs/HistoryLog";
-import ChatHub from "./tabs/ChatHub";
-import Assessment from "./tabs/Assessment";
-import TimelineAudit from "./tabs/TimelineAudit";

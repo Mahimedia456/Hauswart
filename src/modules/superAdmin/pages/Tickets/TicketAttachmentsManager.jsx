@@ -1,7 +1,7 @@
 // src/modules/superAdmin/components/tickets/InternalNotesModal.jsx
 
-import { useLanguage } from "../../../../context/LanguageContext";
-import { t } from "../../../../i18n/translations";
+import { useLanguage } from "../../../../../context/LanguageContext";
+import { t } from "../../../../../i18n/translations";
 
 export default function InternalNotesModal({ open, onClose }) {
   const { lang } = useLanguage();

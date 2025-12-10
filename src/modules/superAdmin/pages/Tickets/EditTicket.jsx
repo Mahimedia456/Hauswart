@@ -1,5 +1,5 @@
 // src/modules/superAdmin/pages/Tickets/EditTicket.jsx
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../../../context/LanguageContext";
 import { t } from "../../../../i18n/translations";
@@ -10,252 +10,179 @@ export default function EditTicket() {
   const { lang } = useLanguage();
   const dict = t[lang];
 
-  // Dummy initial ticket — replace later with API
   const [ticket, setTicket] = useState({
-    id,
     title: "Leaky faucet in Apt 301 bathroom",
-    type: "Maintenance Request",
+    type: "Corrective",
     category: "Plumbing",
-    requestedBy: "Jane Doe (Tenant)",
+    requestedBy: "Tenant",
     priority: "High",
-    source: "Tenant Portal",
+    source: "Mobile App",
 
-    organization: "Starlight Properties Inc.",
-    property: "The Grand Central Apartments",
-    floor: "3rd Floor",
-    unit: "Apt 301",
-    address: "123 Main Street, Metropolis, NY 10001",
+    organization: "Sunrise Towers LLC",
+    floor: "3",
+    property: "Building B",
+    unit: "Unit 301",
+    address: "Auto-populated",
 
-    assignedRole: "Technician",
-    assignedUser: "John Smith",
-    assignedUserAvatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBSNeWKMrorxrV-6lFFnOk4OQeNDo9v-j5SlUVahpklUZQwoCFMUKy1WRPxzAOFPbU0QTD8mTivxHSV19tYZHj-1WZ5tzBdH_zZVoHc9kO1uDmd7gHMIMMAbOpZ5XLLm-U2eBfzHqH2yriKByQ3M490bdxA2WsXAiZOjTIUVYorEb9cytsQBoFhVdFNM-I9akPdFgwV2dVrYbl03P_CStCrB6_G10jymqEpTb6qLOc1IF4IKAaZ_OZI2w_fWtkvhlvT6xLqMIYWwIY",
-    expectedCompletion: "2024-08-15",
+    assignTo: "Technician",
+    userPicker: "John Smith",
+    expectedDate: "2025-12-15",
+    notify: true,
 
-    description:
-      "The faucet in the main bathroom of apartment 301 has been dripping constantly for the past two days. Tenant reports it's getting worse.",
-    internalNotes: "",
+    description: "The faucet is leaking constantly and getting worse.",
+    notes: "",
   });
 
-  const updateField = (key, value) => {
+  const update = (key, value) =>
     setTicket((prev) => ({ ...prev, [key]: value }));
-  };
-
-  const handleSave = () => {
-    console.log("UPDATED TICKET:", ticket);
-  };
-
-  const handleCloseTicket = () => {
-    console.log("CLOSE TICKET:", ticket.id);
-  };
 
   return (
-    <div className="p-6 lg:p-8 w-full">
+    <div className="p-8">
+
       {/* HEADER */}
-      <div className="flex justify-between items-start mb-6">
+      <div className="flex justify-between items-center mb-8">
         <div>
-          <p className="text-3xl font-bold">Edit Ticket #{id}</p>
-          <p className="text-gray-500">Update ticket information and assignment.</p>
+          <h1 className="text-[#1c150d] text-4xl font-black">
+            {dict.ticketEdit} #{id}
+          </h1>
+          <p className="text-[#9c7649] mt-1">{dict.ticketEditDesc}</p>
         </div>
 
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => navigate(`/super-admin/tickets/${id}`)}
-            className="flex items-center gap-2 px-4 h-10 rounded-lg bg-gray-200/50 text-sm hover:bg-gray-200"
-          >
-            <span className="material-symbols-outlined text-base">arrow_back</span>
-            Back to Ticket
-          </button>
-
-          <button className="flex h-10 items-center gap-2 rounded-lg bg-blue-100 px-4 text-blue-800">
-            Open <span className="material-symbols-outlined">expand_more</span>
-          </button>
-        </div>
+        <button
+          onClick={() => navigate(`/super-admin/tickets/${id}`)}
+          className="flex items-center gap-2 text-gray-500 hover:underline"
+        >
+          <span className="material-symbols-outlined">arrow_back</span>
+          {dict.backToTicket}
+        </button>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-        {/* SECTION 1 — TICKET INFO */}
-        <Section title="Ticket Information" id={id}>
-          <TwoCol>
-            <Field label="Ticket Title*" value={ticket.title} onChange={(v) => updateField("title", v)} />
+      {/* FORM CARD */}
+      <div className="bg-white p-8 rounded-lg shadow-subtle">
+        <div className="flex flex-col gap-10">
 
-            <Field label="Ticket Type" value={ticket.type} onChange={(v) => updateField("type", v)} />
+          {/* SECTION: Ticket Info */}
+          <SectionTitle title={dict.ticketInfo} />
 
-            <Field label="Category*" value={ticket.category} onChange={(v) => updateField("category", v)} />
+          <Grid>
+            <Input label={dict.ticketTitle} value={ticket.title} onChange={(e) => update("title", e.target.value)} />
+            <Select label={dict.ticketType} value={ticket.type} onChange={(e) => update("type", e.target.value)} options={["Corrective","Preventive","Inspection","Tenant Request","Emergency"]} />
 
-            <Field label="Requested By" value={ticket.requestedBy} onChange={(v) => updateField("requestedBy", v)} />
+            <Select label={dict.category} value={ticket.category} onChange={(e) => update("category", e.target.value)} options={["Electrical","HVAC","Plumbing","Cleaning","Safety"]} />
+            <Select label={dict.requestedBy} value={ticket.requestedBy} onChange={(e) => update("requestedBy", e.target.value)} options={["Tenant","Facility Manager","Caretaker","Admin"]} />
 
-            <Field label="Priority*" value={ticket.priority} onChange={(v) => updateField("priority", v)} />
+            <Select label={dict.priority} value={ticket.priority} onChange={(e) => update("priority", e.target.value)} options={["Low","Medium","High","Critical"]} />
+            <Input label={dict.sourceOfRequest} value={ticket.source} disabled />
+          </Grid>
 
-            <Field
-              label="Source of Request"
-              value={ticket.source}
-              disabled
-            />
-          </TwoCol>
-        </Section>
+          {/* SECTION: Location */}
+          <SectionTitle title={dict.locationDetails} />
 
-        {/* SECTION 2 — LOCATION */}
-        <Section title="Location Details">
-          <TwoCol>
-            <Field label="Organization" value={ticket.organization} disabled />
-            <Field label="Floor" value={ticket.floor} onChange={(v) => updateField("floor", v)} />
+          <Grid>
+            <Select label={dict.organization} value={ticket.organization} onChange={(e) => update("organization", e.target.value)} options={["Sunrise Towers LLC","Metro Properties"]} />
+            <Select label={dict.floor} value={ticket.floor} onChange={(e) => update("floor", e.target.value)} options={["Ground","1","2","3","4","5"]} />
 
-            <Field label="Property" value={ticket.property} disabled />
-            <Field label="Unit / Room" value={ticket.unit} onChange={(v) => updateField("unit", v)} />
+            <Select label={dict.property} value={ticket.property} onChange={(e) => update("property", e.target.value)} options={["Building A","Building B","Downtown Plaza"]} />
+            <Select label={dict.unitRoom} value={ticket.unit} onChange={(e) => update("unit", e.target.value)} options={["Unit 101","Unit 201","Unit 301","Unit 403"]} />
 
-            <div className="md:col-span-2">
-              <Field label="Address" value={ticket.address} disabled />
-            </div>
-          </TwoCol>
-        </Section>
+            <FullWidth>
+              <Input label={dict.address} value={ticket.address} disabled />
+            </FullWidth>
+          </Grid>
 
-        {/* SECTION 3 — ASSIGNMENT */}
-        <Section title="Assignment">
-          <TwoCol>
-            <Field
-              label="Assign To"
-              value={ticket.assignedRole}
-              onChange={(v) => updateField("assignedRole", v)}
-            />
+          {/* SECTION: Assignment */}
+          <SectionTitle title={dict.assignment} />
 
-            <UserPicker ticket={ticket} updateField={updateField} />
+          <Grid>
+            <Select label={dict.assignTo} value={ticket.assignTo} onChange={(e) => update("assignTo", e.target.value)} options={["Facility Manager","Caretaker","Technician","Service Provider"]} />
 
-            <Field
-              label="Expected Completion Date"
-              type="date"
-              value={ticket.expectedCompletion}
-              onChange={(v) => updateField("expectedCompletion", v)}
-            />
+            <Input label={dict.userPicker} placeholder={dict.searchUser} value={ticket.userPicker} onChange={(e) => update("userPicker", e.target.value)} />
 
-            <Checkbox
-              label="Notify User"
-              checked={true}
-            />
-          </TwoCol>
-        </Section>
+            <Input type="date" label={dict.expectedCompletion} value={ticket.expectedDate} onChange={(e) => update("expectedDate", e.target.value)} />
 
-        {/* SECTION 4 — DESCRIPTION */}
-        <Section title="Description & Internal Notes">
-          <TwoCol>
-            <Textarea
-              label="Description*"
-              value={ticket.description}
-              onChange={(v) => updateField("description", v)}
-            />
+            <label className="flex items-center gap-2 pt-6">
+              <input type="checkbox" checked={ticket.notify} onChange={(e) => update("notify", e.target.checked)} className="rounded text-brand-orange" />
+              <span className="text-sm">{dict.notifyUser}</span>
+            </label>
+          </Grid>
 
-            <Textarea
-              label="Internal Notes"
-              value={ticket.internalNotes}
-              onChange={(v) => updateField("internalNotes", v)}
-              placeholder="Add internal notes..."
-            />
-          </TwoCol>
-        </Section>
+          {/* SECTION: Description & Notes */}
+          <SectionTitle title={dict.descriptionNotes} />
+
+          <Grid>
+            <TextArea label={dict.description} value={ticket.description} onChange={(e) => update("description", e.target.value)} />
+            <TextArea label={dict.internalNotes} value={ticket.notes} onChange={(e) => update("notes", e.target.value)} />
+          </Grid>
+        </div>
       </div>
 
       {/* FOOTER */}
-      <footer className="sticky bottom-0 bg-white/80 backdrop-blur-sm border-t border-gray-200 p-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <button
-            onClick={() => navigate(-1)}
-            className="text-gray-600 hover:text-black px-4 py-2"
-          >
-            Cancel Changes
+      <div className="sticky bottom-0 bg-white/80 backdrop-blur-sm mt-6 p-4 -mx-8 border-t flex justify-between items-center">
+        <button onClick={() => navigate(-1)} className="px-4 h-10 rounded-lg text-sm font-bold bg-gray-100">
+          {dict.cancelChanges}
+        </button>
+
+        <div className="flex items-center gap-3">
+          <button className="px-4 h-10 rounded-lg text-sm font-bold border border-red-300 text-red-600 hover:bg-red-50">
+            {dict.closeTicket}
           </button>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handleCloseTicket}
-              className="px-4 py-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50"
-            >
-              Close Ticket
-            </button>
-
-            <button
-              onClick={handleSave}
-              className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-black"
-            >
-              Save Changes
-            </button>
-          </div>
+          <button className="px-6 h-10 rounded-lg text-sm font-bold bg-[#F38B14] text-white">
+            {dict.saveChanges}
+          </button>
         </div>
-      </footer>
-    </div>
-  );
-}
-
-/* ----------------------------------------- */
-/* COMPONENT HELPERS */
-/* ----------------------------------------- */
-
-function Section({ title, id, children }) {
-  return (
-    <div className="border-b border-gray-200 pb-8 mb-8">
-      <div className="flex justify-between items-baseline mb-4">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        {id && <span className="text-gray-400 text-sm">ID: #{id}</span>}
       </div>
-      {children}
     </div>
   );
 }
 
-function TwoCol({ children }) {
+/* COMPONENTS */
+function SectionTitle({ title }) {
+  return <h3 className="text-lg font-bold text-[#1c150d]">{title}</h3>;
+}
+
+function Grid({ children }) {
   return <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{children}</div>;
 }
 
-function Field({ label, value, onChange, disabled, type = "text" }) {
+function FullWidth({ children }) {
+  return <div className="col-span-1 md:col-span-2">{children}</div>;
+}
+
+function Input({ label, value, onChange, placeholder, disabled, type = "text" }) {
   return (
-    <label className="flex flex-col">
-      <span className="text-sm font-medium pb-2">{label}</span>
+    <label className="flex flex-col gap-2">
+      <span className="text-sm font-medium">{label}</span>
       <input
         type={type}
         value={value}
         disabled={disabled}
-        onChange={(e) => onChange?.(e.target.value)}
-        className={`h-11 rounded-lg text-sm px-3 border ${
-          disabled
-            ? "bg-gray-200 cursor-not-allowed"
-            : "bg-gray-50 border-gray-300 focus:ring-2 focus:ring-primary/50"
-        }`}
-      />
-    </label>
-  );
-}
-
-function Textarea({ label, value, onChange, placeholder }) {
-  return (
-    <label className="flex flex-col">
-      <span className="text-sm font-medium pb-2">{label}</span>
-      <textarea
-        rows={5}
-        className="rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm focus:ring-2 focus:ring-primary/50"
-        value={value}
+        onChange={onChange}
         placeholder={placeholder}
-        onChange={(e) => onChange?.(e.target.value)}
+        className={`form-field ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
       />
     </label>
   );
 }
 
-function Checkbox({ label, checked }) {
+function Select({ label, value, onChange, options }) {
   return (
-    <div className="flex items-center gap-2 mt-6">
-      <input type="checkbox" defaultChecked={checked} className="rounded text-primary" />
-      <span className="text-sm">{label}</span>
-    </div>
+    <label className="flex flex-col gap-2">
+      <span className="text-sm font-medium">{label}</span>
+      <select value={value} onChange={onChange} className="form-field">
+        {options.map((o) => (
+          <option key={o}>{o}</option>
+        ))}
+      </select>
+    </label>
   );
 }
 
-function UserPicker({ ticket, updateField }) {
+function TextArea({ label, value, onChange }) {
   return (
-    <label className="flex flex-col">
-      <span className="text-sm font-medium pb-2">User Picker</span>
-      <div className="h-11 px-3 flex items-center gap-2 rounded-lg border bg-gray-50 border-gray-300">
-        <img src={ticket.assignedUserAvatar} className="size-6 rounded-full" />
-        <span>{ticket.assignedUser}</span>
-      </div>
+    <label className="flex flex-col gap-2 col-span-1 md:col-span-2">
+      <span className="text-sm font-medium">{label}</span>
+      <textarea rows={5} value={value} onChange={onChange} className="form-field" />
     </label>
   );
 }
