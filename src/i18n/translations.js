@@ -2012,6 +2012,37 @@ priority_critical: "Critical",
 
 select: "Select",
 
+prop_backToList: "Back to Properties",
+prop_edit_title: "Edit Property",
+prop_edit_subtitle: "Update property information, structure, and assigned staff.",
+
+prop_info: "Property Information",
+prop_info_sub: "Update essential details about the property.",
+
+prop_name: "Property Name",
+prop_type: "Property Type",
+prop_street: "Street Address",
+prop_city: "Region / City",
+prop_zip: "Postal Code / ZIP",
+prop_lat: "GPS Latitude",
+prop_long: "GPS Longitude",
+prop_size: "Property Size",
+prop_desc: "Description / Notes",
+
+prop_structure: "Building Structure",
+prop_floors: "Number of Floors",
+prop_units: "Total Units",
+prop_sections: "Building Sections (Optional)",
+prop_utilities: "Utility Areas (Optional)",
+
+prop_personnel: "Assign Personnel",
+prop_manager: "Facility Manager",
+prop_caretakers: "Caretakers",
+prop_providers: "Service Providers",
+prop_security: "Security / Access Control Team",
+prop_notes: "Additional Notes",
+
+prop_save_changes: "Save Changes",
 
 
 
@@ -4085,6 +4116,37 @@ priority_critical: "Kritisch",
 select: "Auswählen",
 
 
+prop_backToList: "Zurück zu Immobilien",
+prop_edit_title: "Immobilie bearbeiten",
+prop_edit_subtitle: "Aktualisieren Sie Informationen, Struktur und zugewiesenes Personal.",
+
+prop_info: "Immobilieninformationen",
+prop_info_sub: "Aktualisieren Sie die wichtigsten Details der Immobilie.",
+
+prop_name: "Immobilienname",
+prop_type: "Immobilientyp",
+prop_street: "Adresse",
+prop_city: "Region / Stadt",
+prop_zip: "Postleitzahl",
+prop_lat: "GPS-Breitengrad",
+prop_long: "GPS-Längengrad",
+prop_size: "Grundstücksgröße",
+prop_desc: "Beschreibung / Notizen",
+
+prop_structure: "Gebäudestruktur",
+prop_floors: "Anzahl der Stockwerke",
+prop_units: "Gesamtanzahl Einheiten",
+prop_sections: "Gebäudebereiche (Optional)",
+prop_utilities: "Technikräume / Nebenflächen (Optional)",
+
+prop_personnel: "Personal zuweisen",
+prop_manager: "Facility Manager",
+prop_caretakers: "Hausmeister",
+prop_providers: "Dienstleister",
+prop_security: "Sicherheits- / Zugangsteam",
+prop_notes: "Zusätzliche Notizen",
+
+prop_save_changes: "Änderungen speichern",
 
 
 
