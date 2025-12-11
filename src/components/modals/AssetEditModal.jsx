@@ -1,5 +1,6 @@
-import { useLanguage } from "../../../../../context/LanguageContext";
-import { t } from "../../../../../i18n/translations";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/translations";
+
 
 export default function AssetEditModal({ asset, onClose }) {
   const { lang } = useLanguage();

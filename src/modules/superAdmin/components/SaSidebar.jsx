@@ -87,16 +87,27 @@ export default function SaSidebar() {
   />
 </SidebarSection>
 
-        {/* Jobs */}
-        <SidebarSection label={dict.jobs}>
-          <SidebarItem to="/super-admin/jobs" icon="assignment" label={dict.jobs} />
-          <SidebarItem to="/super-admin/jobs/history" icon="timeline" label={dict.jobsHistory} />
-        </SidebarSection>
 
-        {/* Maintenance */}
-        <SidebarSection label={dict.maintenance}>
-          <SidebarItem to="/super-admin/maintenance" icon="build_circle" label={dict.maintenance} />
-        </SidebarSection>
+      {/* Maintenance */}
+<SidebarSection label={dict.maintenance}>
+  <SidebarItem 
+    to="/super-admin/maintenance" 
+    icon="dashboard_customize" 
+    label={dict.maintenanceDashboard} 
+  />
+
+  <SidebarItem 
+    to="/super-admin/maintenance/list" 
+    icon="list_alt" 
+    label={dict.maintenanceList} 
+  />
+
+  <SidebarItem 
+    to="/super-admin/maintenance/create" 
+    icon="add_circle" 
+    label={dict.maintenanceCreate} 
+  />
+</SidebarSection>
 
         {/* Time Tracking */}
         <SidebarSection label={dict.timeTracking}>

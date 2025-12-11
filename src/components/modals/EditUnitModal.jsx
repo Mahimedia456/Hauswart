@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useLanguage } from "../../../../../../context/LanguageContext";
-import { t } from "../../../../../../i18n/translations";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/translations";
+
 
 export default function EditUnitModal({ unit, floorNumber, onClose, onSave }) {
   const { lang } = useLanguage();

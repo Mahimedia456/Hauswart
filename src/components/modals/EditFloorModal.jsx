@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useLanguage } from "../../../../../../context/LanguageContext";
-import { t } from "../../../../../../i18n/translations";
+import { useLanguage } from "@/context/LanguageContext";
+import { t } from "@/i18n/translations";
+
 
 import AddUnitModal from "./AddUnitModal";
 import EditUnitModal from "./EditUnitModal";

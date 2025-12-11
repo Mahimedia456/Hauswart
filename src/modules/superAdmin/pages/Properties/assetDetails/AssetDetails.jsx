@@ -12,7 +12,7 @@ import MaintenanceOverview from "./components/MaintenanceOverview";
 import DocumentsMedia from "./components/DocumentsMedia";
 import ServiceHistory from "./components/ServiceHistory";
 import QuickActions from "./components/QuickActions";
-import AssignedStaff from "./components/AssignedStaff";
+import { AssignedStaff } from "@/components/modals";
 import UnitContext from "./components/UnitContext";
 import AssetHealthScore from "./components/AssetHealthScore";
 

@@ -3,11 +3,13 @@
 import { useLanguage } from "../../../../../context/LanguageContext";
 import { t } from "../../../../../i18n/translations";
 import { useState } from "react";
+import {
+  AddFloorModal,
+  EditFloorModal,
+  AddUnitModal,
+  EditUnitModal
+} from "@/components/modals";
 
-import AddFloorModal from "../components/structure/AddFloorModal";
-import EditFloorModal from "../components/structure/EditFloorModal";
-import AddUnitModal from "../components/structure/AddUnitModal";
-import EditUnitModal from "../components/structure/EditUnitModal";
 
 export default function StructureTab() {
   const { lang } = useLanguage();

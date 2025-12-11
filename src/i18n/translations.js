@@ -1376,6 +1376,647 @@ action_delete: "Delete",
 action_close: "Close",
 
 
+  maintenance: "Maintenance",
+  maintenanceDashboard: "Dashboard",
+  maintenanceList: "Maintenance List",
+  maintenanceCreate: "Create Maintenance",
+  maintenanceEdit: "Edit Maintenance",
+
+
+maintenance: "Maintenance",
+maintenanceDashboard: "Dashboard",
+maintenanceList: "Maintenance List",
+maintenanceCreate: "Create Maintenance",
+maintenanceEdit: "Edit Maintenance",
+
+maintenanceExportSummary: "Export Summary",
+maintenanceOpenReports: "Open Maintenance Reports",
+maintenanceCreateTask: "Create Maintenance Task",
+
+maintenanceUpcomingTasks: "Upcoming Maintenance Tasks",
+maintenanceUpcomingHint: "Next 7 days",
+maintenanceOverdueTasks: "Overdue Tasks",
+maintenanceOverdueHint: "Requires immediate action",
+maintenanceWarningAssets: "Assets in Warning State",
+maintenanceWarningHint: "Based on sensor logs / task history",
+maintenanceCertificates: "Certificates Near Expiry",
+maintenanceCertificatesHint: "Within 30 days",
+
+maintenanceWorkload: "Workload Distribution",
+maintenanceWorkloadSub: "By role: Facility Manager / Caretaker / Technician / Service Provider",
+maintenanceRoleManager: "Manager",
+maintenanceRoleCaretaker: "Caretaker",
+maintenanceRoleTechnician: "Technician",
+maintenanceRoleProvider: "Service Provider",
+
+maintenanceTrend: "Maintenance Trend (Last 6 Months)",
+maintenanceTrendSub: "Preventive vs Corrective Maintenance",
+
+maintenanceAssetHealth: "Asset Health Overview",
+maintenanceAssetHealthHealthy: "Healthy",
+maintenanceAssetHealthWarning: "Warning",
+maintenanceAssetHealthCritical: "Critical",
+maintenanceAssetHealthUnknown: "Unknown",
+
+maintenanceRiskScore: "Maintenance Risk Score",
+maintenanceRiskModerate: "Moderate Risk",
+maintenanceRiskUpcoming: "Upcoming high-risk assets:",
+maintenanceRiskViewAll: "View All Risk Reports",
+
+maintenanceOverdueTitle: "Overdue Tasks",
+maintenanceOverdueViewAll: "View All Overdue Tasks",
+
+maintenanceTableTask: "Task Name",
+maintenanceTableAsset: "Asset/Area",
+maintenanceTableProperty: "Property",
+maintenanceTableAssignedTo: "Assigned To",
+maintenanceTableDueDate: "Due Date",
+maintenanceTableStatus: "Status",
+maintenanceTableActions: "Actions",
+
+maintenanceUpcomingPM: "Upcoming Preventive Maintenance (Next 7 Days)",
+maintenanceSeeCalendar: "See Maintenance Calendar",
+
+maintenanceRecent: "Recently Completed",
+maintenanceResultPassed: "Passed",
+maintenanceResultObservations: "Passed with observations",
+maintenanceResultFailed: "Failed",
+
+maintenance: "Maintenance",
+maintenanceDashboard: "Dashboard",
+
+maintenanceDashboardPageTitle: "Maintenance Dashboard",
+maintenanceDashboardSub: "Global overview of all preventive and corrective maintenance activities.",
+
+maintenance_exportSummary: "Export Summary",
+maintenance_openReports: "Open Maintenance Reports",
+maintenance_createTask: "Create Maintenance Task",
+
+/* KPI */
+maintenance_kpi_upcoming: "Upcoming Maintenance Tasks",
+maintenance_kpi_upcoming_hint: "Next 7 days",
+
+maintenance_kpi_overdue: "Overdue Tasks",
+maintenance_kpi_overdue_hint: "Requires immediate action",
+
+maintenance_kpi_warningAssets: "Assets in Warning State",
+maintenance_kpi_warningAssets_hint: "Based on sensor logs / task history",
+
+maintenance_kpi_certificates: "Certificates Near Expiry",
+maintenance_kpi_certificates_hint: "Within 30 days",
+
+/* Workload */
+maintenance_workload_title: "Workload Distribution",
+maintenance_workload_sub: "By role: Facility Manager / Caretaker / Technician / Service Provider",
+
+maintenance_role_manager: "Manager",
+maintenance_role_caretaker: "Caretaker",
+maintenance_role_technician: "Technician",
+maintenance_role_provider: "Service Provider",
+
+/* Trend */
+maintenance_trend_title: "Maintenance Trend (Last 6 Months)",
+maintenance_trend_sub: "Preventive vs Corrective Maintenance",
+
+/* Asset Health */
+maintenance_assetHealth_title: "Asset Health Overview",
+maintenance_assetHealth_assetsLabel: "Assets",
+maintenance_assetHealth_healthy: "Healthy",
+maintenance_assetHealth_warning: "Warning",
+maintenance_assetHealth_critical: "Critical",
+maintenance_assetHealth_unknown: "Unknown",
+
+/* Risk Score */
+maintenance_risk_title: "Maintenance Risk Score",
+maintenance_risk_moderate: "Moderate Risk",
+maintenance_risk_upcomingTitle: "Upcoming high-risk assets:",
+maintenance_risk_viewAll: "View All Risk Reports",
+
+/* Overdue */
+maintenance_overdue_title: "Overdue Tasks",
+maintenance_overdue_viewAll: "View All Overdue Tasks",
+
+maintenance_table_taskName: "Task Name",
+maintenance_table_assetArea: "Asset/Area",
+maintenance_table_property: "Property",
+maintenance_table_assignedTo: "Assigned To",
+maintenance_table_dueDate: "Due Date",
+maintenance_table_status: "Status",
+maintenance_table_actions: "Actions",
+
+/* Upcoming PM */
+maintenance_upcoming_title: "Upcoming Preventive Maintenance (Next 7 Days)",
+maintenance_upcoming_seeCalendar: "See Maintenance Calendar",
+
+/* Recently Completed */
+maintenance_recent_title: "Recently Completed",
+maintenance_result_passed: "Passed",
+maintenance_result_observations: "Passed with observations",
+maintenance_result_failed: "Failed",
+
+/* Generic */
+action_view: "View",
+
+maintenanceListPageTitle: "Maintenance Tasks",
+maintenanceListPageSub: "View, filter, and manage all maintenance tasks.",
+maintenance_createTask: "Create Task",
+search: "Search",
+filter_organization: "Organization",
+filter_property: "Property",
+filter_assetCategory: "Asset Category",
+filter_taskType: "Task Type",
+filter_priority: "Priority",
+filter_status: "Status",
+filter_technician: "Technician",
+filter_sla: "SLA",
+resetFilters: "Reset Filters",
+
+mt_table_id: "Task ID",
+mt_table_title: "Task Title",
+mt_table_org: "Organization",
+mt_table_property: "Property",
+mt_table_asset: "Asset",
+mt_table_technician: "Technician",
+mt_table_dueDate: "Due Date",
+mt_table_priority: "Priority",
+mt_table_status: "Status",
+mt_table_sla: "SLA",
+
+mt_tab_overview: "Overview",
+mt_tab_detail: "Detail",
+mt_tab_upcoming: "Upcoming Tasks",
+mt_tab_overdue: "Overdue Tasks",
+mt_tab_calendar: "Calendar",
+mt_tab_preventive: "Preventive Schedule",
+mt_tab_assetMaintenance: "Asset Maintenance",
+mt_tab_propertyMaintenance: "Property Maintenance",
+
+label_mtId: "Maintenance ID",
+label_asset: "Asset",
+label_property: "Property",
+
+modal_delete_title: "Delete Maintenance Task",
+modal_delete_description: "Are you sure you want to delete",
+modal_delete_confirm: "Yes, Delete",
+
+mt_overview_title: "Maintenance Overview",
+mt_overview_desc: "General summary and important highlights for this maintenance task.",
+mt_tab_overview: "Overview",
+mt_tab_detail: "Detail",
+mt_tab_upcomingTasks: "Upcoming Tasks",
+mt_tab_overdueTasks: "Overdue Tasks",
+mt_tab_calendar: "Calendar",
+mt_tab_preventive: "Preventive Schedule",
+mt_tab_assetMaintenance: "Asset Maintenance",
+mt_tab_propertyMaintenance: "Property Maintenance",
+
+
+
+
+
+mt_tab_upcomingTasks: "Upcoming Tasks",
+mt_tab_overdueTasks: "Overdue Tasks",
+mt_tab_calendar: "Calendar",
+mt_tab_preventive: "Preventive Schedule",
+mt_tab_assetMaintenance: "Asset Maintenance",
+mt_tab_propertyMaintenance: "Property Maintenance",
+
+fromSchedule: "From Schedule",
+
+exportList: "Export Task List",
+sortBySoonest: "Sort by: Soonest Due",
+
+filter_timeRange: "Time Range",
+filter_organization: "Organization",
+filter_property: "Property",
+filter_assetCategory: "Asset Category",
+filter_priority: "Priority",
+filter_status: "Status",
+
+mt_table_title: "Task Name",
+mt_table_asset: "Asset / Area",
+mt_table_property: "Property",
+mt_table_technician: "Assigned To",
+mt_table_dueDate: "Scheduled Date",
+mt_table_priority: "Priority",
+mt_table_status: "Status",
+
+modal_delete_title: "Delete Task?",
+modal_delete_desc: "Are you sure you want to delete this maintenance task?",
+mt_status_overdue: "Overdue",
+mt_label_schedule: "SCHEDULE",
+mt_label_description: "DESCRIPTION",
+mt_label_checklistPreview: "CHECKLIST PREVIEW",
+
+mt_action_openDetails: "Open Full Maintenance Details",
+mt_action_viewHistory: "View History",
+mt_action_editTask: "Edit Task",
+
+
+mt_tab_overdueTasks: "Overdue Tasks",
+mt_overdue_subtitle: "All maintenance tasks past their scheduled date.",
+mt_overdue_kpi_critical: "Critical Overdue Tasks",
+mt_overdue_kpi_criticalDesc: "Overdue by more than 10 days",
+mt_overdue_kpi_high: "High Priority Overdue",
+mt_overdue_kpi_highDesc: "Overdue 3–10 days",
+mt_overdue_kpi_medium: "Medium Priority",
+mt_overdue_kpi_mediumDesc: "Overdue 1–3 days",
+mt_overdue_kpi_unassigned: "Unassigned Overdue",
+mt_overdue_kpi_unassignedDesc: "Not yet assigned to a technician",
+
+backToDashboard: "Back to Dashboard",
+exportOverdueList: "Export Overdue List",
+assignTechnicians: "Assign Technicians",
+
+mt_overdue_days: "Days Overdue",
+mt_overdue_sla: "SLA State",
+daysOverdue: "days overdue",
+unassigned: "Unassigned",
+
+
+  mt_calendar_monthView: "Monthly View",
+  mt_calendar_weekView: "Weekly View",
+  mt_calendar_dayView: "Daily View",
+
+  mt_calendar_month: "Month",
+  mt_calendar_week: "Week",
+  mt_calendar_day: "Day",
+
+  createMaintenanceSchedule: "Create Maintenance Schedule",
+  createMaintenanceTask: "Create Maintenance Task",
+
+  mt_calendar_noTasks: "No tasks scheduled",
+  mt_calendar_selectTask: "Select a task to view details",
+  mt_calendar_exampleDesc: "Scheduled preventive task for the selected date.",
+
+  openTaskDetail: "Open Task Detail",
+  reschedule: "Reschedule",
+  reassignTask: "Reassign Task",
+  deleteTask: "Delete Task",
+
+priority: "Priority",
+  category: "Category",
+  quickFilters: "Quick Filters",
+  resetFilters: "Reset Filters",
+
+
+mt_pm_title: "Preventive Maintenance Schedules",
+mt_pm_subtitle: "View and manage all PM schedules across organizations.",
+
+mt_pm_search: "Search schedules...",
+mt_pm_import: "Import Schedules",
+mt_pm_create: "Create Schedule",
+
+// Filters
+mt_pm_filter_org: "Organization",
+mt_pm_filter_property: "Property",
+mt_pm_filter_assetCategory: "Asset Category",
+mt_pm_filter_frequency: "Frequency",
+mt_pm_filter_status: "Status",
+mt_pm_filter_dateRange: "Date Range",
+mt_pm_resetFilters: "Reset Filters",
+
+// Table
+mt_pm_table_name: "Schedule Name",
+mt_pm_table_org: "Organization",
+mt_pm_table_property: "Property",
+mt_pm_table_asset: "Asset",
+mt_pm_table_frequency: "Frequency",
+mt_pm_table_due: "Next Due Date",
+mt_pm_table_assigned: "Assigned To",
+mt_pm_table_status: "Status",
+mt_pm_overdue: "Overdue",
+
+// Bulk bar
+mt_pm_selected: "schedules selected",
+mt_pm_pause: "Pause",
+mt_pm_resume: "Resume",
+mt_pm_assign: "Assign Technician",
+mt_pm_delete: "Delete",
+
+
+
+
+  asset_title: "Asset Maintenance Overview",
+  asset_subtitle: "View maintenance status, schedules, performance, and history for this asset.",
+
+  asset_btn_edit: "Edit Asset",
+  asset_btn_addTask: "Add Maintenance Task",
+  asset_btn_assignSchedule: "Assign Schedule",
+
+  asset_linkedSchedules: "Linked Schedules",
+  asset_noSchedules: "Asset has no preventive maintenance schedules assigned.",
+  asset_assignNow: "Assign Schedule",
+
+  asset_upcomingTasks: "Upcoming Tasks",
+  asset_overdue_alert: "tasks are overdue. Immediate attention required.",
+
+  asset_history: "Maintenance History",
+  asset_viewFullHistory: "View Full History",
+
+  asset_analytics: "Performance & Health Analytics",
+
+  asset_documents: "Related Documents",
+  asset_uploadDocument: "Upload Document",
+
+  asset_quickActions: "Quick Actions",
+  asset_markUnderRepair: "Mark as Under Repair",
+asset_export: "Export Asset Report",
+
+  asset_metadata: "Asset Metadata",
+  asset_alerts: "Warnings & Alerts",
+
+  asset_notes: "Notes",
+  asset_addNote: "Add Note",
+asset_id: "ID no",
+  asset_status_active: "Active",
+  asset_model: "Model",
+  asset_serial: "Serial",
+  asset_manufacturer: "Manufacturer",
+  asset_installDate: "Install Date",
+  asset_warrantyExpiry: "Warranty Expiry",
+  asset_changeImage: "Change Image",
+
+  asset_linkedSchedules: "Linked Schedules",
+  asset_noSchedules: "Asset has no preventive maintenance schedules assigned.",
+  asset_assignNow: "Assign Schedule",
+
+  asset_upcomingTasks: "Upcoming Tasks",
+  asset_overdue_alert: "tasks are overdue. Immediate attention required.",
+  asset_taskId: "Task ID",
+  asset_scheduledDate: "Scheduled Date",
+  asset_assignedTo: "Assigned To",
+  asset_priority: "Priority",
+  asset_status: "Status",
+  asset_status_overdue: "Overdue",
+  asset_status_upcoming: "Upcoming",
+  asset_actions: "Actions",
+  asset_openTask: "Open Task",
+
+  asset_history: "Maintenance History",
+  asset_history_item1: "Replaced air filter and cleaned coils.",
+  asset_history_item2: "Evidence Added: Post-service report uploaded.",
+  asset_history_item3: "Quarterly inspection completed.",
+  asset_by: "by",
+  asset_viewTaskDetails: "View Task Details",
+  asset_viewFullHistory: "View Full History",
+
+  asset_analytics: "Performance & Health Analytics",
+  asset_avgTime: "Avg Time to Complete",
+  asset_totalTasks: "Total Tasks Completed",
+  asset_overdueTasks: "Overdue Tasks",
+  asset_conditionRating: "Condition Rating",
+  asset_chart_activity: "Line Chart: Maintenance Activity",
+  asset_chart_failures: "Bar Chart: Component Failures",
+
+  asset_documents: "Related Documents",
+  asset_uploadDocument: "Upload Document",
+  asset_uploadedBy: "Uploaded by",
+  asset_on: "on",
+
+  asset_quickActions: "Quick Actions",
+  asset_markUnderRepair: "Mark as Under Repair",
+  asset_export: "Export Asset Report",
+
+  asset_metadata: "Asset Metadata",
+  asset_createdOn: "Created On",
+  asset_createdBy: "Created By",
+  asset_lastUpdated: "Last Updated",
+  asset_organization: "Organization",
+  asset_property: "Property",
+  asset_location: "Location",
+
+  asset_alerts: "Warnings & Alerts",
+  asset_alert_warranty: "Warranty expires soon.",
+  asset_alert_overdue: "This asset has overdue maintenance tasks.",
+
+  asset_notes: "Notes",
+  asset_addNote: "Add Note",
+  asset_note_dummy: "Observed noise during inspection; recommend checking the fan belt.",
+
+
+mt_property_title: "Property Maintenance Overview",
+mt_property_subtitle: "View all maintenance activity, schedules, tasks, and asset health for this property.",
+
+mt_property_org: "Organization",
+
+mt_property_totalAssets: "Total Assets",
+mt_property_activeSchedules: "Active Schedules",
+mt_property_openTasks: "Open Tasks",
+mt_property_overdueTasks: "Overdue Tasks",
+
+mt_property_activeSchedules: "Active Maintenance Schedules",
+mt_property_noSchedules: "No schedules assigned to this property.",
+mt_property_assignSchedule: "Assign Schedule",
+
+mt_property_upcomingTasks: "Upcoming Tasks",
+mt_property_overdueAlert: "This property has overdue maintenance tasks requiring immediate attention.",
+mt_property_taskId: "Task ID",
+mt_property_scheduledDate: "Scheduled Date",
+mt_property_technician: "Technician",
+mt_property_priority: "Priority",
+mt_property_location: "Location",
+mt_property_status: "Status",
+mt_property_overdue: "Overdue",
+mt_property_inProgress: "In Progress",
+mt_property_scheduled: "Scheduled",
+
+mt_property_history: "Recent Maintenance History",
+mt_property_history_item1: "Replaced filter for HVAC unit.",
+mt_property_history_item2: "Completed fire extinguisher inspection.",
+mt_property_viewFullHistory: "View Full History",
+
+mt_property_analytics: "Property Maintenance Analytics",
+mt_property_completionRate: "Schedule Completion Rate",
+mt_property_workload: "Maintenance Workload (Last 6 Months)",
+
+mt_property_risk: "Risk Indicators",
+mt_property_highRisk: "High Risk Assets",
+mt_property_expiringWarranty: "Expiring Warranty",
+mt_property_agingEquipment: "Aging Equipment (>10 years)",
+
+mt_property_compliance: "Compliance Summary",
+mt_property_fireSafety: "Fire Safety Certificate",
+mt_property_elevatorInspection: "Elevator Inspection",
+mt_property_electricalReport: "Electrical Safety Report",
+mt_property_valid: "Valid",
+mt_property_expiresSoon: "Expires in 15 days",
+mt_property_expired: "Expired",
+mt_property_uploadDoc: "Upload Document",
+mt_property_openCompliance: "Open Compliance Module",
+
+ mt_detail_title: "Maintenance Detail",
+  mt_detail_subtitle: "View all information related to this maintenance task.",
+  mt_detail_id: "Task ID",
+  mt_detail_lastUpdated: "Last Updated",
+
+  mt_detail_assignTech: "Assign Technician",
+  mt_detail_addEvidence: "Add Evidence",
+  mt_detail_markCompleted: "Mark Completed",
+
+  mt_detail_schedule: "Schedule",
+  mt_detail_asset: "Asset",
+  mt_detail_property: "Property",
+  mt_detail_technician: "Technician",
+  mt_detail_dueDate: "Due Date",
+  mt_detail_startedAt: "Started At",
+
+  mt_detail_openAsset: "Open Asset",
+
+ mt_overview_title: "Maintenance Overview",
+  mt_overview_subtitle: "Quick summary of this maintenance task, status, and progress.",
+  mt_overview_id: "Task ID",
+  mt_overview_lastUpdated: "Last Updated",
+
+  mt_overview_status: "Status",
+  mt_overview_priority: "Priority",
+  mt_overview_category: "Category",
+
+  mt_overview_progress: "Progress",
+  mt_overview_technician: "Assigned Technician",
+  mt_overview_dueDate: "Due Date",
+
+  mt_overview_property: "Property",
+  mt_overview_asset: "Asset",
+
+ms_backToSchedules: "Back to Schedules",
+
+ms_title: "Create Maintenance Schedule",
+ms_subtitle: "Set up preventive maintenance for assets, properties, and organizations.",
+
+ms_scheduleInfo: "Schedule Information",
+ms_scheduleName: "Schedule Name*",
+ms_scheduleName_placeholder: "Example: Monthly HVAC Filter Cleaning",
+ms_description: "Description",
+ms_description_placeholder: "Describe the purpose of this schedule.",
+ms_category: "Category",
+ms_priority: "Priority",
+
+ms_orgProperty: "Organization & Property",
+ms_org: "Organization*",
+ms_selectOrg: "Select Organization",
+ms_property: "Property*",
+ms_selectProperty: "Select Property",
+ms_area: "Area / Floor / Unit",
+ms_allFloors: "All Floors",
+ms_locationNotes: "Location Notes",
+ms_locationNotes_placeholder: "Specify exact room or area.",
+
+ms_assetSelection: "Asset Selection*",
+ms_selectSpecificAsset: "Select Specific Asset",
+ms_applyToCategory: "Apply Schedule to Asset Category",
+ms_asset: "Asset",
+ms_assetDetails: "Asset Details",
+ms_model: "Model",
+ms_serial: "Serial No",
+ms_lastMaint: "Last Maint",
+ms_warranty: "Warranty",
+
+ms_frequencyTiming: "Frequency & Timing",
+ms_frequency: "Frequency*",
+ms_repeatOn: "Repeat On",
+ms_startDate: "Start Date*",
+ms_preferredTime: "Preferred Time",
+ms_endDate: "End Date",
+ms_noEndDate: "No End Date",
+ms_endOn: "End on specific date",
+
+ms_assignment: "Assignment",
+ms_assignedTo: "Assigned To",
+ms_autoAssign: "Auto-assign tasks to available technician",
+ms_assignExpertise: "Assign by asset expertise",
+
+ms_additional: "Additional Settings",
+ms_checklistTemplate: "Checklist Template",
+ms_autoReminder: "Auto-generate reminder 24 hours before due date.",
+ms_autoTenantNotice: "Auto-generate tenant notice (if relevant).",
+
+ms_cancel: "Cancel",
+ms_save: "Save Schedule",
+
+
+ms_edit_back: "Back to Schedules",
+ms_edit_title: "Edit Maintenance Schedule",
+ms_edit_subtitle: "Modify schedule settings and review impact on future tasks.",
+ms_edit_scheduleId: "Schedule ID",
+ms_edit_viewDetails: "View Schedule Details",
+
+ms_edit_scheduleInfo: "Schedule Information",
+ms_edit_name: "Schedule Name",
+ms_edit_description: "Description",
+ms_edit_category: "Category",
+ms_edit_category_note: "Changing category may modify template recommendations.",
+ms_edit_priority: "Priority",
+
+ms_edit_freqTiming: "Frequency & Timing",
+ms_edit_freqWarning: "Changing frequency will generate a new task pattern starting from the next cycle.",
+ms_edit_frequency: "Frequency",
+ms_edit_onThe: "On the",
+ms_edit_startDate: "Start Date",
+ms_edit_prefTime: "Preferred Time",
+
+ms_edit_impactPreview: "Change Impact Preview",
+ms_edit_futureTasks: "Future Tasks Affected",
+ms_edit_tasks: "Tasks",
+
+ms_edit_freqImpactTitle: "Frequency Change Impact: ",
+ms_edit_freqImpact: "New tasks will now be generated on the 15th of each month.",
+ms_edit_assignImpactTitle: "Assignment Impact: ",
+ms_edit_assignImpact: "No change. All future tasks remain assigned to 'HVAC Team'.",
+
+ms_edit_overdueNotice: "This schedule has 2 overdue tasks. Changes may affect their reporting.",
+ms_edit_applyNewOnly: "Apply changes only to new tasks (from next cycle)",
+ms_edit_applyAllFuture: "Apply changes to all future (unstarted) tasks",
+
+ms_edit_versionHistory: "Version History",
+ms_edit_madeChanges: "made changes",
+ms_edit_created: "created schedule",
+ms_edit_historyExample1: "Updated priority from Medium to High.",
+ms_edit_historyExample2: "Initial schedule creation.",
+
+ms_edit_cancel: "Cancel",
+ms_edit_save: "Save Changes",
+
+maint_assign_title: "Assign Maintenance",
+maint_assign_subtitle: "Select a user and role to assign this maintenance task.",
+maint_assign_role: "Assign To Role",
+maint_assign_due: "Expected Completion Date",
+maint_assign_filter_note: "Users shown are filtered based on asset property & role permissions.",
+maint_assign_users: "Available Users",
+maint_assign_property: "Assigned to",
+maint_assign_tasks: "Tasks today",
+maint_assign_open: "Open tickets",
+maint_assign_note: "Assignment Note (Optional)",
+maint_assign_note_ph: "Add a note for the assignee...",
+maint_assign_button: "Assign Task",
+
+mt_create_title: "Create Maintenance Task",
+mt_create_subtitle: "Fill in details to create a new maintenance task.",
+mt_create_name: "Task Name",
+mt_create_name_ph: "Enter task name",
+mt_create_category: "Category",
+mt_create_priority: "Priority",
+mt_create_dueDate: "Due Date",
+mt_create_description: "Description",
+mt_create_description_ph: "Describe the task details...",
+mt_create_button: "Create Task",
+
+mt_edit_title: "Edit Maintenance Task",
+mt_edit_subtitle: "Update the fields below and save changes.",
+mt_edit_button: "Save Changes",
+
+priority_low: "Low",
+priority_medium: "Medium",
+priority_high: "High",
+priority_critical: "Critical",
+
+select: "Select",
+
+
+
+
+
+
 
 
 
@@ -2815,6 +3456,654 @@ ticket_notes_submit: "Notiz hinzufügen",
 action_edit: "Bearbeiten",
 action_delete: "Löschen",
 action_close: "Schließen",
+
+  maintenance: "Wartung",
+  maintenanceDashboard: "Dashboard",
+  maintenanceList: "Wartungsliste",
+  maintenanceCreate: "Wartung erstellen",
+  maintenanceEdit: "Wartung bearbeiten",
+
+maintenance: "Wartung",
+maintenanceDashboard: "Dashboard",
+maintenanceList: "Wartungsliste",
+maintenanceCreate: "Wartung erstellen",
+maintenanceEdit: "Wartung bearbeiten",
+
+maintenanceExportSummary: "Übersicht exportieren",
+maintenanceOpenReports: "Wartungsberichte öffnen",
+maintenanceCreateTask: "Wartungsaufgabe erstellen",
+
+maintenanceUpcomingTasks: "Bevorstehende Wartungsaufgaben",
+maintenanceUpcomingHint: "Nächste 7 Tage",
+maintenanceOverdueTasks: "Überfällige Aufgaben",
+maintenanceOverdueHint: "Erfordert sofortige Maßnahmen",
+maintenanceWarningAssets: "Anlagen im Warnzustand",
+maintenanceWarningHint: "Basierend auf Sensorlogs / Verlauf",
+maintenanceCertificates: "Bald ablaufende Zertifikate",
+maintenanceCertificatesHint: "Innerhalb von 30 Tagen",
+
+maintenanceWorkload: "Arbeitslastverteilung",
+maintenanceWorkloadSub: "Nach Rolle: Facility Manager / Hauswart / Techniker / Dienstleister",
+maintenanceRoleManager: "Manager",
+maintenanceRoleCaretaker: "Hauswart",
+maintenanceRoleTechnician: "Techniker",
+maintenanceRoleProvider: "Dienstleister",
+
+maintenanceTrend: "Wartungstrend (Letzte 6 Monate)",
+maintenanceTrendSub: "Präventive vs. korrektive Wartung",
+
+maintenanceAssetHealth: "Zustand der Anlagen",
+maintenanceAssetHealthHealthy: "Gesund",
+maintenanceAssetHealthWarning: "Warnung",
+maintenanceAssetHealthCritical: "Kritisch",
+maintenanceAssetHealthUnknown: "Unbekannt",
+
+maintenanceRiskScore: "Wartungsrisiko-Score",
+maintenanceRiskModerate: "Mittleres Risiko",
+maintenanceRiskUpcoming: "Bevorstehende Hochrisiko-Anlagen:",
+maintenanceRiskViewAll: "Alle Risikoberichte anzeigen",
+
+maintenanceOverdueTitle: "Überfällige Aufgaben",
+maintenanceOverdueViewAll: "Alle überfälligen Aufgaben anzeigen",
+
+maintenanceTableTask: "Aufgabe",
+maintenanceTableAsset: "Anlage/Bereich",
+maintenanceTableProperty: "Objekt",
+maintenanceTableAssignedTo: "Zugewiesen an",
+maintenanceTableDueDate: "Fällig am",
+maintenanceTableStatus: "Status",
+maintenanceTableActions: "Aktionen",
+
+maintenanceUpcomingPM: "Bevorstehende vorbeugende Wartung (nächste 7 Tage)",
+maintenanceSeeCalendar: "Wartungskalender anzeigen",
+
+maintenanceRecent: "Kürzlich abgeschlossen",
+maintenanceResultPassed: "Bestanden",
+maintenanceResultObservations: "Bestanden mit Anmerkungen",
+maintenanceResultFailed: "Nicht bestanden",
+
+maintenance: "Wartung",
+maintenanceDashboard: "Dashboard",
+
+maintenanceDashboardPageTitle: "Wartungsdashboard",
+maintenanceDashboardSub: "Gesamtübersicht aller präventiven und korrektiven Wartungsaktivitäten.",
+
+maintenance_exportSummary: "Zusammenfassung exportieren",
+maintenance_openReports: "Wartungsberichte öffnen",
+maintenance_createTask: "Wartungsaufgabe erstellen",
+
+/* KPI */
+maintenance_kpi_upcoming: "Bevorstehende Wartungsaufgaben",
+maintenance_kpi_upcoming_hint: "Nächste 7 Tage",
+
+maintenance_kpi_overdue: "Überfällige Aufgaben",
+maintenance_kpi_overdue_hint: "Erfordert sofortige Maßnahmen",
+
+maintenance_kpi_warningAssets: "Anlagen im Warnzustand",
+maintenance_kpi_warningAssets_hint: "Basierend auf Sensorprotokollen / Verlauf",
+
+maintenance_kpi_certificates: "Bald ablaufende Zertifikate",
+maintenance_kpi_certificates_hint: "Innerhalb von 30 Tagen",
+
+/* Workload */
+maintenance_workload_title: "Arbeitslastverteilung",
+maintenance_workload_sub: "Nach Rolle: Facility Manager / Hauswart / Techniker / Dienstleister",
+
+maintenance_role_manager: "Manager",
+maintenance_role_caretaker: "Hauswart",
+maintenance_role_technician: "Techniker",
+maintenance_role_provider: "Dienstleister",
+
+/* Trend */
+maintenance_trend_title: "Wartungstrend (Letzte 6 Monate)",
+maintenance_trend_sub: "Präventive vs. korrektive Wartung",
+
+/* Asset Health */
+maintenance_assetHealth_title: "Anlagenzustand",
+maintenance_assetHealth_assetsLabel: "Anlagen",
+maintenance_assetHealth_healthy: "Gesund",
+maintenance_assetHealth_warning: "Warnung",
+maintenance_assetHealth_critical: "Kritisch",
+maintenance_assetHealth_unknown: "Unbekannt",
+
+/* Risk Score */
+maintenance_risk_title: "Wartungsrisiko-Score",
+maintenance_risk_moderate: "Mittleres Risiko",
+maintenance_risk_upcomingTitle: "Bevorstehende Hochrisiko-Anlagen:",
+maintenance_risk_viewAll: "Alle Risikoberichte anzeigen",
+
+/* Overdue */
+maintenance_overdue_title: "Überfällige Aufgaben",
+maintenance_overdue_viewAll: "Alle überfälligen Aufgaben anzeigen",
+
+maintenance_table_taskName: "Aufgabe",
+maintenance_table_assetArea: "Anlage/Bereich",
+maintenance_table_property: "Objekt",
+maintenance_table_assignedTo: "Zugewiesen an",
+maintenance_table_dueDate: "Fälligkeitsdatum",
+maintenance_table_status: "Status",
+maintenance_table_actions: "Aktionen",
+
+/* Upcoming PM */
+maintenance_upcoming_title: "Bevorstehende vorbeugende Wartung (nächste 7 Tage)",
+maintenance_upcoming_seeCalendar: "Wartungskalender anzeigen",
+
+/* Recently Completed */
+maintenance_recent_title: "Kürzlich abgeschlossen",
+maintenance_result_passed: "Bestanden",
+maintenance_result_observations: "Bestanden mit Anmerkungen",
+maintenance_result_failed: "Nicht bestanden",
+
+/* Generic */
+action_view: "Ansehen",
+
+maintenanceListPageTitle: "Wartungsaufgaben",
+maintenanceListPageSub: "Alle Wartungsaufgaben anzeigen, filtern und verwalten.",
+maintenance_createTask: "Aufgabe erstellen",
+search: "Suchen",
+filter_organization: "Organisation",
+filter_property: "Immobilie",
+filter_assetCategory: "Anlagenkategorie",
+filter_taskType: "Aufgabentyp",
+filter_priority: "Priorität",
+filter_status: "Status",
+filter_technician: "Techniker",
+filter_sla: "SLA",
+resetFilters: "Filter zurücksetzen",
+
+mt_table_id: "Aufgaben-ID",
+mt_table_title: "Aufgabentitel",
+mt_table_org: "Organisation",
+mt_table_property: "Immobilie",
+mt_table_asset: "Anlage",
+mt_table_technician: "Techniker",
+mt_table_dueDate: "Fälligkeitsdatum",
+mt_table_priority: "Priorität",
+mt_table_status: "Status",
+mt_table_sla: "SLA",
+mt_tab_overview: "Übersicht",
+mt_tab_detail: "Details",
+mt_tab_upcoming: "Bevorstehende Aufgaben",
+mt_tab_overdue: "Überfällige Aufgaben",
+mt_tab_calendar: "Kalender",
+mt_tab_preventive: "Präventivplan",
+mt_tab_assetMaintenance: "Anlagenwartung",
+mt_tab_propertyMaintenance: "Objektwartung",
+
+label_mtId: "Wartungs-ID",
+label_asset: "Anlage",
+label_property: "Objekt",
+
+modal_delete_title: "Wartungsaufgabe löschen",
+modal_delete_description: "Möchten Sie wirklich löschen:",
+modal_delete_confirm: "Ja, löschen",
+
+mt_overview_title: "Wartungsübersicht",
+mt_overview_desc: "Allgemeine Zusammenfassung und wichtige Informationen zu dieser Wartungsaufgabe.",
+
+
+mt_tab_overview: "Übersicht",
+mt_tab_detail: "Details",
+mt_tab_upcomingTasks: "Bevorstehende Aufgaben",
+mt_tab_overdueTasks: "Überfällige Aufgaben",
+mt_tab_calendar: "Kalender",
+mt_tab_preventive: "Wartungsplan",
+mt_tab_assetMaintenance: "Asset-Wartung",
+mt_tab_propertyMaintenance: "Objekt-Wartung",
+mt_tab_upcomingTasks: "Bevorstehende Aufgaben",
+mt_tab_overdueTasks: "Überfällige Aufgaben",
+mt_tab_calendar: "Kalender",
+mt_tab_preventive: "Wartungsplan",
+mt_tab_assetMaintenance: "Anlagenwartung",
+mt_tab_propertyMaintenance: "Objektwartung",
+
+fromSchedule: "Aus Plan",
+
+exportList: "Liste exportieren",
+sortBySoonest: "Sortieren nach: Nächste Fälligkeit",
+
+filter_timeRange: "Zeitraum",
+filter_organization: "Organisation",
+filter_property: "Objekt",
+filter_assetCategory: "Anlagenkategorie",
+filter_priority: "Priorität",
+filter_status: "Status",
+
+mt_table_title: "Aufgabenname",
+mt_table_asset: "Anlage / Bereich",
+mt_table_property: "Objekt",
+mt_table_technician: "Zugewiesen an",
+mt_table_dueDate: "Geplantes Datum",
+mt_table_priority: "Priorität",
+mt_table_status: "Status",
+
+modal_delete_title: "Aufgabe löschen?",
+modal_delete_desc:
+  "Sind Sie sicher, dass Sie diese Wartungsaufgabe löschen möchten?",
+mt_status_overdue: "Überfällig",
+mt_label_schedule: "ZEITPLAN",
+mt_label_description: "BESCHREIBUNG",
+mt_label_checklistPreview: "CHECKLISTE (Vorschau)",
+
+mt_action_openDetails: "Wartungsdetails öffnen",
+mt_action_viewHistory: "Verlauf anzeigen",
+mt_action_editTask: "Aufgabe bearbeiten",
+mt_tab_overdueTasks: "Überfällige Aufgaben",
+mt_overdue_subtitle: "Alle Wartungsaufgaben nach dem geplanten Datum.",
+mt_overdue_kpi_critical: "Kritische überfällige Aufgaben",
+mt_overdue_kpi_criticalDesc: "Mehr als 10 Tage überfällig",
+mt_overdue_kpi_high: "Hochpriorisierte Überfällige",
+mt_overdue_kpi_highDesc: "3–10 Tage überfällig",
+mt_overdue_kpi_medium: "Mittlere Priorität",
+mt_overdue_kpi_mediumDesc: "1–3 Tage überfällig",
+mt_overdue_kpi_unassigned: "Nicht zugewiesene Überfällige",
+mt_overdue_kpi_unassignedDesc: "Noch keinem Techniker zugewiesen",
+
+backToDashboard: "Zurück zum Dashboard",
+exportOverdueList: "Überfällige Liste exportieren",
+assignTechnicians: "Techniker zuweisen",
+
+mt_overdue_days: "Überfällige Tage",
+mt_overdue_sla: "SLA-Status",
+daysOverdue: "Tage überfällig",
+unassigned: "Nicht zugewiesen",
+
+
+  mt_calendar_monthView: "Monatsansicht",
+  mt_calendar_weekView: "Wochenansicht",
+  mt_calendar_dayView: "Tagesansicht",
+
+  mt_calendar_month: "Monat",
+  mt_calendar_week: "Woche",
+  mt_calendar_day: "Tag",
+
+  createMaintenanceSchedule: "Wartungsplan erstellen",
+  createMaintenanceTask: "Wartungsaufgabe erstellen",
+
+  mt_calendar_noTasks: "Keine Aufgaben geplant",
+  mt_calendar_selectTask: "Wählen Sie eine Aufgabe aus, um Details anzuzeigen",
+mt_calendar_exampleDesc: "Geplante vorbeugende Wartungsaufgabe für dieses Datum.",
+
+  openTaskDetail: "Aufgabendetails öffnen",
+  reschedule: "Neu planen",
+  reassignTask: "Aufgabe neu zuweisen",
+  deleteTask: "Aufgabe löschen",
+
+  priority: "Priorität",
+  category: "Kategorie",
+  quickFilters: "Schnellfilter",
+  resetFilters: "Filter zurücksetzen",
+
+mt_pm_title: "Wartungspläne (vorbeugend)",
+mt_pm_subtitle: "Alle Wartungspläne organisationsübergreifend verwalten.",
+
+mt_pm_search: "Pläne suchen...",
+mt_pm_import: "Pläne importieren",
+mt_pm_create: "Plan erstellen",
+
+mt_pm_filter_org: "Organisation",
+mt_pm_filter_property: "Immobilie",
+mt_pm_filter_assetCategory: "Anlagenkategorie",
+mt_pm_filter_frequency: "Frequenz",
+mt_pm_filter_status: "Status",
+mt_pm_filter_dateRange: "Datumsbereich",
+mt_pm_resetFilters: "Filter zurücksetzen",
+
+mt_pm_table_name: "Planname",
+mt_pm_table_org: "Organisation",
+mt_pm_table_property: "Immobilie",
+mt_pm_table_asset: "Anlage",
+mt_pm_table_frequency: "Frequenz",
+mt_pm_table_due: "Nächster Termin",
+mt_pm_table_assigned: "Zugewiesen",
+mt_pm_table_status: "Status",
+mt_pm_overdue: "Überfällig",
+
+mt_pm_selected: "Pläne ausgewählt",
+mt_pm_pause: "Pausieren",
+mt_pm_resume: "Fortsetzen",
+mt_pm_assign: "Techniker zuweisen",
+mt_pm_delete: "Löschen",
+
+asset_title: "Asset-Wartungsübersicht",
+  asset_subtitle: "Wartungsstatus, Zeitpläne, Leistung und Verlauf für dieses Asset anzeigen.",
+
+  asset_btn_edit: "Asset bearbeiten",
+  asset_btn_addTask: "Wartungsaufgabe hinzufügen",
+  asset_btn_assignSchedule: "Zeitplan zuweisen",
+
+  asset_linkedSchedules: "Verknüpfte Zeitpläne",
+  asset_noSchedules: "Diesem Asset sind keine Wartungspläne zugewiesen.",
+  asset_assignNow: "Zeitplan zuweisen",
+
+  asset_upcomingTasks: "Bevorstehende Aufgaben",
+  asset_overdue_alert: "Aufgaben sind überfällig. Sofortige Aufmerksamkeit erforderlich.",
+
+  asset_history: "Wartungsverlauf",
+  asset_viewFullHistory: "Gesamten Verlauf anzeigen",
+
+  asset_analytics: "Leistungs- & Gesundheitsanalyse",
+
+  asset_documents: "Zugehörige Dokumente",
+  asset_uploadDocument: "Dokument hochladen",
+
+  asset_quickActions: "Schnellaktionen",
+  asset_markUnderRepair: "Als in Reparatur markieren",
+  asset_export: "Asset-Bericht exportieren",
+
+  asset_metadata: "Asset-Metadaten",
+  asset_alerts: "Warnungen & Hinweise",
+
+  asset_notes: "Notizen",
+  asset_addNote: "Notiz hinzufügen",
+
+asset_id: "ID",
+  asset_status_active: "Aktiv",
+  asset_model: "Modell",
+  asset_serial: "Seriennummer",
+  asset_manufacturer: "Hersteller",
+  asset_installDate: "Installationsdatum",
+  asset_warrantyExpiry: "Garantieablauf",
+  asset_changeImage: "Bild ändern",
+
+  asset_linkedSchedules: "Verknüpfte Wartungspläne",
+  asset_noSchedules: "Für dieses Asset sind keine vorbeugenden Wartungspläne zugewiesen.",
+  asset_assignNow: "Plan zuweisen",
+
+  asset_upcomingTasks: "Bevorstehende Aufgaben",
+  asset_overdue_alert: "Aufgaben sind überfällig. Sofortige Aufmerksamkeit erforderlich.",
+  asset_taskId: "Aufgaben-ID",
+  asset_scheduledDate: "Geplanter Termin",
+  asset_assignedTo: "Zugewiesen an",
+  asset_priority: "Priorität",
+  asset_status: "Status",
+  asset_status_overdue: "Überfällig",
+  asset_status_upcoming: "Bevorstehend",
+  asset_actions: "Aktionen",
+  asset_openTask: "Aufgabe öffnen",
+
+  asset_history: "Wartungshistorie",
+  asset_history_item1: "Luftfilter ersetzt und Spulen gereinigt.",
+  asset_history_item2: "Nachweis hinzugefügt: Servicebericht hochgeladen.",
+  asset_history_item3: "Vierteljährliche Inspektion abgeschlossen.",
+  asset_by: "von",
+  asset_viewTaskDetails: "Aufgabendetails anzeigen",
+  asset_viewFullHistory: "Gesamte Historie anzeigen",
+
+  asset_analytics: "Leistungs- & Zustandsanalyse",
+  asset_avgTime: "Durchschnittliche Bearbeitungszeit",
+  asset_totalTasks: "Abgeschlossene Aufgaben insgesamt",
+  asset_overdueTasks: "Überfällige Aufgaben",
+  asset_conditionRating: "Zustandsbewertung",
+  asset_chart_activity: "Liniendiagramm: Wartungsaktivität",
+  asset_chart_failures: "Balkendiagramm: Komponentenfehler",
+
+  asset_documents: "Zugehörige Dokumente",
+  asset_uploadDocument: "Dokument hochladen",
+  asset_uploadedBy: "Hochgeladen von",
+  asset_on: "am",
+
+  asset_quickActions: "Schnellaktionen",
+  asset_markUnderRepair: "Als in Reparatur markieren",
+  asset_export: "Asset-Bericht exportieren",
+
+  asset_metadata: "Asset-Metadaten",
+  asset_createdOn: "Erstellt am",
+  asset_createdBy: "Erstellt von",
+  asset_lastUpdated: "Zuletzt aktualisiert",
+  asset_organization: "Organisation",
+  asset_property: "Liegenschaft",
+  asset_location: "Standort",
+
+  asset_alerts: "Warnungen & Hinweise",
+  asset_alert_warranty: "Garantie läuft bald ab.",
+  asset_alert_overdue: "Dieses Asset hat überfällige Wartungsaufgaben.",
+
+  asset_notes: "Notizen",
+  asset_addNote: "Notiz hinzufügen",
+  asset_note_dummy: "Während der Inspektion wurde ein Geräusch festgestellt; Überprüfung des Lüfterriemens empfohlen.",
+
+mt_property_title: "Übersicht der Immobilienwartung",
+mt_property_subtitle: "Sehen Sie alle Wartungsaktivitäten, Pläne, Aufgaben und den Anlagenzustand dieser Immobilie.",
+
+mt_property_org: "Organisation",
+
+mt_property_totalAssets: "Gesamtanlagen",
+mt_property_activeSchedules: "Aktive Wartungspläne",
+mt_property_openTasks: "Offene Aufgaben",
+mt_property_overdueTasks: "Überfällige Aufgaben",
+
+mt_property_activeSchedules: "Aktive Wartungspläne",
+mt_property_noSchedules: "Für diese Immobilie wurden keine Wartungspläne zugewiesen.",
+mt_property_assignSchedule: "Plan zuweisen",
+
+mt_property_upcomingTasks: "Bevorstehende Aufgaben",
+mt_property_overdueAlert: "Diese Immobilie hat überfällige Wartungsaufgaben, die sofortige Aufmerksamkeit erfordern.",
+mt_property_taskId: "Aufgaben-ID",
+mt_property_scheduledDate: "Geplanter Termin",
+mt_property_technician: "Techniker",
+mt_property_priority: "Priorität",
+mt_property_location: "Standort",
+mt_property_status: "Status",
+mt_property_overdue: "Überfällig",
+mt_property_inProgress: "In Bearbeitung",
+mt_property_scheduled: "Geplant",
+
+mt_property_history: "Wartungshistorie",
+mt_property_history_item1: "Filter für HVAC-Gerät ersetzt.",
+mt_property_history_item2: "Feuerlöscherinspektion abgeschlossen.",
+mt_property_viewFullHistory: "Gesamte Historie anzeigen",
+
+mt_property_analytics: "Wartungsanalytik der Immobilie",
+mt_property_completionRate: "Abschlussrate der Wartungspläne",
+mt_property_workload: "Wartungslast (letzte 6 Monate)",
+
+mt_property_risk: "Risikokennzahlen",
+mt_property_highRisk: "Hochrisiko-Anlagen",
+mt_property_expiringWarranty: "Auslaufende Garantie",
+mt_property_agingEquipment: "Alternde Geräte (>10 Jahre)",
+
+mt_property_compliance: "Compliance-Zusammenfassung",
+mt_property_fireSafety: "Brandschutzzertifikat",
+mt_property_elevatorInspection: "Aufzugsinspektion",
+mt_property_electricalReport: "Elektrischer Sicherheitsbericht",
+mt_property_valid: "Gültig",
+mt_property_expiresSoon: "Läuft in 15 Tagen ab",
+mt_property_expired: "Abgelaufen",
+mt_property_uploadDoc: "Dokument hochladen",
+mt_property_openCompliance: "Compliance-Modul öffnen",
+
+
+mt_detail_title: "Wartungsdetails",
+  mt_detail_subtitle: "Alle Informationen zu dieser Wartungsaufgabe anzeigen.",
+  mt_detail_id: "Aufgaben-ID",
+  mt_detail_lastUpdated: "Zuletzt aktualisiert",
+
+  mt_detail_assignTech: "Techniker zuweisen",
+  mt_detail_addEvidence: "Nachweis hinzufügen",
+  mt_detail_markCompleted: "Als abgeschlossen markieren",
+
+  mt_detail_schedule: "Wartungsplan",
+  mt_detail_asset: "Anlage",
+  mt_detail_property: "Liegenschaft",
+  mt_detail_technician: "Techniker",
+  mt_detail_dueDate: "Fälligkeitsdatum",
+  mt_detail_startedAt: "Gestartet am",
+
+  mt_detail_openAsset: "Anlage öffnen",
+
+mt_overview_title: "Wartungsübersicht",
+  mt_overview_subtitle: "Kurze Zusammenfassung dieser Wartungsaufgabe, des Status und des Fortschritts.",
+  mt_overview_id: "Aufgaben-ID",
+  mt_overview_lastUpdated: "Zuletzt aktualisiert",
+
+  mt_overview_status: "Status",
+  mt_overview_priority: "Priorität",
+  mt_overview_category: "Kategorie",
+
+  mt_overview_progress: "Fortschritt",
+  mt_overview_technician: "Zugewiesener Techniker",
+  mt_overview_dueDate: "Fälligkeitsdatum",
+
+  mt_overview_property: "Liegenschaft",
+  mt_overview_asset: "Anlage",
+
+ms_backToSchedules: "Zurück zu den Zeitplänen",
+
+ms_title: "Wartungsplan erstellen",
+ms_subtitle: "Richten Sie präventive Wartung für Anlagen, Immobilien und Organisationen ein.",
+
+ms_scheduleInfo: "Planinformationen",
+ms_scheduleName: "Planname*",
+ms_scheduleName_placeholder: "Beispiel: Monatliche HVAC-Filterreinigung",
+ms_description: "Beschreibung",
+ms_description_placeholder: "Beschreiben Sie den Zweck dieses Wartungsplans.",
+ms_category: "Kategorie",
+ms_priority: "Priorität",
+
+ms_orgProperty: "Organisation & Immobilie",
+ms_org: "Organisation*",
+ms_selectOrg: "Organisation auswählen",
+ms_property: "Immobilie*",
+ms_selectProperty: "Immobilie auswählen",
+ms_area: "Bereich / Etage / Einheit",
+ms_allFloors: "Alle Etagen",
+ms_locationNotes: "Standortnotizen",
+ms_locationNotes_placeholder: "Genaue Räumlichkeit oder Bereich angeben.",
+
+ms_assetSelection: "Anlagenauswahl*",
+ms_selectSpecificAsset: "Spezifische Anlage wählen",
+ms_applyToCategory: "Plan auf Anlagenkategorie anwenden",
+ms_asset: "Anlage",
+ms_assetDetails: "Anlagendetails",
+ms_model: "Modell",
+ms_serial: "Seriennummer",
+ms_lastMaint: "Letzte Wartung",
+ms_warranty: "Garantie",
+
+ms_frequencyTiming: "Häufigkeit & Zeitplanung",
+ms_frequency: "Häufigkeit*",
+ms_repeatOn: "Wiederholen am",
+ms_startDate: "Startdatum*",
+ms_preferredTime: "Bevorzugte Zeit",
+ms_endDate: "Enddatum",
+ms_noEndDate: "Kein Enddatum",
+ms_endOn: "Endet an einem bestimmten Datum",
+
+ms_assignment: "Zuweisung",
+ms_assignedTo: "Zugewiesen an",
+ms_autoAssign: "Aufgaben automatisch verfügbarem Techniker zuweisen",
+ms_assignExpertise: "Nach Anlagenexpertise zuweisen",
+
+ms_additional: "Zusätzliche Einstellungen",
+ms_checklistTemplate: "Checklisten-Vorlage",
+ms_autoReminder: "Automatische Erinnerung 24 Stunden vor Fälligkeit.",
+ms_autoTenantNotice: "Automatische Mieterbenachrichtigung (falls relevant).",
+
+ms_cancel: "Abbrechen",
+ms_save: "Plan speichern",
+
+
+
+ms_edit_back: "Zurück zu den Zeitplänen",
+ms_edit_title: "Wartungsplan bearbeiten",
+ms_edit_subtitle: "Bearbeiten Sie die Einstellungen des Plans und prüfen Sie Auswirkungen auf zukünftige Aufgaben.",
+ms_edit_scheduleId: "Plan-ID",
+ms_edit_viewDetails: "Plan Details anzeigen",
+
+ms_edit_scheduleInfo: "Planinformationen",
+ms_edit_name: "Planname",
+ms_edit_description: "Beschreibung",
+ms_edit_category: "Kategorie",
+ms_edit_category_note: "Das Ändern der Kategorie kann Vorlagenempfehlungen beeinflussen.",
+ms_edit_priority: "Priorität",
+
+ms_edit_freqTiming: "Häufigkeit & Zeitplanung",
+ms_edit_freqWarning: "Eine Änderung der Häufigkeit erzeugt ein neues Aufgabenmuster ab dem nächsten Zyklus.",
+ms_edit_frequency: "Häufigkeit",
+ms_edit_onThe: "Am",
+ms_edit_startDate: "Startdatum",
+ms_edit_prefTime: "Bevorzugte Zeit",
+
+ms_edit_impactPreview: "Änderungs-Auswirkungsübersicht",
+ms_edit_futureTasks: "Betroffene zukünftige Aufgaben",
+ms_edit_tasks: "Aufgaben",
+
+ms_edit_freqImpactTitle: "Auswirkung durch Häufigkeitsänderung: ",
+ms_edit_freqImpact: "Neue Aufgaben werden künftig am 15. jedes Monats erstellt.",
+ms_edit_assignImpactTitle: "Auswirkung auf Zuweisung: ",
+ms_edit_assignImpact: "Keine Änderung. Alle zukünftigen Aufgaben bleiben dem 'HVAC-Team' zugewiesen.",
+
+ms_edit_overdueNotice: "Dieser Plan hat 2 überfällige Aufgaben. Änderungen können deren Berichte beeinflussen.",
+ms_edit_applyNewOnly: "Änderungen nur auf neue Aufgaben anwenden (ab nächstem Zyklus)",
+ms_edit_applyAllFuture: "Änderungen auf alle zukünftigen (nicht gestarteten) Aufgaben anwenden",
+
+ms_edit_versionHistory: "Versionsverlauf",
+ms_edit_madeChanges: "hat Änderungen vorgenommen",
+ms_edit_created: "hat den Plan erstellt",
+ms_edit_historyExample1: "Priorität von Mittel auf Hoch aktualisiert.",
+ms_edit_historyExample2: "Ursprüngliche Planerstellung.",
+
+ms_edit_cancel: "Abbrechen",
+ms_edit_save: "Änderungen speichern",
+
+maint_assign_title: "Wartung zuweisen",
+maint_assign_subtitle: "Wählen Sie eine Rolle und einen Benutzer aus, um diese Wartungsaufgabe zuzuweisen.",
+maint_assign_role: "Rolle zuweisen",
+maint_assign_due: "Voraussichtliches Abschlussdatum",
+maint_assign_filter_note: "Angezeigte Benutzer basieren auf Objektzugehörigkeiten und Rollenberechtigungen.",
+maint_assign_users: "Verfügbare Benutzer",
+maint_assign_property: "Zugewiesen zu",
+maint_assign_tasks: "Aufgaben heute",
+maint_assign_open: "Offene Tickets",
+maint_assign_note: "Zuweisungsnotiz (optional)",
+maint_assign_note_ph: "Fügen Sie eine Notiz für den zuständigen Mitarbeiter hinzu...",
+maint_assign_button: "Aufgabe zuweisen",
+
+
+
+mt_create_title: "Wartungsaufgabe erstellen",
+mt_create_subtitle: "Füllen Sie die Details aus, um eine neue Wartungsaufgabe zu erstellen.",
+mt_create_name: "Aufgabenname",
+mt_create_name_ph: "Aufgabenname eingeben",
+mt_create_category: "Kategorie",
+mt_create_priority: "Priorität",
+mt_create_dueDate: "Fälligkeitsdatum",
+mt_create_description: "Beschreibung",
+mt_create_description_ph: "Aufgabendetails beschreiben...",
+mt_create_button: "Aufgabe erstellen",
+
+mt_edit_title: "Wartungsaufgabe bearbeiten",
+mt_edit_subtitle: "Aktualisieren Sie die Felder unten und speichern Sie die Änderungen.",
+mt_edit_button: "Änderungen speichern",
+
+priority_low: "Niedrig",
+priority_medium: "Mittel",
+priority_high: "Hoch",
+priority_critical: "Kritisch",
+
+select: "Auswählen",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

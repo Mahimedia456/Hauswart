@@ -56,3 +56,11 @@ html, body {
   border-color: #F38B14;
   box-shadow: 0 0 0 1px #F38B14;
 }
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.25s ease-out;
+}

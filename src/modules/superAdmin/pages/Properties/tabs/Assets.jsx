@@ -3,8 +3,8 @@ import { useLanguage } from "../../../../../context/LanguageContext";
 import { t } from "../../../../../i18n/translations";
 
 import AssetDrawer from "../components/AssetDrawer";
-import AssetAddModal from "../components/AssetAddModal";
-import AssetEditModal from "../components/AssetEditModal";
+import { AssetAddModal, AssetEditModal } from "@/components/modals";
+
 
 export default function AssetsTab() {
   const { lang } = useLanguage();

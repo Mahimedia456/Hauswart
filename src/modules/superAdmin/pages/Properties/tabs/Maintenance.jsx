@@ -3,8 +3,7 @@ import { useLanguage } from "../../../../../context/LanguageContext";
 import { t } from "../../../../../i18n/translations";
 
 import MaintenanceTaskDrawer from "../components/maintenance/MaintenanceTaskDrawer";
-import MaintenanceTaskCreate from "../components/maintenance/MaintenanceTaskCreate";
-import AssignMaintenanceModal from "../components/maintenance/AssignMaintenanceModal";
+import { MaintenanceTaskCreate, AssignMaintenanceModal } from "@/components/modals";
 import MaintenanceCalendar from "../components/maintenance/MaintenanceCalendar";
 
 export default function Maintenance() {
@@ -18,7 +17,7 @@ export default function Maintenance() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
 
-  const [assignAssetName, setAssignAssetName] = useState("");
+  const [assignAsset, setAssignAsset] = useState(null);   // ✅ FIXED
 
   /* ------------ Dummy Tasks ------------ */
   const tasks = [
@@ -81,8 +80,14 @@ export default function Maintenance() {
     setOpenMenu(null);
   };
 
+  /** FIXED — build proper asset object for modal */
   const openAssignModal = (task) => {
-    setAssignAssetName(task.asset);
+    setAssignAsset({
+      unit: task.asset,          // e.g., "HVAC Unit 3"
+      floor: "Not specified",    // No floor info in dummy tasks, so using placeholder
+      property: task.property    // e.g., "Main Office Building"
+    });
+
     setAssignOpen(true);
     setOpenMenu(null);
   };
@@ -104,7 +109,7 @@ export default function Maintenance() {
         </button>
       </div>
 
-      {/* CALENDAR (FULL WIDTH) */}
+      {/* CALENDAR */}
       <div className="rounded-xl bg-white p-4 shadow-sm border">
         <MaintenanceCalendar />
       </div>
@@ -185,11 +190,11 @@ export default function Maintenance() {
         />
       )}
 
-      {/* ASSIGN MODAL */}
+      {/* ASSIGN MODAL — FIXED */}
       {assignOpen && (
         <AssignMaintenanceModal
           open={assignOpen}
-          assetName={assignAssetName}
+          asset={assignAsset}
           onClose={() => setAssignOpen(false)}
         />
       )}

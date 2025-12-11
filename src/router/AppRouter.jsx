@@ -57,7 +57,7 @@ import PropertyActivity from "../modules/superAdmin/pages/Properties/tabs/Activi
 import AssetDetails from "../modules/superAdmin/pages/Properties/assetDetails/AssetDetails.jsx";
 
 // -----------------------------------------
-// TICKETS MODULE — FULL SYSTEM
+// TICKETS MODULE
 // -----------------------------------------
 import TicketsDashboard from "../modules/superAdmin/pages/Tickets/TicketsDashboard";
 import TicketsList from "../modules/superAdmin/pages/Tickets/TicketsList";
@@ -65,16 +65,32 @@ import TicketCreate from "../modules/superAdmin/pages/Tickets/TicketCreate";
 import TicketDetail from "../modules/superAdmin/pages/Tickets/TicketDetail";
 import EditTicket from "../modules/superAdmin/pages/Tickets/EditTicket";
 
-// Ticket Tabs
 import TicketOverview from "../modules/superAdmin/pages/Tickets/tabs/Overview";
 import TicketDetailTab from "../modules/superAdmin/pages/Tickets/tabs/Detail";
 import TicketAttachments from "../modules/superAdmin/pages/Tickets/tabs/Attachments";
 import TicketChatHub from "../modules/superAdmin/pages/Tickets/tabs/ChatHub";
 import TicketHistoryLog from "../modules/superAdmin/pages/Tickets/tabs/HistoryLog";
 import TicketAssessment from "../modules/superAdmin/pages/Tickets/tabs/Assessment";
-
-// NEW — Dedicated full conversation page
 import TicketConversation from "../modules/superAdmin/pages/Tickets/TicketConversation";
+
+// -----------------------------------------
+// MAINTENANCE MODULE
+// -----------------------------------------
+import MaintenanceDashboard from "../modules/superAdmin/pages/Maintenance/Dashboard";
+import MaintenanceList from "../modules/superAdmin/pages/Maintenance/MaintenanceList";
+import MaintenanceCreate from "../modules/superAdmin/pages/Maintenance/MaintenanceCreate";
+import MaintenanceEdit from "../modules/superAdmin/pages/Maintenance/MaintenanceEdit";
+import MaintenanceDetail from "../modules/superAdmin/pages/Maintenance/MaintenanceDetail";
+
+// Maintenance Tabs
+import MOverview from "../modules/superAdmin/pages/Maintenance/tabs/Overview";
+import MDetail from "../modules/superAdmin/pages/Maintenance/tabs/Detail";
+import MUpcoming from "../modules/superAdmin/pages/Maintenance/tabs/UpcomingTasks";
+import MOverdue from "../modules/superAdmin/pages/Maintenance/tabs/OverdueTasks";
+import MCalendar from "../modules/superAdmin/pages/Maintenance/tabs/Calendar";
+import MPreventive from "../modules/superAdmin/pages/Maintenance/tabs/PreventiveSchedule";
+import MAsset from "../modules/superAdmin/pages/Maintenance/tabs/AssetMaintenance";
+import MProperty from "../modules/superAdmin/pages/Maintenance/tabs/PropertyMaintenance";
 
 export default function AppRouter() {
   return (
@@ -149,23 +165,12 @@ export default function AppRouter() {
           {/* ASSET DETAILS */}
           <Route path="properties/assets/:assetId" element={<AssetDetails />} />
 
-          {/* ============================= */}
-          {/*       TICKET SYSTEM          */}
-          {/* ============================= */}
-
-          {/* DASHBOARD */}
+          {/* ---------------- TICKETS ---------------- */}
           <Route path="tickets" element={<TicketsDashboard />} />
-
-          {/* ALL LIST */}
           <Route path="tickets/all" element={<TicketsList />} />
-
-          {/* CREATE */}
           <Route path="tickets/create" element={<TicketCreate />} />
-
-          {/* EDIT */}
           <Route path="tickets/:id/edit" element={<EditTicket />} />
 
-          {/* DETAIL + NESTED TABS */}
           <Route path="tickets/:id" element={<TicketDetail />}>
             <Route index element={<TicketOverview />} />
             <Route path="overview" element={<TicketOverview />} />
@@ -176,11 +181,26 @@ export default function AppRouter() {
             <Route path="assessment" element={<TicketAssessment />} />
           </Route>
 
-          {/* NEW — FULL CONVERSATION PAGE (Correct route) */}
-          <Route
-            path="tickets/:id/conversation"
-            element={<TicketConversation />}
-          />
+          <Route path="tickets/:id/conversation" element={<TicketConversation />} />
+
+          {/* ---------------- MAINTENANCE ---------------- */}
+          <Route path="maintenance" element={<MaintenanceDashboard />} />
+          <Route path="maintenance/list" element={<MaintenanceList />} />
+          <Route path="maintenance/create" element={<MaintenanceCreate />} />
+
+          <Route path="maintenance/:id" element={<MaintenanceDetail />}>
+            <Route index element={<MOverview />} />
+            <Route path="overview" element={<MOverview />} />
+            <Route path="detail" element={<MDetail />} />
+            <Route path="upcoming" element={<MUpcoming />} />
+            <Route path="overdue" element={<MOverdue />} />
+            <Route path="calendar" element={<MCalendar />} />
+            <Route path="preventive" element={<MPreventive />} />
+            <Route path="asset" element={<MAsset />} />
+            <Route path="property" element={<MProperty />} />
+          </Route>
+
+          <Route path="maintenance/:id/edit" element={<MaintenanceEdit />} />
 
         </Route>
       </Route>
