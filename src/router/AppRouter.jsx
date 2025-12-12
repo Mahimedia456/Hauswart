@@ -1,4 +1,3 @@
-// src/router/AppRouter.jsx
 import { Routes, Route } from "react-router-dom";
 
 import RootLayout from "../layouts/RootLayout";
@@ -92,6 +91,22 @@ import MPreventive from "../modules/superAdmin/pages/Maintenance/tabs/Preventive
 import MAsset from "../modules/superAdmin/pages/Maintenance/tabs/AssetMaintenance";
 import MProperty from "../modules/superAdmin/pages/Maintenance/tabs/PropertyMaintenance";
 
+// -----------------------------------------
+// USERS MODULE
+// -----------------------------------------
+import UsersList from "@/modules/superAdmin/pages/Users/UsersList";
+import UserCreate from "@/modules/superAdmin/pages/Users/UserCreate";
+import UserDetail from "@/modules/superAdmin/pages/Users/UserDetail";
+import UserEdit from "@/modules/superAdmin/pages/Users/UserEdit";
+import DeleteUser from "../modules/superAdmin/pages/Users/DeleteUser";
+
+// ✅ USER TAB IMPORTS (FIX)
+import UserOverview from "../modules/superAdmin/pages/Users/tabs/Overview";
+import UserPerformance from "../modules/superAdmin/pages/Users/tabs/Performance";
+import UserAttendance from "../modules/superAdmin/pages/Users/tabs/Attendance";
+import UserDailyAttendance from "../modules/superAdmin/pages/Users/tabs/DailyAttendance";
+import UserOffboarding from "../modules/superAdmin/pages/Users/tabs/Offboarding";
+
 export default function AppRouter() {
   return (
     <Routes>
@@ -119,8 +134,6 @@ export default function AppRouter() {
             </ProtectedRoute>
           }
         >
-
-          {/* DASHBOARD */}
           <Route index element={<SaDashboard />} />
 
           {/* ORGANIZATIONS */}
@@ -162,10 +175,10 @@ export default function AppRouter() {
           <Route path="properties/:id/edit" element={<PropertyEdit />} />
           <Route path="properties/:id/delete" element={<PropertyDelete />} />
 
-          {/* ASSET DETAILS */}
+          {/* ASSET */}
           <Route path="properties/assets/:assetId" element={<AssetDetails />} />
 
-          {/* ---------------- TICKETS ---------------- */}
+          {/* TICKETS */}
           <Route path="tickets" element={<TicketsDashboard />} />
           <Route path="tickets/all" element={<TicketsList />} />
           <Route path="tickets/create" element={<TicketCreate />} />
@@ -183,7 +196,7 @@ export default function AppRouter() {
 
           <Route path="tickets/:id/conversation" element={<TicketConversation />} />
 
-          {/* ---------------- MAINTENANCE ---------------- */}
+          {/* MAINTENANCE */}
           <Route path="maintenance" element={<MaintenanceDashboard />} />
           <Route path="maintenance/list" element={<MaintenanceList />} />
           <Route path="maintenance/create" element={<MaintenanceCreate />} />
@@ -201,6 +214,23 @@ export default function AppRouter() {
           </Route>
 
           <Route path="maintenance/:id/edit" element={<MaintenanceEdit />} />
+
+          {/* USERS */}
+          <Route path="users">
+            <Route index element={<UsersList />} />
+            <Route path="create" element={<UserCreate />} />
+            <Route path=":id/edit" element={<UserEdit />} />
+            <Route path=":id/delete" element={<DeleteUser />} />
+
+            <Route path=":id" element={<UserDetail />}>
+              <Route index element={<UserOverview />} />
+              <Route path="overview" element={<UserOverview />} />
+              <Route path="performance" element={<UserPerformance />} />
+              <Route path="attendance" element={<UserAttendance />} />
+              <Route path="daily-attendance" element={<UserDailyAttendance />} />
+              <Route path="offboarding" element={<UserOffboarding />} />
+            </Route>
+          </Route>
 
         </Route>
       </Route>

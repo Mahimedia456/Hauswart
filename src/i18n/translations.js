@@ -2043,6 +2043,407 @@ prop_security: "Security / Access Control Team",
 prop_notes: "Additional Notes",
 
 prop_save_changes: "Save Changes",
+users_module: "Users",
+users_list: "Users",
+users_create: "Add New User",
+
+users: "Users",
+users_sub: "Manage all users across all organizations.",
+users_export: "Export Users",
+users_add: "Add New User",
+
+users_user: "User",
+users_role: "Role",
+users_org: "Organization",
+users_properties: "Properties",
+users_phone: "Phone",
+users_status: "Status",
+users_last_activity: "Last Activity",
+users_actions: "Actions",
+
+back_to_users: "Back to Users",
+
+user_create_title: "Create New User",
+user_create_subtitle: "Add a new user to the Hauswart ecosystem.",
+
+user_info_title: "User Information",
+user_info_desc: "Enter basic user details and assign a role.",
+
+user_full_name: "Full Name",
+user_email: "Email Address",
+user_phone: "Phone Number",
+user_photo: "Profile Photo (Optional)",
+user_password: "Password",
+user_confirm_password: "Confirm Password",
+
+user_role_title: "Role Assignment",
+user_role_desc: "Roles determine access level and visibility across the platform.",
+user_role: "Role",
+user_customize_permissions: "Customize Permissions",
+user_permissions_for: "Permissions for",
+user_permissions_desc: "Full access to manage tickets, properties, maintenance schedules, and users within their assigned organization.",
+
+user_access_title: "Access Mapping",
+user_access_desc: "Assigning properties limits which tickets and tasks the user can work on.",
+user_assign_org: "Assign Organization",
+user_assign_properties: "Assign Properties",
+
+user_status_title: "Status & Activation",
+user_status: "Status",
+user_send_activation: "Send activation email to the user",
+
+unsaved_changes: "Unsaved changes",
+
+action_cancel: "Cancel",
+action_create_user: "Create User",
+user_edit_title: "Edit User",
+user_edit_subtitle: "Update user details, role, and access permissions.",
+
+action_save_changes: "Save Changes",
+
+
+
+
+
+
+
+user_tab_overview: "Overview",
+user_tab_performance: "Performance Dashboard",
+user_tab_attendance: "Attendance",
+user_tab_dailyAttendance: "Daily Attendance Log",
+user_tab_offboarding: "Offboarding & Access",
+
+action_backToUsers: "Back to Users",
+action_editUser: "Edit User",
+action_assignRole: "Assign Role",
+action_moreActions: "More Actions",
+
+
+
+user_delete_title: "Delete User",
+user_delete_subtitle: "This action is permanent and cannot be undone.",
+
+user_delete_warning_title:
+  "Deleting this user will permanently remove their access and detach all active assignments.",
+user_delete_warning_desc:
+  "Historical data will remain for compliance. Proceed with caution.",
+
+user_delete_impact_title: "Before You Delete This User",
+
+user_open_tickets: "Open Tickets",
+user_active_maintenance: "Active Maintenance",
+user_recurring_tasks: "Recurring Assignments",
+user_upcoming_tasks: "Upcoming Scheduled Tasks",
+user_live_chats: "Live Chats",
+
+user_reassign_notice:
+  "These items must be reassigned or closed before deletion.",
+
+user_delete_confirm:
+  "I understand that this action is permanent and cannot be undone.",
+
+user_delete_notes_title: "Optional Admin Notes",
+user_delete_notes_desc:
+  "Add an internal note explaining why this user is being deleted. This will be stored in audit logs.",
+user_delete_notes_placeholder:
+  "e.g., User has left the company as of YYYY-MM-DD.",
+
+user_delete_irreversible: "This action is irreversible.",
+
+action_delete_user: "Delete User Permanently",
+action_backToUserProfile: "Back to User Profile",
+
+user_orgs: "Organization(s)",
+user_properties: "Assigned Properties",
+user_last_active: "Last Active",
+user_created: "Created Date",
+user_id: "User ID",
+        
+role_apply_title: "Apply Role & Permission Changes?",
+role_apply_subtitle:
+  "These changes affect user access immediately and will be logged in the audit system.",
+
+role_apply_summary:
+  "You are about to apply the following changes to multiple user roles.",
+
+permission_added: "Permission Added",
+permission_removed: "Permission Removed",
+
+role_facility_manager: "Role: Facility Manager",
+role_technician: "Role: Technician",
+role_auditor: "Role: Auditor",
+
+action_confirm_apply: "Confirm & Apply",
+user_overview_basic: "Basic Information",
+user_overview_access: "Organization & Property Access",
+user_quick_actions: "Quick Actions",
+user_recent_activity: "Recent Activity",
+user_upcoming_assignments: "Upcoming Assignments",
+
+user_joined_date: "Joined Date",
+user_last_login: "Last Login",
+user_mfa_enabled: "MFA Enabled",
+user_assigned_properties: "Assigned Properties",
+
+action_edit_information: "Edit Information",
+action_edit_access: "Edit Access",
+action_view_full_log: "View Full Log",
+action_reset_password: "Reset Password",
+action_deactivate_user: "Deactivate User",
+action_view_audit_log: "View Audit Log",
+action_download_report: "Download User Report",
+perf_total_tickets: "Total Tickets",
+perf_sla_adherence: "SLA Adherence",
+perf_avg_resolution: "Avg. Resolution",
+perf_overdue_tasks: "Overdue Tasks",
+perf_maintenance: "Maintenance",
+perf_rework_rate: "Rework Rate",
+perf_graphs: "Performance Graphs",
+perf_tasks_completed: "Tasks Completed Over Time",
+perf_task_distribution: "Task Distribution by Category",
+perf_ticket_performance: "Ticket Performance",
+perf_task_strengths: "Task Category Strengths",
+perf_attendance_summary: "Attendance Summary",
+perf_productivity: "Productivity Score",
+perf_excellent: "Excellent",
+perf_sla_compliance: "SLA Compliance",
+perf_avg_completion: "Avg Completion",
+perf_total_orders: "Total Orders",
+perf_attendance: "Attendance",
+
+action_download_performance: "Download Performance Report",
+action_filter: "Filter",
+action_compare_user: "Compare With Another User",
+attendance_overview: "Attendance Overview",
+attendance_subtitle: "Detailed attendance insights for this user.",
+
+att_working_days: "Working Days",
+att_present_days: "Present Days",
+att_absent_days: "Absent Days",
+att_late_arrivals: "Late Arrivals",
+att_early_clockouts: "Early Clock-outs",
+
+filter_date_range: "Date Range: This Month",
+filter_organization: "Organization",
+filter_property: "Property",
+filter_status: "Status: All",
+
+att_monthly_heatmap: "Monthly Attendance Heatmap",
+att_statistics: "Attendance Statistics",
+att_avg_daily_hours: "Avg Daily Hours",
+att_punctuality_score: "Avg Punctuality Score",
+att_avg_breaks: "Avg Breaks Taken",
+att_daily_hours_trend: "Daily Hours Trend (Last 30 Days)",
+att_late_vs_early: "Late Arrivals vs Early Exits",
+
+att_leave_tracker: "Leave & Exception Tracker",
+att_recent_logs: "Recent Clock-ins & Clock-outs",
+att_compliance: "Compliance Overview",
+
+att_avg_weekly_hours: "Avg weekly hours",
+att_overtime: "Overtime hours",
+att_undertime: "Undertime hours",
+att_missing_logs: "Missing clock-ins",
+att_frequent_late_warning: "Frequent late arrivals detected.",
+
+quick_actions: "Quick Actions",
+
+action_export_attendance: "Export Attendance",
+action_view_daily_logs: "View Daily Logs",
+action_request_leave: "Request Leave",
+action_view_full_history: "View Full History",
+action_reset_filters: "Reset Filters",
+action_approve_leave: "Approve Leave Request",
+action_manual_entry: "Add Manual Entry",
+action_send_reminder: "Send Reminder to Clock-in",
+
+clock_in: "Clock-in",
+clock_out: "Clock-out",
+compliant: "Compliant",
+
+
+
+att_daily_logs: "Daily Attendance Logs",
+att_daily_logs_sub: "Clock-in, clock-out, and shift data for this user.",
+
+att_missing_logs: "Missing Logs",
+
+table_date: "Date",
+table_day: "Day",
+table_total_hours: "Total Hours",
+table_status: "Status",
+table_location: "Location",
+table_actions: "Actions",
+
+att_status_present: "Present",
+att_status_late: "Late",
+att_status_missing: "Missing Log",
+att_status_absent: "Absent",
+att_status_early: "Early Exit",
+
+action_export_logs: "Export Logs",
+action_filter: "Filter",
+action_view_map: "View Map",
+action_previous: "Previous",
+action_next: "Next",
+
+offboarding_title: "Offboarding & Access Removal",
+offboarding_subtitle: "Deactivate the user, revoke access, and reassign responsibilities.",
+
+action_deactivate_user: "Deactivate User",
+action_archive_user: "Archive User",
+action_delete_user: "Delete User Permanently",
+
+off_last_active: "Last Active",
+off_account_created: "Account Created",
+off_created_by: "Created By",
+
+off_choose_type: "Choose Deactivation Type",
+
+off_temp_suspension: "Temporary Suspension",
+off_temp_suspension_desc: "User cannot log in; account remains intact.",
+
+off_full_deactivation: "Full Deactivation",
+off_full_deactivation_desc: "Removes user from active lists; tasks must be reassigned.",
+
+off_permanent_deletion: "Permanent Deletion",
+off_permanent_deletion_desc: "User and personal identifiers will be permanently removed.",
+off_irreversible_warning: "This action is irreversible and requires confirmation.",
+
+off_reassign_tasks: "Reassign Tickets & Tasks",
+off_reassign_warning: "These items must be reassigned or closed before deletion.",
+
+table_task_id: "Task ID",
+table_task_type: "Type",
+table_property: "Property",
+table_due_date: "Due Date",
+table_reassign_to: "Reassign To",
+
+off_property_cleanup: "Property Assignment Cleanup",
+off_unassign_all: "Unassign from all properties",
+
+off_notes_docs: "Notes & Documentation",
+off_reason_label: "Reason for Offboarding",
+off_upload_docs: "Upload Supporting Documents",
+off_hr_comments: "HR Comments",
+
+off_access_removal: "Access Removal Steps",
+off_disable_login: "Disable login access",
+off_terminate_sessions: "Terminate active sessions",
+off_revoke_tokens: "Revoke API tokens",
+off_remove_roles: "Remove role assignments",
+off_remove_properties: "Remove property assignments",
+off_remove_org_access: "Remove organization access",
+off_stop_notifications: "Stop notifications & alerts",
+
+off_data_retention: "Data Retention Mode",
+off_retain_all: "Retain all data",
+off_retain_all_desc: "Keeps all user-generated data intact. (Recommended)",
+
+off_anonymize_pii: "Retain logs, anonymize PII",
+off_anonymize_pii_desc: "Removes personal identifiers from user data.",
+
+off_full_anonymization: "Full anonymization",
+off_full_anonymization_desc: "Anonymizes all user data for GDPR compliance.",
+
+off_summary: "Offboarding Summary",
+off_deactivation_type: "Deactivation Type",
+off_tasks_reassigned: "Tasks Reassigned",
+off_properties_reassigned: "Properties Reassigned",
+off_access_steps: "Access Steps",
+off_data_retention_label: "Data Retention",
+
+action_review_confirm: "Review & Confirm Offboarding",
+
+
+/* =========================
+   OFFBOARDING – EN
+========================= */
+
+offboarding_title: "Offboarding & Access Removal",
+offboarding_subtitle: "Deactivate the user, revoke access, and reassign responsibilities.",
+
+action_deactivate_user: "Deactivate User",
+action_archive_user: "Archive User",
+action_delete_user: "Delete User Permanently",
+action_review_confirm: "Review & Confirm Offboarding",
+
+off_last_active: "Last Active",
+off_account_created: "Account Created",
+off_created_by: "Created By",
+
+off_choose_type: "Choose Deactivation Type",
+
+off_temp_suspension: "Temporary Suspension",
+off_temp_suspension_desc: "User cannot log in; account remains intact.",
+
+off_full_deactivation: "Full Deactivation",
+off_full_deactivation_desc: "Removes user from active lists; tasks must be reassigned.",
+
+off_permanent_deletion: "Permanent Deletion",
+off_permanent_deletion_desc: "User and personal identifiers will be permanently removed.",
+off_irreversible_warning: "This action is irreversible and requires confirmation.",
+
+off_reassign_tasks: "Reassign Tickets & Tasks",
+off_reassign_warning: "These items must be reassigned or closed before deletion.",
+
+table_task_id: "Task ID",
+table_task_type: "Type",
+table_property: "Property",
+table_due_date: "Due Date",
+table_reassign_to: "Reassign To",
+
+off_property_cleanup: "Property Assignment Cleanup",
+off_unassign_all: "Unassign from all properties",
+
+off_notes_docs: "Notes & Documentation",
+off_reason_label: "Reason for Offboarding",
+off_upload_docs: "Upload Supporting Documents",
+off_hr_comments: "HR Comments (Optional)",
+
+off_access_removal: "Access Removal Steps",
+off_disable_login: "Disable login access",
+off_terminate_sessions: "Terminate active sessions",
+off_revoke_tokens: "Revoke API tokens",
+off_remove_roles: "Remove role assignments",
+off_remove_properties: "Remove property assignments",
+off_remove_org_access: "Remove organization access",
+off_stop_notifications: "Stop notifications & alerts",
+
+off_data_retention: "Data Retention Mode",
+off_retain_all: "Retain all data",
+off_retain_all_desc: "Keeps all user-generated data intact. (Recommended)",
+off_anonymize_pii: "Retain logs, anonymize PII",
+off_anonymize_pii_desc: "Removes personal identifiers from user data.",
+off_full_anonymization: "Full anonymization",
+off_full_anonymization_desc: "Anonymizes all user data for GDPR compliance.",
+
+off_summary: "Offboarding Summary",
+off_deactivation_type: "Deactivation Type",
+off_tasks_reassigned: "Tasks Reassigned",
+off_properties_reassigned: "Properties Reassigned",
+off_access_steps: "Access Steps",
+off_data_retention_label: "Data Retention",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4148,19 +4549,384 @@ prop_notes: "Zusätzliche Notizen",
 
 prop_save_changes: "Änderungen speichern",
 
+users_module: "Benutzer",
+users_list: "Benutzer",
+users_create: "Neuen Benutzer hinzufügen",
+
+users: "Benutzer",
+users_sub: "Verwalten Sie alle Benutzer in allen Organisationen.",
+users_export: "Benutzer exportieren",
+users_add: "Neuen Benutzer hinzufügen",
+
+users_user: "Benutzer",
+users_role: "Rolle",
+users_org: "Organisation",
+users_properties: "Objekte",
+users_phone: "Telefon",
+users_status: "Status",
+users_last_activity: "Letzte Aktivität",
+users_actions: "Aktionen",
+back_to_users: "Zurück zu Benutzern",
+
+user_create_title: "Neuen Benutzer erstellen",
+user_create_subtitle: "Fügen Sie einen neuen Benutzer zum Hauswart-System hinzu.",
+
+user_info_title: "Benutzerinformationen",
+user_info_desc: "Grundlegende Benutzerdaten eingeben und Rolle zuweisen.",
+
+user_full_name: "Vollständiger Name",
+user_email: "E-Mail-Adresse",
+user_phone: "Telefonnummer",
+user_photo: "Profilfoto (optional)",
+user_password: "Passwort",
+user_confirm_password: "Passwort bestätigen",
+
+user_role_title: "Rollenzuweisung",
+user_role_desc: "Rollen bestimmen Zugriffsrechte und Sichtbarkeit.",
+user_role: "Rolle",
+user_customize_permissions: "Berechtigungen anpassen",
+user_permissions_for: "Berechtigungen für",
+user_permissions_desc: "Voller Zugriff auf Tickets, Objekte, Wartungspläne und Benutzer innerhalb der zugewiesenen Organisation.",
+
+user_access_title: "Zugriffszuteilung",
+user_access_desc: "Zugewiesene Objekte begrenzen Aufgaben und Tickets.",
+user_assign_org: "Organisation zuweisen",
+user_assign_properties: "Objekte zuweisen",
+
+user_status_title: "Status & Aktivierung",
+user_status: "Status",
+user_send_activation: "Aktivierungs-E-Mail an Benutzer senden",
+
+unsaved_changes: "Ungespeicherte Änderungen",
+
+action_cancel: "Abbrechen",
+action_create_user: "Benutzer erstellen",
+
+
+user_edit_title: "Benutzer bearbeiten",
+user_edit_subtitle: "Benutzerdaten, Rollen und Zugriffsrechte aktualisieren.",
+
+action_save_changes: "Änderungen speichern",
+// USER DETAIL TABS (DE)
+user_tab_overview: "Übersicht",
+user_tab_performance: "Leistungsübersicht",
+user_tab_attendance: "Anwesenheit",
+user_tab_dailyAttendance: "Tägliches Anwesenheitsprotokoll",
+user_tab_offboarding: "Offboarding & Zugriffsrechte",
+
+// USER ACTIONS (DE)
+action_backToUsers: "Zurück zu den Benutzern",
+action_editUser: "Benutzer bearbeiten",
+action_assignRole: "Rolle zuweisen",
+action_moreActions: "Weitere Aktionen",
 
 
 
+user_delete_title: "Benutzer löschen",
+user_delete_subtitle: "Diese Aktion ist dauerhaft und kann nicht rückgängig gemacht werden.",
+
+user_delete_warning_title:
+  "Durch das Löschen dieses Benutzers werden alle Zugriffe und aktiven Zuweisungen dauerhaft entfernt.",
+user_delete_warning_desc:
+  "Historische Daten bleiben aus Compliance-Gründen erhalten. Vorsichtig fortfahren.",
+
+user_delete_impact_title: "Vor dem Löschen dieses Benutzers",
+
+user_open_tickets: "Offene Tickets",
+user_active_maintenance: "Aktive Wartungen",
+user_recurring_tasks: "Wiederkehrende Aufgaben",
+user_upcoming_tasks: "Geplante Aufgaben",
+user_live_chats: "Aktive Chats",
+
+user_reassign_notice:
+  "Diese Elemente müssen vor dem Löschen neu zugewiesen oder abgeschlossen werden.",
+
+user_delete_confirm:
+  "Ich verstehe, dass diese Aktion dauerhaft ist und nicht rückgängig gemacht werden kann.",
+
+user_delete_notes_title: "Optionale Admin-Notizen",
+user_delete_notes_desc:
+  "Fügen Sie eine interne Notiz hinzu, warum dieser Benutzer gelöscht wird. Diese wird in den Audit-Logs gespeichert.",
+user_delete_notes_placeholder:
+  "z. B. Benutzer hat das Unternehmen am TT.MM.JJJJ verlassen.",
+
+user_delete_irreversible: "Diese Aktion ist unwiderruflich.",
+
+action_delete_user: "Benutzer dauerhaft löschen",
+action_backToUserProfile: "Zurück zum Benutzerprofil",
+
+user_orgs: "Organisation(en)",
+user_properties: "Zugewiesene Objekte",
+user_last_active: "Zuletzt aktiv",
+user_created: "Erstellt am",
+user_id: "Benutzer-ID",
+role_apply_title: "Rollen- und Berechtigungsänderungen anwenden?",
+role_apply_subtitle:
+  "Diese Änderungen wirken sich sofort auf den Benutzerzugang aus und werden im Audit-System protokolliert.",
+
+role_apply_summary:
+  "Sie sind dabei, die folgenden Änderungen auf mehrere Benutzerrollen anzuwenden.",
+
+permission_added: "Berechtigung hinzugefügt",
+permission_removed: "Berechtigung entfernt",
+
+role_facility_manager: "Rolle: Facility Manager",
+role_technician: "Rolle: Techniker",
+role_auditor: "Rolle: Prüfer",
+
+action_confirm_apply: "Bestätigen & Anwenden",
+user_overview_basic: "Grundinformationen",
+user_overview_access: "Organisations- & Objektzugriff",
+user_quick_actions: "Schnellaktionen",
+user_recent_activity: "Letzte Aktivitäten",
+user_upcoming_assignments: "Bevorstehende Aufgaben",
+
+user_joined_date: "Beitrittsdatum",
+user_last_login: "Letzte Anmeldung",
+user_mfa_enabled: "MFA aktiviert",
+user_assigned_properties: "Zugewiesene Objekte",
+
+action_edit_information: "Informationen bearbeiten",
+action_edit_access: "Zugriff bearbeiten",
+action_view_full_log: "Vollständiges Protokoll anzeigen",
+action_reset_password: "Passwort zurücksetzen",
+action_deactivate_user: "Benutzer deaktivieren",
+action_view_audit_log: "Audit-Protokoll anzeigen",
+action_download_report: "Benutzerbericht herunterladen",
 
 
+perf_total_tickets: "Gesamt Tickets",
+perf_sla_adherence: "SLA Einhaltung",
+perf_avg_resolution: "Ø Lösungszeit",
+perf_overdue_tasks: "Überfällige Aufgaben",
+perf_maintenance: "Wartung",
+perf_rework_rate: "Nacharbeitsquote",
+perf_graphs: "Leistungsdiagramme",
+perf_tasks_completed: "Abgeschlossene Aufgaben",
+perf_task_distribution: "Aufgabenverteilung nach Kategorie",
+perf_ticket_performance: "Ticket-Leistung",
+perf_task_strengths: "Stärken nach Kategorie",
+perf_attendance_summary: "Anwesenheitsübersicht",
+perf_productivity: "Produktivitätswert",
+perf_excellent: "Ausgezeichnet",
+perf_sla_compliance: "SLA Konformität",
+perf_avg_completion: "Ø Abschlusszeit",
+perf_total_orders: "Gesamtaufträge",
+perf_attendance: "Anwesenheit",
+
+action_download_performance: "Leistungsbericht herunterladen",
+action_filter: "Filter",
+action_compare_user: "Mit anderem Benutzer vergleichen",
 
 
+attendance_overview: "Anwesenheitsübersicht",
+attendance_subtitle: "Detaillierte Anwesenheitsinformationen für diesen Benutzer.",
+
+att_working_days: "Arbeitstage",
+att_present_days: "Anwesende Tage",
+att_absent_days: "Fehltage",
+att_late_arrivals: "Verspätete Ankünfte",
+att_early_clockouts: "Frühe Abmeldungen",
+
+filter_date_range: "Datumsbereich: Dieser Monat",
+filter_organization: "Organisation",
+filter_property: "Objekt",
+filter_status: "Status: Alle",
+
+att_monthly_heatmap: "Monatliche Anwesenheitsübersicht",
+att_statistics: "Anwesenheitsstatistiken",
+att_avg_daily_hours: "Durchschn. tägliche Stunden",
+att_punctuality_score: "Durchschn. Pünktlichkeitswert",
+att_avg_breaks: "Durchschn. Pausen",
+att_daily_hours_trend: "Trend der täglichen Arbeitsstunden (letzte 30 Tage)",
+att_late_vs_early: "Verspätungen vs. frühe Abgänge",
+
+att_leave_tracker: "Urlaubs- & Ausnahmeübersicht",
+att_recent_logs: "Letzte Ein- & Ausstempelungen",
+att_compliance: "Compliance-Übersicht",
+
+att_avg_weekly_hours: "Durchschn. Wochenstunden",
+att_overtime: "Überstunden",
+att_undertime: "Unterstunden",
+att_missing_logs: "Fehlende Stempelungen",
+att_frequent_late_warning: "Häufige Verspätungen festgestellt.",
+
+quick_actions: "Schnellaktionen",
+
+action_export_attendance: "Anwesenheit exportieren",
+action_view_daily_logs: "Tagesprotokolle anzeigen",
+action_request_leave: "Urlaub beantragen",
+action_view_full_history: "Vollständigen Verlauf anzeigen",
+action_reset_filters: "Filter zurücksetzen",
+action_approve_leave: "Urlaubsantrag genehmigen",
+action_manual_entry: "Manuellen Eintrag hinzufügen",
+action_send_reminder: "Erinnerung zum Einstempeln senden",
+
+clock_in: "Einstempeln",
+clock_out: "Ausstempeln",
+compliant: "Konform",
+
+att_daily_logs: "Tägliche Anwesenheitsprotokolle",
+att_daily_logs_sub: "Ein- und Ausstempelungen sowie Schichtdaten für diesen Benutzer.",
+
+att_missing_logs: "Fehlende Protokolle",
+
+table_date: "Datum",
+table_day: "Tag",
+table_total_hours: "Gesamtstunden",
+table_status: "Status",
+table_location: "Standort",
+table_actions: "Aktionen",
+
+att_status_present: "Anwesend",
+att_status_late: "Verspätet",
+att_status_missing: "Protokoll fehlt",
+att_status_absent: "Abwesend",
+att_status_early: "Früher Feierabend",
+
+action_export_logs: "Protokolle exportieren",
+action_filter: "Filter",
+action_view_map: "Karte ansehen",
+action_previous: "Zurück",
+action_next: "Weiter",
 
 
+offboarding_title: "Offboarding & Zugriffsentfernung",
+offboarding_subtitle: "Benutzer deaktivieren, Zugriff entziehen und Verantwortlichkeiten neu zuweisen.",
 
+action_deactivate_user: "Benutzer deaktivieren",
+action_archive_user: "Benutzer archivieren",
+action_delete_user: "Benutzer dauerhaft löschen",
 
+off_last_active: "Zuletzt aktiv",
+off_account_created: "Konto erstellt",
+off_created_by: "Erstellt von",
 
+off_choose_type: "Deaktivierungstyp auswählen",
 
+off_temp_suspension: "Temporäre Sperrung",
+off_temp_suspension_desc: "Benutzer kann sich nicht anmelden; Konto bleibt erhalten.",
+
+off_full_deactivation: "Vollständige Deaktivierung",
+off_full_deactivation_desc: "Entfernt den Benutzer aus aktiven Listen; Aufgaben müssen neu zugewiesen werden.",
+
+off_permanent_deletion: "Dauerhafte Löschung",
+off_permanent_deletion_desc: "Benutzer und personenbezogene Daten werden dauerhaft entfernt.",
+off_irreversible_warning: "Diese Aktion ist nicht rückgängig zu machen und erfordert eine Bestätigung.",
+
+off_reassign_tasks: "Tickets & Aufgaben neu zuweisen",
+off_reassign_warning: "Diese Elemente müssen neu zugewiesen oder geschlossen werden.",
+
+table_task_id: "Aufgaben-ID",
+table_task_type: "Typ",
+table_property: "Objekt",
+table_due_date: "Fälligkeitsdatum",
+table_reassign_to: "Neu zuweisen an",
+
+off_property_cleanup: "Bereinigung der Objektzuweisungen",
+off_unassign_all: "Von allen Objekten entfernen",
+
+off_notes_docs: "Notizen & Dokumentation",
+off_reason_label: "Grund für Offboarding",
+off_upload_docs: "Unterstützende Dokumente hochladen",
+off_hr_comments: "HR-Kommentare",
+
+off_access_removal: "Zugriffsentfernungs-Schritte",
+off_disable_login: "Anmeldung deaktivieren",
+off_terminate_sessions: "Aktive Sitzungen beenden",
+off_revoke_tokens: "API-Tokens widerrufen",
+off_remove_roles: "Rollen entfernen",
+off_remove_properties: "Objektzuweisungen entfernen",
+off_remove_org_access: "Organisationszugriff entfernen",
+off_stop_notifications: "Benachrichtigungen stoppen",
+
+off_data_retention: "Datenaufbewahrungsmodus",
+off_retain_all: "Alle Daten behalten",
+off_retain_all_desc: "Alle benutzergenerierten Daten bleiben erhalten. (Empfohlen)",
+
+off_anonymize_pii: "Protokolle behalten, PII anonymisieren",
+off_anonymize_pii_desc: "Personenbezogene Daten werden entfernt.",
+
+off_full_anonymization: "Vollständige Anonymisierung",
+off_full_anonymization_desc: "Alle Benutzerdaten werden DSGVO-konform anonymisiert.",
+
+off_summary: "Offboarding-Zusammenfassung",
+off_deactivation_type: "Deaktivierungstyp",
+off_tasks_reassigned: "Aufgaben neu zugewiesen",
+off_properties_reassigned: "Objekte neu zugewiesen",
+off_access_steps: "Zugriffsschritte",
+off_data_retention_label: "Datenaufbewahrung",
+
+action_review_confirm: "Offboarding prüfen & bestätigen",
+
+/* =========================
+   OFFBOARDING – DE
+========================= */
+
+offboarding_title: "Offboarding & Zugriffsentzug",
+offboarding_subtitle: "Benutzer deaktivieren, Zugriffe entziehen und Verantwortlichkeiten neu zuweisen.",
+
+action_deactivate_user: "Benutzer deaktivieren",
+action_archive_user: "Benutzer archivieren",
+action_delete_user: "Benutzer dauerhaft löschen",
+action_review_confirm: "Offboarding prüfen & bestätigen",
+
+off_last_active: "Zuletzt aktiv",
+off_account_created: "Konto erstellt am",
+off_created_by: "Erstellt von",
+
+off_choose_type: "Deaktivierungstyp auswählen",
+
+off_temp_suspension: "Temporäre Sperrung",
+off_temp_suspension_desc: "Benutzer kann sich nicht anmelden; Konto bleibt erhalten.",
+
+off_full_deactivation: "Vollständige Deaktivierung",
+off_full_deactivation_desc: "Entfernt Benutzer aus aktiven Listen; Aufgaben müssen neu zugewiesen werden.",
+
+off_permanent_deletion: "Dauerhafte Löschung",
+off_permanent_deletion_desc: "Benutzer und personenbezogene Daten werden dauerhaft entfernt.",
+off_irreversible_warning: "Diese Aktion ist nicht rückgängig zu machen und erfordert eine Bestätigung.",
+
+off_reassign_tasks: "Tickets & Aufgaben neu zuweisen",
+off_reassign_warning: "Diese Elemente müssen vor der Löschung neu zugewiesen oder geschlossen werden.",
+
+table_task_id: "Aufgaben-ID",
+table_task_type: "Typ",
+table_property: "Objekt",
+table_due_date: "Fälligkeitsdatum",
+table_reassign_to: "Neu zuweisen an",
+
+off_property_cleanup: "Objektzuweisungen bereinigen",
+off_unassign_all: "Von allen Objekten entfernen",
+
+off_notes_docs: "Notizen & Dokumentation",
+off_reason_label: "Grund für Offboarding",
+off_upload_docs: "Unterstützende Dokumente hochladen",
+off_hr_comments: "HR-Kommentare (optional)",
+
+off_access_removal: "Schritte zum Zugriffsentzug",
+off_disable_login: "Login-Zugriff deaktivieren",
+off_terminate_sessions: "Aktive Sitzungen beenden",
+off_revoke_tokens: "API-Tokens widerrufen",
+off_remove_roles: "Rollenzuweisungen entfernen",
+off_remove_properties: "Objektzuweisungen entfernen",
+off_remove_org_access: "Organisationszugriff entfernen",
+off_stop_notifications: "Benachrichtigungen & Alarme stoppen",
+
+off_data_retention: "Datenaufbewahrung",
+off_retain_all: "Alle Daten behalten",
+off_retain_all_desc: "Alle benutzergenerierten Daten bleiben erhalten. (Empfohlen)",
+off_anonymize_pii: "Logs behalten, personenbezogene Daten anonymisieren",
+off_anonymize_pii_desc: "Personenbezogene Daten werden entfernt.",
+off_full_anonymization: "Vollständige Anonymisierung",
+off_full_anonymization_desc: "Alle Benutzerdaten werden DSGVO-konform anonymisiert.",
+
+off_summary: "Offboarding-Zusammenfassung",
+off_deactivation_type: "Deaktivierungstyp",
+off_tasks_reassigned: "Neu zugewiesene Aufgaben",
+off_properties_reassigned: "Neu zugewiesene Objekte",
+off_access_steps: "Zugriffsschritte",
+off_data_retention_label: "Datenaufbewahrung",
 
 
 

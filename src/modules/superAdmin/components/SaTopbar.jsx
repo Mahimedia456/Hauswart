@@ -77,14 +77,14 @@ export default function SaTopbar() {
         </div>
 
         {/* Theme Toggle */}
-        <button
+        {/* <button
           onClick={toggleTheme}
           className="h-10 w-10 flex items-center justify-center rounded-xl bg-slate-100 hover:bg-slate-200"
         >
           <span className="material-symbols-outlined text-[22px] text-slate-700">
             {theme === "light" ? "dark_mode" : "light_mode"}
           </span>
-        </button>
+        </button> */}
 
         {/* Profile */}
         <button className="flex items-center gap-3 rounded-xl bg-slate-100 py-1.5 px-2 hover:bg-slate-200">

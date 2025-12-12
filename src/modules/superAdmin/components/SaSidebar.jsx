@@ -107,6 +107,21 @@ export default function SaSidebar() {
     icon="add_circle" 
     label={dict.maintenanceCreate} 
   />
+  {/* Users */}
+<SidebarSection label={dict.users_module}>
+  <SidebarItem 
+    to="/super-admin/users" 
+    icon="group" 
+    label={dict.users_list} 
+  />
+
+  <SidebarItem 
+    to="/super-admin/users/create" 
+    icon="person_add" 
+    label={dict.users_create} 
+  />
+</SidebarSection>
+
 </SidebarSection>
 
         {/* Time Tracking */}
