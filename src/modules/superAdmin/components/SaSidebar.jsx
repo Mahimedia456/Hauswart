@@ -121,24 +121,21 @@ export default function SaSidebar() {
     label={dict.users_create} 
   />
 </SidebarSection>
+{/* TENANTS */}
+<SidebarSection label={dict.tenants_module}>
+  <SidebarItem
+    to="/super-admin/tenants"
+    icon="groups"
+    label={dict.tenants}
+  />
+</SidebarSection>
 
 </SidebarSection>
 
-        {/* Time Tracking */}
-        <SidebarSection label={dict.timeTracking}>
-          <SidebarItem to="/super-admin/time-tracking" icon="schedule" label={dict.timeTracking} />
-          <SidebarItem to="/super-admin/gps-logs" icon="map" label={dict.gps} />
-        </SidebarSection>
-
-        {/* Documents */}
-        <SidebarSection label={dict.documents}>
-          <SidebarItem to="/super-admin/documents" icon="description" label={dict.documents} />
-        </SidebarSection>
 
         {/* Notifications */}
         <SidebarSection label={dict.notifications}>
           <SidebarItem to="/super-admin/notifications" icon="notifications" label={dict.notifications} />
-          <SidebarItem to="/super-admin/chat" icon="chat" label={dict.chat} />
         </SidebarSection>
 
         {/* Settings */}

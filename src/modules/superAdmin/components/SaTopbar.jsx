@@ -1,12 +1,19 @@
 // src/modules/superAdmin/components/SaTopbar.jsx
+import { useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
-import { useTheme } from "../../../context/ThemeContext";
 import { t } from "../../../i18n/translations";
+import { useNavigate } from "react-router-dom";
+
+import NotificationDropdown from "@/modules/notifications/components/NotificationDropdown";
+import { mockNotifications } from "@/modules/notifications/data/mockNotifications";
 
 export default function SaTopbar() {
   const { lang, setLang } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
   const dict = t[lang];
+
+  // ✅ CORRECT STATE
+  const [openNotifications, setOpenNotifications] = useState(false);
 
   return (
     <header
@@ -31,7 +38,7 @@ export default function SaTopbar() {
       </div>
 
       {/* RIGHT CONTROLS */}
-      <div className="flex items-center gap-4">
+      <div className="relative flex items-center gap-4">
 
         {/* Search */}
         <div className="relative hidden md:block">
@@ -49,19 +56,35 @@ export default function SaTopbar() {
           />
         </div>
 
-        {/* Notification */}
-        <button className="h-10 w-10 flex items-center justify-center rounded-xl bg-slate-100 hover:bg-slate-200">
-          <span className="material-symbols-outlined text-[22px] text-slate-700">
+        {/* 🔔 Notification */}
+        <button
+          onClick={() => setOpenNotifications(v => !v)}
+          className="relative h-10 w-10 flex items-center justify-center rounded-xl bg-slate-100 hover:bg-slate-200"
+        >
+          <span className="material-symbols-outlined text-[22px]">
             notifications
           </span>
+
+          {mockNotifications.some(n => !n.read) && (
+            <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-[#F38B14]" />
+          )}
         </button>
+
+        {/* 🔽 DROPDOWN */}
+        <NotificationDropdown
+          open={openNotifications}
+          onClose={() => setOpenNotifications(false)}
+          notifications={mockNotifications}
+        />
 
         {/* Language Switch */}
         <div className="flex items-center rounded-xl bg-slate-100 border border-slate-200">
           <button
             onClick={() => setLang("EN")}
             className={`px-3 py-1.5 rounded-xl text-sm ${
-              lang === "EN" ? "bg-white text-slate-900 shadow-sm" : "text-slate-600"
+              lang === "EN"
+                ? "bg-white text-slate-900 shadow-sm"
+                : "text-slate-600"
             }`}
           >
             EN
@@ -69,25 +92,17 @@ export default function SaTopbar() {
           <button
             onClick={() => setLang("DE")}
             className={`px-3 py-1.5 rounded-xl text-sm ${
-              lang === "DE" ? "bg-white text-slate-900 shadow-sm" : "text-slate-600"
+              lang === "DE"
+                ? "bg-white text-slate-900 shadow-sm"
+                : "text-slate-600"
             }`}
           >
             DE
           </button>
         </div>
 
-        {/* Theme Toggle */}
-        {/* <button
-          onClick={toggleTheme}
-          className="h-10 w-10 flex items-center justify-center rounded-xl bg-slate-100 hover:bg-slate-200"
-        >
-          <span className="material-symbols-outlined text-[22px] text-slate-700">
-            {theme === "light" ? "dark_mode" : "light_mode"}
-          </span>
-        </button> */}
-
         {/* Profile */}
-        <button className="flex items-center gap-3 rounded-xl bg-slate-100 py-1.5 px-2 hover:bg-slate-200">
+        <button onClick={() => navigate("/super-admin/profile")} className="flex items-center gap-3 rounded-xl bg-slate-100 py-1.5 px-2 hover:bg-slate-200">
           <img src="https://i.pravatar.cc/100" className="h-9 w-9 rounded-full" />
           <div className="hidden md:block text-sm">
             <p className="font-semibold text-slate-900">Jane Doe</p>

@@ -2427,55 +2427,488 @@ off_data_retention_label: "Data Retention",
 
 
 
+tenants_module: "Tenants",
+tenants: "Tenants",
+tenants_subtitle: "Manage all tenants across organizations and properties.",
+add_tenant: "Add Tenant",
+export_list: "Export List",
+
+tenants_total: "Total Tenants",
+tenants_active: "Active Tenants",
+tenants_pending: "Pending Onboarding",
+tenants_recent: "Recently Added",
+
+tenant_name: "Tenant Name",
+move_in: "Move-In",
+last_activity: "Last Activity",
+
+
+add_new_tenant: "Add New Tenant",
+add_tenant_subtitle: "Create a tenant profile and assign property/unit.",
+tenants_list: "Tenants List",
+
+personal_information: "Personal Information",
+full_name: "Full Name",
+enter_full_name: "Enter full name",
+email_address: "Email Address",
+enter_email: "Enter email address",
+date_of_birth: "Date of Birth",
+phone_number: "Phone Number",
+enter_phone: "Enter phone number",
+gender: "Gender",
+male: "Male",
+female: "Female",
+other: "Other",
+secondary_phone_optional: "Secondary Phone (Optional)",
+enter_secondary_phone: "Enter secondary phone",
+national_id: "National ID / CNIC",
+enter_national_id: "Enter national ID",
+emergency_contact_name: "Emergency Contact Name",
+enter_contact_name: "Enter contact name",
+emergency_contact_phone: "Emergency Contact Phone",
+enter_contact_phone: "Enter contact phone",
+
+tenancy_details: "Tenancy Details",
+tenant_type: "Tenant Type",
+primary: "Primary",
+co_tenant: "Co-Tenant",
+family_member: "Family Member",
+lease_start_date: "Lease Start Date",
+lease_end_date: "Lease End Date",
+account_status: "Account Status",
+active: "Active",
+pending: "Pending",
+suspended: "Suspended",
+move_in_date: "Move-In Date",
+move_out_date_optional: "Move-Out Date (Optional)",
+rent_amount_optional: "Rent Amount (Optional)",
+deposit_amount_optional: "Deposit Amount (Optional)",
+enter_amount: "Enter amount",
+lease_helper_text: "These fields help track lease and rental history.",
+
+property_assignment: "Property Assignment",
+optional: "Optional",
+select_organization: "Select Organization",
+select_property: "Select Property",
+select_unit: "Select Unit",
+floor: "Floor",
+building: "Building",
+block: "Block",
+north: "North",
+unit_type: "Unit Type",
+assign_primary_responsible: "Assign Tenant as Primary Responsible for Unit",
+assign_later_note: "You can assign a property later from the tenant details screen.",
+
+cancel: "Cancel",
+create_tenant: "Create Tenant",
+
+
+
+
+edit_tenant: "Edit Tenant",
+edit_tenant_subtitle: "Update tenant information",
+update_tenant: "Update Tenant",
+
+
+
+// ===============================
+// TENANT DETAIL
+// ===============================
+tenantProfile_title: "Tenant Profile",
+tenantProfile_subtitle:
+  "View and manage tenant information, documents, and history.",
+
+propertyAssigned: "Property Assigned",
+unitNumber: "Unit Number",
+moveInDate: "Move-In Date",
+leaseExpiry: "Lease Expiry",
+
+// ===============================
+// TENANT TABS
+// ===============================
+tab_overview: "Overview",
+tab_tenantDetails: "Tenant Details",
+tab_propertyUnit: "Property & Unit",
+tab_tickets: "Tickets",
+tab_maintenance: "Maintenance History",
+tab_documents: "Documents",
+tab_communication: "Communication Log",
+tab_notes: "Notes",
+tab_activity: "Activity Log",
 
 
 
 
 
+// ===============================
+// TENANT DETAIL — HEADER ACTIONS
+// ===============================
+action_backToTenants: "Back to Tenants",
+action_editTenant: "Edit Tenant",
+action_moveTenant: "Move Tenant",
+action_deactivate: "Deactivate",
+action_delete: "Delete",
+
+// ===============================
+// TENANT DETAIL — META LABELS
+// ===============================
+propertyAssigned: "Property Assigned",
+unitNumber: "Unit Number",
+moveInDate: "Move-In Date",
+leaseExpiry: "Lease Expiry",
 
 
 
 
+// Tenant Overview Tabs
+tenant_tab_overview: "Overview",
+tenant_tab_leaseDetails: "Lease Details",
+tenant_tab_documents: "Documents",
+tenant_tab_activityLog: "Activity Log",
+
+// Summary Cards
+tenant_overview_propertyUnit: "Property & Unit",
+tenant_overview_leaseStatus: "Lease Status",
+tenant_overview_tickets: "Tickets",
+tenant_overview_maintenance: "Maintenance",
+
+tenant_overview_viewProperty: "View Property",
+tenant_overview_viewLeaseDetails: "View Lease Details",
+tenant_overview_viewAllTickets: "View All Tickets",
+tenant_overview_viewMaintenanceHistory: "View Maintenance History",
+
+tenant_overview_leaseExpires: "Expires",
+tenant_overview_active: "Active",
+tenant_overview_requests: "Requests",
+
+// Tenant Information
+tenant_info_title: "Tenant Information",
+tenant_info_fullName: "Full Name",
+tenant_info_email: "Email",
+tenant_info_phone: "Phone",
+tenant_info_nationalId: "National ID / CNIC",
+tenant_info_dateOfBirth: "Date of Birth",
+tenant_info_gender: "Gender",
+tenant_info_emergencyContact: "Emergency Contact",
+tenant_info_emergencyPhone: "Emergency Phone",
+tenant_info_tenantType: "Tenant Type",
+tenant_info_accountStatus: "Account Status",
+tenant_info_moveInDate: "Move-In Date",
+tenant_info_edit: "Edit Tenant Information",
+
+
+
+/* ---------------- TENANT DETAILS ---------------- */
+
+    tenant_personalInformation: "Personal Information",
+    tenancyDetails: "Tenancy Details",
+    propertyAssignment: "Property Assignment",
+    documents: "Documents",
+    accountInformation: "Account Information",
+    adminNotes: "Admin Notes",
+
+    /* ---------------- FIELDS ---------------- */
+
+    fullName: "Full Name",
+    email: "Email",
+    dateOfBirth: "Date of Birth",
+    phoneNumber: "Phone Number",
+    secondaryPhone: "Secondary Phone",
+    gender: "Gender",
+    nationalId: "National ID / CNIC",
+    emergencyContactName: "Emergency Contact Name",
+    emergencyContactNumber: "Emergency Contact Number",
+
+    tenantType: "Tenant Type",
+    leaseStartDate: "Lease Start Date",
+    leaseEndDate: "Lease End Date",
+    moveInDate: "Move-In Date",
+    moveOutDate: "Move-Out Date",
+    rentAmount: "Rent Amount",
+    depositAmount: "Deposit Amount",
+    currentStatus: "Current Status",
+    notSpecified: "Not Specified",
+
+    assignedProperty: "Assigned Property",
+    assignedUnit: "Assigned Unit",
+    floorBuilding: "Floor / Building",
+    tenancyTypeLabel: "Tenancy Type",
+
+    leaseAgreement: "Lease Agreement",
+    nationalIdDoc: "National ID",
+    tenantApplication: "Tenant Application",
+    additionalDocuments: "Additional Documents",
+
+    username: "Username",
+    lastLoginActivity: "Last Login Activity",
+    accountCreatedOn: "Account Created On",
+    activeSessions: "Active Sessions",
+
+    /* ---------------- ACTIONS ---------------- */
+
+    editInformation: "Edit Information",
+    resetAccountPassword: "Reset Account Password",
+    editTenancyDetails: "Edit Tenancy Details",
+    viewLeaseAgreement: "View Lease Agreement",
+    assignPropertyUnit: "Assign Property / Unit",
+    removeAssignment: "Remove Assignment",
+    manageAllDocuments: "Manage All Documents",
+    manageSessions: "Manage Sessions",
+    suspendAccount: "Suspend Account",
+    deleteAccountPermanently: "Delete Account Permanently",
+    viewAllNotes: "View All Notes",
+    addNewNote: "Add New Note",
+
+    /* ---------------- NOTES TAGS ---------------- */
+
+    noteGeneral: "General",
+    noteWarning: "Warning",
+    noteDispute: "Dispute",
+
+assignPropertyUnit: "Assign Property / Unit",
+tenantPropertyHelper:
+  "This tenant may be linked to one or multiple properties and units. Use this page to manage assignments.",
+
+
+searchTickets: "Search tickets…",
+createTicket: "Create Ticket",
+
+ticketId: "Ticket ID",
+category: "Category",
+propertyUnit: "Property / Unit",
+assignedTo: "Assigned To",
+status: "Status",
+priority: "Priority",
+createdDate: "Created Date",
+lastUpdated: "Last Updated",
+
+status_completed: "Completed",
+status_inProgress: "In Progress",
+status_overdue: "Overdue",
+status_open: "Open",
+
+priority_low: "Low",
+priority_medium: "Medium",
+priority_high: "High",
+priority_critical: "Critical",
+
+
+notifications: "Notifications",
+markAllRead: "Mark all as read",
+all: "All",
+unread: "Unread",
+tickets: "Tickets",
+maintenance: "Maintenance",
+system: "System",
+noNotifications: "You have no notifications at the moment.",
+
+
+notifications: "Notifications",
+viewAllNotifications: "View all notifications",
+
+notification_ticketAssigned: "Ticket Assigned",
+notification_maintenanceUpdate: "Maintenance Update",
+notification_tenantAdded: "Tenant Added",
+notification_system: "System Notification",
+notifications: "Notifications",
+viewAll: "View all",
+notificationsHelper: "All recent system and activity notifications",
+
+notification_ticketAssigned: "New ticket assigned",
+notification_maintenanceScheduled: "Maintenance scheduled",
+notification_userAdded: "New user added",
+notification_systemUpdate: "System update",
+
+ticket: "Ticket",
+maintenance: "Maintenance",
+users: "Users",
+system: "System",
 
 
 
 
+profile: "Profile",
+profile_personalInfo: "Personal Information",
+security: "Security",
+fullName: "Full Name",
+email: "Email",
+phone: "Phone Number",
+language: "Language",
+currentPassword: "Current Password",
+newPassword: "New Password",
+confirmPassword: "Confirm Password",
+saveChanges: "Save Changes",
+cancel: "Cancel",
+
+
+systemSettings: "System Settings",
+systemSettingsDesc:
+  "Manage global configuration, platform templates, and core system behavior.",
+
+settings_general_title: "General Settings",
+settings_general_desc: "Timezone, language, system name",
+
+settings_branding_title: "Branding",
+settings_branding_desc: "Logos, colors, theme preferences",
+
+settings_localization_title: "Localization",
+settings_localization_desc: "Languages and regional formats",
+
+settings_notifications_title: "Notification Templates",
+settings_notifications_desc: "Email, SMS, push templates",
+
+settings_email_title: "Email (SMTP)",
+settings_email_desc: "SMTP host, credentials, testing",
+
+settings_push_title: "Push Notification Settings",
+settings_push_desc: "Firebase / APNs configuration",
+
+settings_integrations_title: "Integrations",
+settings_integrations_desc: "Stripe, PayPal, Webhooks, IoT",
+
+generalSettings: "General Settings",
+generalSettingsDescription: "Configure global system defaults such as timezone, language, and naming.",
+systemConfiguration: "System Configuration",
+systemConfigurationHint: "These settings affect all organizations and modules.",
+systemName: "System Name",
+systemNamePlaceholder: "Enter system name...",
+defaultTimezone: "Default Timezone",
+defaultLanguage: "Default Language",
+dateFormat: "Date Format",
+timeFormat: "Time Format",
+currency: "Currency",
+numberFormat: "Number Format",
+weekStartDay: "Week Start Day",
+monday: "Monday",
+sunday: "Sunday",
+saveSettings: "Save Settings",
+cancel: "Cancel",
+
+
+branding: "Branding",
+brandingDesc: "Customize the platform’s visual identity and theme.",
+
+logoIdentity: "Logo & Identity",
+logoIdentityDesc: "Upload your brand logos for both light and dark mode.",
+lightModeLogo: "Light Mode Logo",
+darkModeLogo: "Dark Mode Logo",
+uploadHint: "Drag & drop or click to upload",
+uploadFormat: "PNG, SVG (240×80px recommended)",
+
+themeColors: "Theme & Colors",
+primaryColor: "Primary Brand Color",
+neutralDark: "Neutral Dark",
+neutralGrey: "Neutral Grey",
+accentColors: "Accent Colors (Optional)",
+addAccent: "Add Accent Color",
+
+themeMode: "Theme Mode",
+theme_light: "Light",
+theme_dark: "Dark",
+theme_auto: "Auto (sync with device)",
+
+saveBranding: "Save Branding Settings",
 
 
 
+localization: "Localization",
+localizationDesc: "Manage supported languages and regional formatting.",
+supportedLanguages: "Supported Languages",
+supportedLanguagesDesc: "Enable or disable languages available in the system.",
+addLanguage: "Add Language",
+language: "Language",
+code: "Code",
+enabled: "Enabled",
+default: "Default",
+languagePriority: "Language Priority Order",
+languagePriorityDesc: "Drag to reorder languages. Higher priority languages appear first.",
+saveLocalization: "Save Localization Settings",
 
 
+notificationTemplates: "Notification Templates",
+notificationTemplatesDesc: "Manage email, SMS, push, and in-app notification templates.",
+
+emailTemplates: "Email Templates",
+emailTemplatesDesc: "Customize automated communication templates.",
+
+createTemplate: "Create New Template",
+templateName: "Template Name",
+type: "Type",
+description: "Description",
+lastUpdated: "Last Updated",
+status: "Status",
+actions: "Actions",
+
+welcomeEmailDesc: "Sent to new users upon registration.",
+
+editTemplate: "Edit Template",
+subject: "Subject",
+messageBody: "Message Body",
+availableVariables: "Available Variables",
+
+active: "Active",
+inactive: "Inactive",
+
+saveChanges: "Save Changes",
+cancel: "Cancel",
 
 
+smtpTitle: "Email (SMTP) Settings",
+smtpDesc: "Configure SMTP server used for sending system notifications and alerts.",
+
+smtpConfigTitle: "SMTP Configuration",
+smtpConfigDesc: "Provide details of your email provider for transaction-based communication.",
+
+smtpHost: "SMTP Host",
+smtpPort: "SMTP Port",
+smtpUsername: "Username",
+smtpPassword: "Password",
+smtpEncryption: "Encryption Method",
+smtpFromEmail: "From Email Address",
+smtpFromName: "From Name",
+
+smtpAdvanced: "Advanced Options",
+smtpTimeout: "Connection Timeout (seconds)",
+smtpRetries: "Retry Attempts",
+smtpAuthMode: "Authentication Mode",
+
+smtpTest: "Test Email",
+smtpTestEmail: "Send Test Email To",
+sendTestEmail: "Send Test Email",
+
+saveSmtp: "Save SMTP Settings",
+resetDefaults: "Reset to Defaults",
 
 
+pushTitle: "Push Notification Settings",
+pushDesc:
+  "Configure Firebase and APNs credentials for mobile and web push notifications.",
 
+firebaseTitle: "Firebase Configuration (Android & Web)",
+firebaseDesc: "Add credentials provided by Firebase Console.",
 
+firebaseServerKey: "Firebase Server Key",
+firebaseSenderId: "Sender ID",
+firebaseProjectId: "Project ID",
+firebaseAppId: "Application ID",
+firebaseApiKey: "API Key",
 
+sendTestPush: "Send Test Push Notification",
+deviceToken: "Device Token",
 
+apnsTitle: "APNs Configuration (iOS)",
+apnsDesc: "Upload Apple push certificate for iOS notifications.",
 
+apnsCert: "APNs Certificate (.p12 or .pem)",
+apnsCertPassword: "Certificate Password",
+apnsTeamId: "Team ID",
+apnsKeyId: "Key ID",
+apnsBundleId: "Bundle Identifier",
 
+sendTestPushIos: "Send Test Notification (iOS)",
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+savePush: "Save Push Settings",
+cancel: "Cancel",
 
 
 
@@ -4929,18 +5362,473 @@ off_access_steps: "Zugriffsschritte",
 off_data_retention_label: "Datenaufbewahrung",
 
 
+tenants_module: "Mieter",
+tenants: "Mieter",
+tenants_subtitle: "Verwalten Sie alle Mieter über Organisationen und Immobilien hinweg.",
+add_tenant: "Mieter hinzufügen",
+export_list: "Liste exportieren",
+
+tenants_total: "Gesamtmieter",
+tenants_active: "Aktive Mieter",
+tenants_pending: "Ausstehende Onboardings",
+tenants_recent: "Kürzlich hinzugefügt",
+
+tenant_name: "Mietername",
+move_in: "Einzug",
+last_activity: "Letzte Aktivität",
+
+
+add_new_tenant: "Neuen Mieter hinzufügen",
+add_tenant_subtitle: "Erstellen Sie ein Mieterprofil und weisen Sie eine Einheit zu.",
+tenants_list: "Mieterliste",
+
+personal_information: "Persönliche Informationen",
+full_name: "Vollständiger Name",
+enter_full_name: "Vollständigen Namen eingeben",
+email_address: "E-Mail-Adresse",
+enter_email: "E-Mail-Adresse eingeben",
+date_of_birth: "Geburtsdatum",
+phone_number: "Telefonnummer",
+enter_phone: "Telefonnummer eingeben",
+gender: "Geschlecht",
+male: "Männlich",
+female: "Weiblich",
+other: "Andere",
+secondary_phone_optional: "Zweite Telefonnummer (Optional)",
+enter_secondary_phone: "Zweite Telefonnummer eingeben",
+national_id: "National-ID / Ausweis",
+enter_national_id: "National-ID eingeben",
+emergency_contact_name: "Notfallkontakt Name",
+enter_contact_name: "Kontaktname eingeben",
+emergency_contact_phone: "Notfallkontakt Telefonnummer",
+enter_contact_phone: "Kontakttelefon eingeben",
+
+tenancy_details: "Mietdetails",
+tenant_type: "Mietertyp",
+primary: "Hauptmieter",
+co_tenant: "Mitmieter",
+family_member: "Familienmitglied",
+lease_start_date: "Mietbeginn",
+lease_end_date: "Mietende",
+account_status: "Kontostatus",
+active: "Aktiv",
+pending: "Ausstehend",
+suspended: "Gesperrt",
+move_in_date: "Einzugsdatum",
+move_out_date_optional: "Auszugsdatum (Optional)",
+rent_amount_optional: "Mietbetrag (Optional)",
+deposit_amount_optional: "Kaution (Optional)",
+enter_amount: "Betrag eingeben",
+lease_helper_text: "Diese Felder helfen bei der Nachverfolgung der Mietgeschichte.",
+
+property_assignment: "Objektzuweisung",
+optional: "Optional",
+select_organization: "Organisation auswählen",
+select_property: "Objekt auswählen",
+select_unit: "Einheit auswählen",
+floor: "Etage",
+building: "Gebäude",
+block: "Block",
+north: "Nord",
+unit_type: "Wohnungstyp",
+assign_primary_responsible: "Mieter als hauptverantwortlich festlegen",
+assign_later_note: "Sie können die Objektzuweisung später im Mieterprofil vornehmen.",
+
+cancel: "Abbrechen",
+create_tenant: "Mieter erstellen",
+
+
+edit_tenant: "Mieter bearbeiten",
+edit_tenant_subtitle: "Mieterdaten aktualisieren",
+update_tenant: "Mieter aktualisieren",
+
+// ===============================
+// TENANT DETAIL
+// ===============================
+tenantProfile_title: "Mieterprofil",
+tenantProfile_subtitle:
+  "Mieterinformationen, Dokumente und Verlauf anzeigen und verwalten.",
+
+propertyAssigned: "Zugewiesene Immobilie",
+unitNumber: "Wohneinheit",
+moveInDate: "Einzugsdatum",
+leaseExpiry: "Mietende",
+
+// ===============================
+// TENANT TABS
+// ===============================
+tab_overview: "Übersicht",
+tab_tenantDetails: "Mieterdetails",
+tab_propertyUnit: "Immobilie & Einheit",
+tab_tickets: "Tickets",
+tab_maintenance: "Wartungshistorie",
+tab_documents: "Dokumente",
+tab_communication: "Kommunikationsprotokoll",
+tab_notes: "Notizen",
+tab_activity: "Aktivitätsprotokoll",
+
+// ===============================
+// TENANT DETAIL — HEADER ACTIONS
+// ===============================
+action_backToTenants: "Zurück zu Mietern",
+action_editTenant: "Mieter bearbeiten",
+action_moveTenant: "Mieter verschieben",
+action_deactivate: "Deaktivieren",
+action_delete: "Löschen",
+
+// ===============================
+// TENANT DETAIL — META LABELS
+// ===============================
+propertyAssigned: "Zugewiesene Immobilie",
+unitNumber: "Wohneinheit",
+moveInDate: "Einzugsdatum",
+leaseExpiry: "Mietende",
+
+
+
+tenant_tab_overview: "Übersicht",
+tenant_tab_leaseDetails: "Mietdetails",
+tenant_tab_documents: "Dokumente",
+tenant_tab_activityLog: "Aktivitätsprotokoll",
+
+tenant_overview_propertyUnit: "Immobilie & Einheit",
+tenant_overview_leaseStatus: "Mietstatus",
+tenant_overview_tickets: "Tickets",
+tenant_overview_maintenance: "Wartung",
+
+tenant_overview_viewProperty: "Immobilie anzeigen",
+tenant_overview_viewLeaseDetails: "Mietdetails anzeigen",
+tenant_overview_viewAllTickets: "Alle Tickets anzeigen",
+tenant_overview_viewMaintenanceHistory: "Wartungsverlauf anzeigen",
+
+tenant_overview_leaseExpires: "Läuft ab",
+tenant_overview_active: "Aktiv",
+tenant_overview_requests: "Anfragen",
+
+tenant_info_title: "Mieterinformationen",
+tenant_info_fullName: "Vollständiger Name",
+tenant_info_email: "E-Mail",
+tenant_info_phone: "Telefon",
+tenant_info_nationalId: "Nationale ID / CNIC",
+tenant_info_dateOfBirth: "Geburtsdatum",
+tenant_info_gender: "Geschlecht",
+tenant_info_emergencyContact: "Notfallkontakt",
+tenant_info_emergencyPhone: "Notfalltelefon",
+tenant_info_tenantType: "Mietertyp",
+tenant_info_accountStatus: "Kontostatus",
+tenant_info_moveInDate: "Einzugsdatum",
+tenant_info_edit: "Mieterinformationen bearbeiten",
+
+
+
+/* ---------------- TENANT DETAILS ---------------- */
+
+    tenant_personalInformation: "Persönliche Informationen",
+    tenancyDetails: "Mietdetails",
+    propertyAssignment: "Objektzuweisung",
+    documents: "Dokumente",
+    accountInformation: "Kontoinformationen",
+    adminNotes: "Admin-Notizen",
+
+    /* ---------------- FIELDS ---------------- */
+
+    fullName: "Vollständiger Name",
+    email: "E-Mail-Adresse",
+    dateOfBirth: "Geburtsdatum",
+    phoneNumber: "Telefonnummer",
+    secondaryPhone: "Zweitnummer",
+    gender: "Geschlecht",
+    nationalId: "Nationale ID / CNIC",
+    emergencyContactName: "Name des Notfallkontakts",
+    emergencyContactNumber: "Notfallkontakt Nummer",
+
+    tenantType: "Mietertyp",
+    leaseStartDate: "Mietbeginn",
+    leaseEndDate: "Mietende",
+    moveInDate: "Einzugsdatum",
+    moveOutDate: "Auszugsdatum",
+    rentAmount: "Mietbetrag",
+    depositAmount: "Kaution",
+    currentStatus: "Aktueller Status",
+    notSpecified: "Nicht angegeben",
+
+    assignedProperty: "Zugewiesenes Objekt",
+    assignedUnit: "Zugewiesene Einheit",
+    floorBuilding: "Etage / Gebäude",
+    tenancyTypeLabel: "Mietart",
+
+    leaseAgreement: "Mietvertrag",
+    nationalIdDoc: "Nationale ID",
+    tenantApplication: "Mieterantrag",
+    additionalDocuments: "Zusätzliche Dokumente",
+
+    username: "Benutzername",
+    lastLoginActivity: "Letzte Anmeldung",
+    accountCreatedOn: "Konto erstellt am",
+    activeSessions: "Aktive Sitzungen",
+
+    /* ---------------- ACTIONS ---------------- */
+
+    editInformation: "Informationen bearbeiten",
+    resetAccountPassword: "Kontopasswort zurücksetzen",
+    editTenancyDetails: "Mietdetails bearbeiten",
+    viewLeaseAgreement: "Mietvertrag anzeigen",
+    assignPropertyUnit: "Objekt / Einheit zuweisen",
+    removeAssignment: "Zuweisung entfernen",
+    manageAllDocuments: "Alle Dokumente verwalten",
+    manageSessions: "Sitzungen verwalten",
+    suspendAccount: "Konto sperren",
+    deleteAccountPermanently: "Konto dauerhaft löschen",
+    viewAllNotes: "Alle Notizen anzeigen",
+    addNewNote: "Neue Notiz hinzufügen",
+
+    /* ---------------- NOTES TAGS ---------------- */
+
+    noteGeneral: "Allgemein",
+    noteWarning: "Warnung",
+    noteDispute: "Streitfall",
+
+assignPropertyUnit: "Objekt / Einheit zuweisen",
+tenantPropertyHelper:
+  "Dieser Mieter kann einer oder mehreren Immobilien und Einheiten zugeordnet sein. Verwenden Sie diese Seite zur Verwaltung der Zuweisungen.",
+
+searchTickets: "Tickets suchen…",
+createTicket: "Ticket erstellen",
+
+ticketId: "Ticket-ID",
+category: "Kategorie",
+propertyUnit: "Objekt / Einheit",
+assignedTo: "Zugewiesen an",
+status: "Status",
+priority: "Priorität",
+createdDate: "Erstellt am",
+lastUpdated: "Zuletzt aktualisiert",
+
+status_completed: "Abgeschlossen",
+status_inProgress: "In Bearbeitung",
+status_overdue: "Überfällig",
+status_open: "Offen",
+
+priority_low: "Niedrig",
+priority_medium: "Mittel",
+priority_high: "Hoch",
+priority_critical: "Kritisch",
+
+
+notifications: "Benachrichtigungen",
+markAllRead: "Alle als gelesen markieren",
+all: "Alle",
+unread: "Ungelesen",
+tickets: "Tickets",
+maintenance: "Wartung",
+system: "System",
+noNotifications: "Sie haben derzeit keine Benachrichtigungen.",
 
 
 
 
 
+notifications: "Benachrichtigungen",
+viewAllNotifications: "Alle Benachrichtigungen anzeigen",
+
+notification_ticketAssigned: "Ticket zugewiesen",
+notification_maintenanceUpdate: "Wartungsupdate",
+notification_tenantAdded: "Mieter hinzugefügt",
+notification_system: "Systembenachrichtigung",
 
 
+notifications: "Benachrichtigungen",
+viewAll: "Alle anzeigen",
+notificationsHelper: "Alle aktuellen System- und Aktivitätsmeldungen",
+
+notification_ticketAssigned: "Neues Ticket zugewiesen",
+notification_maintenanceScheduled: "Wartung geplant",
+notification_userAdded: "Neuer Benutzer hinzugefügt",
+notification_systemUpdate: "Systemaktualisierung",
+
+ticket: "Ticket",
+maintenance: "Wartung",
+users: "Benutzer",
+system: "System",
 
 
+profile: "Profil",
+profile_personalInfo: "Persönliche Informationen",
+security: "Sicherheit",
+fullName: "Vollständiger Name",
+email: "E-Mail",
+phone: "Telefonnummer",
+language: "Sprache",
+currentPassword: "Aktuelles Passwort",
+newPassword: "Neues Passwort",
+confirmPassword: "Passwort bestätigen",
+saveChanges: "Änderungen speichern",
+cancel: "Abbrechen",
 
 
+systemSettings: "Systemeinstellungen",
+systemSettingsDesc:
+  "Globale Konfiguration, Vorlagen und Systemverhalten verwalten.",
 
+settings_general_title: "Allgemeine Einstellungen",
+settings_general_desc: "Zeitzone, Sprache, Systemname",
+
+settings_branding_title: "Branding",
+settings_branding_desc: "Logos, Farben, Designoptionen",
+
+settings_localization_title: "Lokalisierung",
+settings_localization_desc: "Sprachen und regionale Formate",
+
+settings_notifications_title: "Benachrichtigungsvorlagen",
+settings_notifications_desc: "E-Mail-, SMS- und Push-Vorlagen",
+
+settings_email_title: "E-Mail (SMTP)",
+settings_email_desc: "SMTP-Server und Zugangsdaten",
+
+settings_push_title: "Push-Benachrichtigungen",
+settings_push_desc: "Firebase / APNs Konfiguration",
+
+settings_integrations_title: "Integrationen",
+settings_integrations_desc: "Stripe, PayPal, Webhooks, IoT",
+generalSettings: "Allgemeine Einstellungen",
+generalSettingsDescription: "Konfigurieren Sie globale Systemeinstellungen wie Zeitzone, Sprache und Benennung.",
+systemConfiguration: "Systemkonfiguration",
+systemConfigurationHint: "Diese Einstellungen wirken sich auf alle Organisationen und Module aus.",
+systemName: "Systemname",
+systemNamePlaceholder: "Systemnamen eingeben...",
+defaultTimezone: "Standardzeitzone",
+defaultLanguage: "Standardsprache",
+dateFormat: "Datumsformat",
+timeFormat: "Zeitformat",
+currency: "Währung",
+numberFormat: "Zahlenformat",
+weekStartDay: "Wochenbeginn",
+monday: "Montag",
+sunday: "Sonntag",
+saveSettings: "Einstellungen speichern",
+cancel: "Abbrechen",
+
+branding: "Branding",
+brandingDesc: "Passen Sie das visuelle Erscheinungsbild und das Design der Plattform an.",
+
+logoIdentity: "Logo & Identität",
+logoIdentityDesc: "Laden Sie Ihre Markenlogos für den hellen und dunklen Modus hoch.",
+lightModeLogo: "Logo für hellen Modus",
+darkModeLogo: "Logo für dunklen Modus",
+uploadHint: "Ziehen & ablegen oder klicken zum Hochladen",
+uploadFormat: "PNG, SVG (240×80px empfohlen)",
+
+themeColors: "Theme & Farben",
+primaryColor: "Primäre Markenfarbe",
+neutralDark: "Neutrales Dunkel",
+neutralGrey: "Neutrales Grau",
+accentColors: "Akzentfarben (optional)",
+addAccent: "Akzentfarbe hinzufügen",
+
+themeMode: "Designmodus",
+theme_light: "Hell",
+theme_dark: "Dunkel",
+theme_auto: "Automatisch (Gerät)",
+
+saveBranding: "Branding-Einstellungen speichern",
+
+
+localization: "Lokalisierung",
+localizationDesc: "Verwalten Sie unterstützte Sprachen und regionale Formate.",
+supportedLanguages: "Unterstützte Sprachen",
+supportedLanguagesDesc: "Aktivieren oder deaktivieren Sie verfügbare Sprachen.",
+addLanguage: "Sprache hinzufügen",
+language: "Sprache",
+code: "Code",
+enabled: "Aktiv",
+default: "Standard",
+languagePriority: "Sprachpriorität",
+languagePriorityDesc: "Ziehen Sie Sprachen, um die Reihenfolge festzulegen.",
+saveLocalization: "Lokalisierung speichern",
+
+notificationTemplates: "Benachrichtigungsvorlagen",
+notificationTemplatesDesc: "Verwalten Sie E-Mail-, SMS- und Systembenachrichtigungen.",
+
+emailTemplates: "E-Mail-Vorlagen",
+emailTemplatesDesc: "Automatisierte Kommunikationsvorlagen anpassen.",
+
+createTemplate: "Neue Vorlage erstellen",
+templateName: "Vorlagenname",
+type: "Typ",
+description: "Beschreibung",
+lastUpdated: "Zuletzt aktualisiert",
+status: "Status",
+actions: "Aktionen",
+
+welcomeEmailDesc: "Wird bei der Registrierung an neue Benutzer gesendet.",
+
+editTemplate: "Vorlage bearbeiten",
+subject: "Betreff",
+messageBody: "Nachrichtentext",
+availableVariables: "Verfügbare Variablen",
+
+active: "Aktiv",
+inactive: "Inaktiv",
+
+saveChanges: "Änderungen speichern",
+cancel: "Abbrechen",
+
+
+smtpTitle: "E-Mail (SMTP) Einstellungen",
+smtpDesc: "Konfigurieren Sie den SMTP-Server für den Versand von Systembenachrichtigungen und Warnmeldungen.",
+
+smtpConfigTitle: "SMTP-Konfiguration",
+smtpConfigDesc: "Geben Sie die Details Ihres E-Mail-Anbieters für transaktionsbasierte Kommunikation an.",
+
+smtpHost: "SMTP-Host",
+smtpPort: "SMTP-Port",
+smtpUsername: "Benutzername",
+smtpPassword: "Passwort",
+smtpEncryption: "Verschlüsselungsmethode",
+smtpFromEmail: "Absender-E-Mail-Adresse",
+smtpFromName: "Absendername",
+
+smtpAdvanced: "Erweiterte Optionen",
+smtpTimeout: "Verbindungszeitüberschreitung (Sekunden)",
+smtpRetries: "Wiederholungsversuche",
+smtpAuthMode: "Authentifizierungsmodus",
+
+smtpTest: "Test-E-Mail",
+smtpTestEmail: "Test-E-Mail senden an",
+sendTestEmail: "Test-E-Mail senden",
+
+saveSmtp: "SMTP-Einstellungen speichern",
+resetDefaults: "Auf Standard zurücksetzen",
+
+pushTitle: "Push-Benachrichtigungseinstellungen",
+pushDesc:
+  "Konfigurieren Sie Firebase- und APNs-Zugangsdaten für mobile und Web-Push-Benachrichtigungen.",
+
+firebaseTitle: "Firebase-Konfiguration (Android & Web)",
+firebaseDesc: "Fügen Sie die von der Firebase-Konsole bereitgestellten Zugangsdaten hinzu.",
+
+firebaseServerKey: "Firebase-Server-Schlüssel",
+firebaseSenderId: "Sender-ID",
+firebaseProjectId: "Projekt-ID",
+firebaseAppId: "Anwendungs-ID",
+firebaseApiKey: "API-Schlüssel",
+
+sendTestPush: "Test-Push-Benachrichtigung senden",
+deviceToken: "Geräte-Token",
+
+apnsTitle: "APNs-Konfiguration (iOS)",
+apnsDesc: "Apple Push-Zertifikat für iOS-Benachrichtigungen hochladen.",
+
+apnsCert: "APNs-Zertifikat (.p12 oder .pem)",
+apnsCertPassword: "Zertifikat-Passwort",
+apnsTeamId: "Team-ID",
+apnsKeyId: "Schlüssel-ID",
+apnsBundleId: "Bundle-Kennung",
+
+sendTestPushIos: "Testbenachrichtigung senden (iOS)",
+
+savePush: "Push-Einstellungen speichern",
+cancel: "Abbrechen",
 
 
 

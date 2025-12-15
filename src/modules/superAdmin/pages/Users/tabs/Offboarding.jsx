@@ -1,13 +1,61 @@
-import React from "react";
 import { useLanguage } from "../../../../../context/LanguageContext";
 import { t } from "../../../../../i18n/translations";
 
+/* ========================================================= */
+/* DUMMY DATA — TEMP (REMOVE WHEN API IS READY)              */
+/* ========================================================= */
 
-export default function Offboarding({ user }) {
+const dummyUser = {
+  name: "Eleanor Vance",
+  email: "eleanor.vance@hauswart.com",
+  avatar:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAccYXlCMFaOrLcDdglkhnsFKS4dLYK3IG15c3MLZACdjUB7_d-tZijSXilxhH9-SyDIaTIJqjqtdDOFzOf5cpRWA1muUWMr91QZ8Wt5GL6jWMF4kW7cQ-GVSmQWr6lCEXSxz3GTlw2M69tlmrexQzL2cPwW80k8_JZqbP6SpsGgeAIY1YKS9y8lgTKNQYo7XJbcefU4c_x3dzkLTDLyoyIdeU-doW2Vs46EzVekdW8CeXYHWIQ7RA2jrHoUngHcnCENfez1bozswE",
+  role: "Facility Manager",
+  status: "Active",
+  organization: "HQ Division",
+  lastActive: "2 hours ago",
+  createdAt: "June 15, 2022",
+  createdBy: "admin@hauswart.com",
+};
+
+const dummyTasks = [
+  {
+    id: "#TKT-8912",
+    type: "Ticket",
+    property: "Westwood Plaza",
+    dueDate: "2024-08-15",
+    assignees: ["Marcus Aurelius", "Jane Doe"],
+  },
+  {
+    id: "#MNT-4351",
+    type: "Maintenance",
+    property: "Downtown Center",
+    dueDate: "2024-08-22",
+    assignees: ["Marcus Aurelius", "Jane Doe"],
+  },
+];
+
+const dummyProperties = [
+  {
+    name: "Westwood Plaza",
+    role: "Facility Manager",
+    options: ["Marcus Aurelius"],
+  },
+  {
+    name: "Downtown Center",
+    role: "Technician",
+    options: ["Jane Doe"],
+  },
+];
+
+/* ========================================================= */
+/* MAIN COMPONENT                                            */
+/* ========================================================= */
+
+export default function Offboarding() {
   const { lang } = useLanguage();
   const dict = t[lang];
-
-  if (!user) return null;
+  const user = dummyUser;
 
   return (
     <div className="space-y-6">
@@ -24,7 +72,7 @@ export default function Offboarding({ user }) {
         </div>
 
         <div className="flex gap-2">
-          <button className="h-10 px-4 rounded-lg bg-[#F38B14] text-black font-bold hover:bg-black hover:text-white">
+          <button className="h-10 px-4 rounded-lg bg-[#F38B14] font-bold hover:bg-black hover:text-white">
             {dict.action_deactivate_user}
           </button>
           <button className="h-10 px-4 rounded-lg bg-stone-200 font-bold hover:bg-stone-300">
@@ -39,11 +87,7 @@ export default function Offboarding({ user }) {
       {/* USER SUMMARY */}
       <div className="bg-white rounded-lg border p-6 flex justify-between items-center">
         <div className="flex gap-4 items-center">
-          <img
-            src={user.avatar}
-            alt={user.name}
-            className="w-16 h-16 rounded-full object-cover"
-          />
+          <img src={user.avatar} alt={user.name} className="w-16 h-16 rounded-full" />
           <div>
             <p className="font-bold text-lg">{user.name}</p>
             <p className="text-sm text-stone-500">{user.email}</p>
@@ -54,7 +98,6 @@ export default function Offboarding({ user }) {
             </div>
           </div>
         </div>
-
         <div className="text-sm text-right text-stone-600">
           <p>{dict.off_last_active}: {user.lastActive}</p>
           <p>{dict.off_account_created}: {user.createdAt}</p>
@@ -62,18 +105,15 @@ export default function Offboarding({ user }) {
         </div>
       </div>
 
-      {/* MAIN GRID */}
+      {/* GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* LEFT */}
         <div className="lg:col-span-2 space-y-6">
 
-          {/* DEACTIVATION TYPE */}
+          {/* DEACTIVATION */}
           <Card title={dict.off_choose_type}>
-            <RadioCard
-              title={dict.off_temp_suspension}
-              description={dict.off_temp_suspension_desc}
-            >
+            <RadioCard title={dict.off_temp_suspension} description={dict.off_temp_suspension_desc}>
               <select className="mt-2 w-full max-w-xs rounded-md border p-2">
                 <option>1 Day</option>
                 <option>1 Week</option>
@@ -82,11 +122,7 @@ export default function Offboarding({ user }) {
               </select>
             </RadioCard>
 
-            <RadioCard
-              checked
-              title={dict.off_full_deactivation}
-              description={dict.off_full_deactivation_desc}
-            />
+            <RadioCard checked title={dict.off_full_deactivation} description={dict.off_full_deactivation_desc} />
 
             <RadioCard danger title={dict.off_permanent_deletion} description={dict.off_permanent_deletion_desc}>
               <div className="mt-3 flex items-center gap-2 rounded bg-red-100 p-3 text-sm text-red-700">
@@ -96,11 +132,9 @@ export default function Offboarding({ user }) {
             </RadioCard>
           </Card>
 
-          {/* TASK REASSIGNMENT */}
+          {/* TASKS */}
           <Card title={dict.off_reassign_tasks}>
-            <p className="text-sm text-red-600 mb-3">
-              {dict.off_reassign_warning}
-            </p>
+            <p className="text-sm text-red-600 mb-3">{dict.off_reassign_warning}</p>
 
             <Table
               headers={[
@@ -110,13 +144,15 @@ export default function Offboarding({ user }) {
                 dict.table_due_date,
                 dict.table_reassign_to,
               ]}
+              rows={dummyTasks}
             />
           </Card>
 
-          {/* PROPERTY CLEANUP */}
+          {/* PROPERTIES */}
           <Card title={dict.off_property_cleanup}>
-            <PropertyRow name="Westwood Plaza" role="Facility Manager" />
-            <PropertyRow name="Downtown Center" role="Technician" />
+            {dummyProperties.map(p => (
+              <PropertyRow key={p.name} {...p} />
+            ))}
             <button className="text-sm font-bold text-[#F38B14] hover:underline mt-2">
               {dict.off_unassign_all}
             </button>
@@ -137,8 +173,6 @@ export default function Offboarding({ user }) {
 
         {/* RIGHT */}
         <div className="space-y-6">
-
-          {/* ACCESS REMOVAL */}
           <Card title={dict.off_access_removal}>
             {[
               dict.off_disable_login,
@@ -148,29 +182,15 @@ export default function Offboarding({ user }) {
               dict.off_remove_properties,
               dict.off_remove_org_access,
               dict.off_stop_notifications,
-            ].map(item => (
-              <CheckRow key={item} label={item} />
-            ))}
+            ].map(i => <CheckRow key={i} label={i} />)}
           </Card>
 
-          {/* DATA RETENTION */}
           <Card title={dict.off_data_retention}>
-            <RadioOption
-              title={dict.off_retain_all}
-              description={dict.off_retain_all_desc}
-              checked
-            />
-            <RadioOption
-              title={dict.off_anonymize_pii}
-              description={dict.off_anonymize_pii_desc}
-            />
-            <RadioOption
-              title={dict.off_full_anonymization}
-              description={dict.off_full_anonymization_desc}
-            />
+            <RadioOption checked title={dict.off_retain_all} description={dict.off_retain_all_desc} />
+            <RadioOption title={dict.off_anonymize_pii} description={dict.off_anonymize_pii_desc} />
+            <RadioOption title={dict.off_full_anonymization} description={dict.off_full_anonymization_desc} />
           </Card>
 
-          {/* SUMMARY */}
           <Card title={dict.off_summary} sticky>
             <SummaryRow label={dict.off_deactivation_type} value="Full Deactivation" />
             <SummaryRow label={dict.off_tasks_reassigned} value="2 / 2" />
@@ -188,7 +208,9 @@ export default function Offboarding({ user }) {
   );
 }
 
-/* ---------- SMALL COMPONENTS ---------- */
+/* ========================================================= */
+/* REUSABLE COMPONENTS                                       */
+/* ========================================================= */
 
 function Card({ title, children, sticky }) {
   return (
@@ -205,11 +227,7 @@ function Badge({ text, color }) {
     green: "bg-green-100 text-green-700",
     default: "bg-stone-100 text-stone-700",
   };
-  return (
-    <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${map[color] || map.default}`}>
-      {text}
-    </span>
-  );
+  return <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${map[color] || map.default}`}>{text}</span>;
 }
 
 function RadioCard({ title, description, checked, danger, children }) {
@@ -224,6 +242,47 @@ function RadioCard({ title, description, checked, danger, children }) {
         </div>
       </div>
     </label>
+  );
+}
+
+function Table({ headers, rows }) {
+  return (
+    <table className="w-full text-sm border">
+      <thead className="bg-stone-50">
+        <tr>{headers.map(h => <th key={h} className="p-2 text-left">{h}</th>)}</tr>
+      </thead>
+      <tbody>
+        {rows.map(r => (
+          <tr key={r.id} className="border-t">
+            <td className="p-2">{r.id}</td>
+            <td className="p-2">{r.type}</td>
+            <td className="p-2">{r.property}</td>
+            <td className="p-2">{r.dueDate}</td>
+            <td className="p-2">
+              <select className="w-full rounded-md border p-2">
+                <option>Reassign To...</option>
+                {r.assignees.map(a => <option key={a}>{a}</option>)}
+              </select>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function PropertyRow({ name, role, options }) {
+  return (
+    <div className="grid grid-cols-3 gap-4 items-center bg-stone-50 p-3 rounded">
+      <div>
+        <p className="font-medium">{name}</p>
+        <p className="text-sm text-stone-500">{role}</p>
+      </div>
+      <select className="col-span-2 rounded-md border p-2">
+        <option>Reassign To...</option>
+        {options.map(o => <option key={o}>{o}</option>)}
+      </select>
+    </div>
   );
 }
 
@@ -257,20 +316,6 @@ function SummaryRow({ label, value, success }) {
   );
 }
 
-function PropertyRow({ name, role }) {
-  return (
-    <div className="grid grid-cols-3 gap-4 items-center bg-stone-50 p-3 rounded">
-      <div>
-        <p className="font-medium">{name}</p>
-        <p className="text-sm text-stone-500">{role}</p>
-      </div>
-      <select className="col-span-2 rounded-md border p-2">
-        <option>Reassign To...</option>
-      </select>
-    </div>
-  );
-}
-
 function UploadBox() {
   return (
     <div className="border-2 border-dashed rounded-lg p-6 text-center text-sm text-stone-500">
@@ -281,25 +326,4 @@ function UploadBox() {
 
 function Label({ children }) {
   return <label className="block text-sm font-medium text-stone-700">{children}</label>;
-}
-
-function Table({ headers }) {
-  return (
-    <table className="w-full text-sm border">
-      <thead className="bg-stone-50">
-        <tr>
-          {headers.map(h => (
-            <th key={h} className="p-2 text-left font-medium text-stone-500">{h}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td colSpan={headers.length} className="p-4 text-center text-stone-400">
-            —
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  );
 }
