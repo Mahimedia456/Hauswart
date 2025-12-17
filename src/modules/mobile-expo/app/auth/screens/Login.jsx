@@ -24,7 +24,7 @@ export default function Login() {
 
   const handleLogin = () => {
     if (role === "tenant") {
-      router.replace("/tenant/dashboard");
+      router.replace("/tenant/home");
     }
 
     if (role === "facilityManager") {

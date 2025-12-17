@@ -1,5 +1,4 @@
 import { View, Text, Image, Pressable, StyleSheet } from "react-native";
-import { Bell } from "lucide-react-native";
 import { colors } from "../constants/colors";
 import { spacing } from "../constants/spacing";
 
