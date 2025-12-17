@@ -1,4 +1,5 @@
 import { View, Text, Image, Pressable, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../constants/colors";
 import { spacing } from "../constants/spacing";
 
@@ -13,7 +14,11 @@ export default function TenantHeader() {
 
       <View style={styles.right}>
         <Pressable style={styles.bell}>
-          <Bell size={20} color="#555" />
+          <Ionicons
+            name="notifications-outline"
+            size={20}
+            color="#555"
+          />
           <View style={styles.dot} />
         </Pressable>
 

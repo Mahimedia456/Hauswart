@@ -17,7 +17,7 @@ import { spacing } from "../../constants/spacing";
 import { radius } from "../../constants/radius";
 import useLanguage from "../../hooks/useLanguage";
 
-const ROLES = ["facilityManager", "technician", "serviceProvider", "tenant"];
+const ROLES = ["technician", "tenant"];
 
 export default function RoleSelect() {
   const { t } = useLanguage();

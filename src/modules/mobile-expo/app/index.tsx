@@ -1,5 +1,6 @@
+// app/index.tsx
 import { Redirect } from "expo-router";
 
-export default function TabsIndex() {
-  return <Redirect href="/tenant/(tabs)/home" />;
+export default function Index() {
+  return <Redirect href="auth/screens/Splash" />;
 }
